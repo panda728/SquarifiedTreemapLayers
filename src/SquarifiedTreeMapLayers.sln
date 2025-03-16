@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapForge", "SquarifiedTreeMapForge\SquarifiedTreeMapForge.csproj", "{736A6C37-5A4E-440F-996E-3A53D66FF904}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapForge.Tests", "SquarifiedTreeMapForge.Tests\SquarifiedTreeMapForge.Tests.csproj", "{39EE5A0B-159E-4792-9A9E-524DA6A78D76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapForge.WinForms", "SquarifiedTreeMapForge.WinForms\SquarifiedTreeMapForge.WinForms.csproj", "{BF049CAF-02C5-445D-99B3-8792EF68D110}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapForge.WinForms.Demo", "..\Demo\SquarifiedTreeMapForge.WinForms.Demo\SquarifiedTreeMapForge.WinForms.Demo.csproj", "{A7181A2F-F4DF-435A-B379-F96308532993}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapShared", "SquarifiedTreeMapShared\SquarifiedTreeMapShared.csproj", "{E07B110F-70FA-419B-9DAA-160B3D6EA12D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapCoordinator", "SquarifiedTreeMapCoordinator\SquarifiedTreeMapCoordinator.csproj", "{EB67BDDC-AA9F-4806-A9FD-C0D3FA3DE1F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PopulationDataProvider.Demo", "..\Demo\PopulationDataProvider.Demo\PopulationDataProvider.Demo.csproj", "{98981CEE-4164-4D66-B443-D4680D5CDD73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapConsole", "SquarifiedTreeMapConsole\SquarifiedTreeMapConsole.csproj", "{F9E20EE1-A53D-4048-AB0A-9DD94DE8B49D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{736A6C37-5A4E-440F-996E-3A53D66FF904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{736A6C37-5A4E-440F-996E-3A53D66FF904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{736A6C37-5A4E-440F-996E-3A53D66FF904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{736A6C37-5A4E-440F-996E-3A53D66FF904}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39EE5A0B-159E-4792-9A9E-524DA6A78D76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39EE5A0B-159E-4792-9A9E-524DA6A78D76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39EE5A0B-159E-4792-9A9E-524DA6A78D76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39EE5A0B-159E-4792-9A9E-524DA6A78D76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF049CAF-02C5-445D-99B3-8792EF68D110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF049CAF-02C5-445D-99B3-8792EF68D110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF049CAF-02C5-445D-99B3-8792EF68D110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF049CAF-02C5-445D-99B3-8792EF68D110}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7181A2F-F4DF-435A-B379-F96308532993}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7181A2F-F4DF-435A-B379-F96308532993}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7181A2F-F4DF-435A-B379-F96308532993}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7181A2F-F4DF-435A-B379-F96308532993}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E07B110F-70FA-419B-9DAA-160B3D6EA12D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E07B110F-70FA-419B-9DAA-160B3D6EA12D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E07B110F-70FA-419B-9DAA-160B3D6EA12D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E07B110F-70FA-419B-9DAA-160B3D6EA12D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB67BDDC-AA9F-4806-A9FD-C0D3FA3DE1F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB67BDDC-AA9F-4806-A9FD-C0D3FA3DE1F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB67BDDC-AA9F-4806-A9FD-C0D3FA3DE1F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB67BDDC-AA9F-4806-A9FD-C0D3FA3DE1F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98981CEE-4164-4D66-B443-D4680D5CDD73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98981CEE-4164-4D66-B443-D4680D5CDD73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98981CEE-4164-4D66-B443-D4680D5CDD73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98981CEE-4164-4D66-B443-D4680D5CDD73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9E20EE1-A53D-4048-AB0A-9DD94DE8B49D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9E20EE1-A53D-4048-AB0A-9DD94DE8B49D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9E20EE1-A53D-4048-AB0A-9DD94DE8B49D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9E20EE1-A53D-4048-AB0A-9DD94DE8B49D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D424F98-53B8-4A6D-ADAD-37CC64BDF272}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SquarifiedTreeMapConsole": {
+      "commandName": "Project",
+      "commandLineArgs": "1920 1080 data.json treemap.png"
+    }
+  }
+}

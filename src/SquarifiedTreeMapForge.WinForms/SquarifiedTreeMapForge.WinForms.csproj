@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;IDE1006</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;IDE1006</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SquarifiedTreeMapCoordinator\SquarifiedTreeMapCoordinator.csproj" />
+    <ProjectReference Include="..\SquarifiedTreeMapForge\SquarifiedTreeMapForge.csproj" />
+    <ProjectReference Include="..\SquarifiedTreeMapShared\SquarifiedTreeMapShared.csproj" />
+  </ItemGroup>
+
+</Project>
