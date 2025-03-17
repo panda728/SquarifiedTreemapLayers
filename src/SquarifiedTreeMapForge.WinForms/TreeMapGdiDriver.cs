@@ -14,6 +14,7 @@ public sealed class TreeMapGdiDriver<T>(
     GdiRenderer renderer
 )
 {
+    const string FONT_HEIGHT_DEFALUT = "A";
     readonly Semaphore _semaphore = new(1, 1);
 
     [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
@@ -87,7 +88,7 @@ public sealed class TreeMapGdiDriver<T>(
         string titleText)
     {
         var nodeHeight = renderer.GetFontHeight(
-            g, coordinator.NodeFont, titleText);
+            g, coordinator.NodeFont, string.IsNullOrEmpty(titleText) ? FONT_HEIGHT_DEFALUT : titleText);
 
         if (coordinator.Layout(bounds, nodeHeight)
             && coordinator.TreeMap != null && coordinator.RootNode != null)

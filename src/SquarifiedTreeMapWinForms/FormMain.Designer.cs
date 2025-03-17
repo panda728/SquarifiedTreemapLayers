@@ -1,4 +1,6 @@
-﻿namespace SquarifiedTreeMapForge.WinForms.Demo
+﻿using SquarifiedTreeMapForge.WinForms;
+
+namespace SquarifiedTreeMapWinForms
 {
     partial class FormMain
     {
@@ -89,6 +91,8 @@
             label3 = new Label();
             label2 = new Label();
             splitContainer1 = new SplitContainer();
+            panel1 = new Panel();
+            label17 = new Label();
             treeMapControl1 = new TreeMapControl();
             tableLayoutPanel2 = new TableLayoutPanel();
             miniToolStrip = new StatusStrip();
@@ -97,8 +101,10 @@
             toolStripSplitButton1 = new ToolStripSplitButton();
             toolStripOpen = new ToolStripMenuItem();
             toolStripClose = new ToolStripMenuItem();
+            toolStripLoad = new ToolStripMenuItem();
             tableLayoutMain = new TableLayoutPanel();
             saveFileDialog1 = new SaveFileDialog();
+            openFileDialog1 = new OpenFileDialog();
             tableLayoutPanel1.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox6.SuspendLayout();
@@ -125,6 +131,7 @@
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
+            panel1.SuspendLayout();
             statusStrip1.SuspendLayout();
             tableLayoutMain.SuspendLayout();
             SuspendLayout();
@@ -790,6 +797,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            splitContainer1.Panel1.Controls.Add(panel1);
             splitContainer1.Panel1.Controls.Add(treeMapControl1);
             // 
             // splitContainer1.Panel2
@@ -799,6 +807,25 @@
             splitContainer1.SplitterDistance = 553;
             splitContainer1.SplitterWidth = 8;
             splitContainer1.TabIndex = 3;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(label17);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(553, 687);
+            panel1.TabIndex = 4;
+            // 
+            // label17
+            // 
+            label17.Dock = DockStyle.Fill;
+            label17.Location = new Point(0, 0);
+            label17.Name = "label17";
+            label17.Size = new Size(553, 687);
+            label17.TabIndex = 0;
+            label17.Text = "Specify the original data json file from the menu in the lower left corner.";
+            label17.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // treeMapControl1
             // 
@@ -859,7 +886,7 @@
             // 
             toolStripSplitButton1.Alignment = ToolStripItemAlignment.Right;
             toolStripSplitButton1.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripSplitButton1.DropDownItems.AddRange(new ToolStripItem[] { toolStripOpen, toolStripClose });
+            toolStripSplitButton1.DropDownItems.AddRange(new ToolStripItem[] { toolStripOpen, toolStripClose, toolStripLoad });
             toolStripSplitButton1.Image = (Image)resources.GetObject("toolStripSplitButton1.Image");
             toolStripSplitButton1.ImageTransparentColor = Color.Magenta;
             toolStripSplitButton1.Name = "toolStripSplitButton1";
@@ -870,16 +897,23 @@
             // toolStripOpen
             // 
             toolStripOpen.Name = "toolStripOpen";
-            toolStripOpen.Size = new Size(143, 22);
-            toolStripOpen.Text = "Open Setting";
+            toolStripOpen.Size = new Size(170, 22);
+            toolStripOpen.Text = "Open Setting Area";
             toolStripOpen.Click += toolStripOpen_Click;
             // 
             // toolStripClose
             // 
             toolStripClose.Name = "toolStripClose";
-            toolStripClose.Size = new Size(143, 22);
-            toolStripClose.Text = "Close Setting";
+            toolStripClose.Size = new Size(170, 22);
+            toolStripClose.Text = "Close Setting Area";
             toolStripClose.Click += toolStripClose_Click;
+            // 
+            // toolStripLoad
+            // 
+            toolStripLoad.Name = "toolStripLoad";
+            toolStripLoad.Size = new Size(170, 22);
+            toolStripLoad.Text = "Load Json";
+            toolStripLoad.Click += toolStripLoad_Click;
             // 
             // tableLayoutMain
             // 
@@ -895,6 +929,10 @@
             tableLayoutMain.RowStyles.Add(new RowStyle(SizeType.Absolute, 36F));
             tableLayoutMain.Size = new Size(1008, 729);
             tableLayoutMain.TabIndex = 4;
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
             // 
             // FormMain
             // 
@@ -940,6 +978,7 @@
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
+            panel1.ResumeLayout(false);
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
             tableLayoutMain.ResumeLayout(false);
@@ -1018,5 +1057,9 @@
         private CheckBox checkLegendOrder;
         private Label label16;
         private NumericUpDown numericLegendHeight;
+        private Panel panel1;
+        private Label label17;
+        private ToolStripMenuItem toolStripLoad;
+        private OpenFileDialog openFileDialog1;
     }
 }

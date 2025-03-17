@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PopulationDataProvider.Demo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapConsole", "SquarifiedTreeMapConsole\SquarifiedTreeMapConsole.csproj", "{F9E20EE1-A53D-4048-AB0A-9DD94DE8B49D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapWinForms", "SquarifiedTreeMapWinForms\SquarifiedTreeMapWinForms.csproj", "{46888ACA-C708-4FE7-A00E-1A93E943FCEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{F9E20EE1-A53D-4048-AB0A-9DD94DE8B49D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9E20EE1-A53D-4048-AB0A-9DD94DE8B49D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9E20EE1-A53D-4048-AB0A-9DD94DE8B49D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46888ACA-C708-4FE7-A00E-1A93E943FCEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46888ACA-C708-4FE7-A00E-1A93E943FCEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46888ACA-C708-4FE7-A00E-1A93E943FCEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46888ACA-C708-4FE7-A00E-1A93E943FCEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

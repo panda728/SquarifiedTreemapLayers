@@ -1,21 +1,21 @@
 using System.Text;
-using PopulationDataProvider.Demo;
 using SquarifiedTreeMapShared;
+using SquarifiedTreeMapForge.WinForms;
+using System.Text.Json;
 
-namespace SquarifiedTreeMapForge.WinForms.Demo
+namespace SquarifiedTreeMapWinForms
 {
     public partial class FormMain : Form
     {
         readonly Semaphore _semaphore = new(1, 1);
 
-        readonly TreeMapGdiDriver<PopulationData> _driver;
-        readonly IReadOnlyList<PopulationData> _populationPivots;
+        readonly TreeMapGdiDriver<PivotDataSource> _driver;
         readonly string[] _defaultAggrColumns;
         readonly string _defaultWeightColumn;
 
         readonly bool _isInit = true;
 
-        public FormMain(TreeMapGdiDriver<PopulationData> driver, PopulationDataProvider.Demo.PopulationDataProvider provider)
+        public FormMain(TreeMapGdiDriver<PivotDataSource> driver)
         {
             InitializeComponent();
 
@@ -56,30 +56,32 @@ namespace SquarifiedTreeMapForge.WinForms.Demo
             this.listBoxAggrSelected.Items.Clear();
             this.listBoxAggrSelected.Items.AddRange(_driver.LayoutSettings.AggregateColumns);
             this.listBoxAggrSelectable.Items.Clear();
-
-            _populationPivots = provider.GetPopulationPivotsFromJson();
+            this.treeMapControl1.Visible = false;
+            this.panel1.Visible = true;
             _isInit = false;
         }
 
-        string GetTitle(string k, IEnumerable<PopulationData> d)
+        List<PivotDataSource> PivotDataSource { get; set; } = [];
+
+        string GetTitle(string k, IEnumerable<PivotDataSource> d)
         {
-            var total = (double)d.Sum(d => d.TotalPopulation);
-            var purchaseTotal = (double)d.Sum(d => d.PopChange5Y);
+            var total = (double)d.Sum(d => d.Weight);
+            var purchaseTotal = (double)d.Sum(d => d.RelativeWeight);
             var per = purchaseTotal / total;
-            return $"{k}({d.Sum(d => d.TotalPopulation) / 1000:#,##0} {per:+0.0%;-0.0%}) ";
+            return $"{k}({d.Sum(d => d.Weight) / 1000:#,##0} {per:+0.0%;-0.0%}) ";
         }
 
-        Color GetColor(IEnumerable<PopulationData> d)
+        Color GetColor(IEnumerable<PivotDataSource> d)
         {
-            var total = (double)d.Sum(d => d.TotalPopulation);
-            var diff = (double)d.Sum(d => d.PopChange5Y);
+            var total = (double)d.Sum(d => d.Weight);
+            var diff = (double)d.Sum(d => d.RelativeWeight);
             var percentage = Math.Round(diff / total * 1000) / 1000;
             return _driver.GetPercentageColor(percentage);
         }
 
         void Form1_Shown(object sender, EventArgs e)
         {
-            _driver.Invalidate(_populationPivots);
+            _driver.Invalidate(PivotDataSource);
         }
 
         async Task RedrawTreemapAsync()
@@ -116,12 +118,13 @@ namespace SquarifiedTreeMapForge.WinForms.Demo
 
                 _driver.TreeMapSettings.LegendFontSize = (float)numericLegendFontSize.Value;
 
-                _driver.Invalidate(_populationPivots);
+                _driver.Invalidate(PivotDataSource);
 
                 if (!string.IsNullOrEmpty(_driver.LayoutSettings.TitleText))
                 {
                     this.Text = _driver.LayoutSettings.TitleText;
                 }
+
 
                 await Task.Delay(10);
             }
@@ -318,6 +321,38 @@ namespace SquarifiedTreeMapForge.WinForms.Demo
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        async Task LoadJsonDataAsync(string filePath)
+        {
+            try
+            {
+                using FileStream openStream = File.OpenRead(filePath);
+                PivotDataSource = await JsonSerializer.DeserializeAsync<List<PivotDataSource>>(openStream) ?? [];
+                await RedrawTreemapAsync();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading JSON data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        async void toolStripLoad_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "JSON Files (*.json)|*.json|All Files (*.*)|*.*";
+            openFileDialog1.DefaultExt = "json";
+            openFileDialog1.FileName = "data.json";
+            openFileDialog1.AddExtension = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                await LoadJsonDataAsync(openFileDialog1.FileName);
+                if(PivotDataSource.Count > 0)
+                {
+                    this.treeMapControl1.Visible = true;
+                    this.panel1.Visible = false;
+                }
             }
         }
         #endregion

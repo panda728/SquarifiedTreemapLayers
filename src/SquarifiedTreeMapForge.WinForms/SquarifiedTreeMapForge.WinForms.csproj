@@ -5,6 +5,17 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Description>SquarifiedTreeMapLayers is a library for generating and rendering treemap layouts. This solution provides various functionalities related to treemaps, including layout generation, color calculation, and legend generation.</Description>
+    <Title>SquarifiedTreeMapForge.WinForms</Title>
+    <Authors>Hideyuki Kitao</Authors>
+    <Product>SquarifiedTreeMapLayers</Product>
+    <Copyright>Copyright © 2025 Hideyuki Kitao</Copyright>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl></RepositoryUrl>
+    <PackageProjectUrl>https://github.com/panda728/SquarifiedTreeMapLayers</PackageProjectUrl>
+    <PackageTags>Visualization</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -14,6 +25,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <NoWarn>1701;1702;IDE1006</NoWarn>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\SquarifiedTreeMapCoordinator\SquarifiedTreeMapCoordinator.csproj" />

@@ -92,10 +92,11 @@ public class GdiRenderer : IDisposable
         if (!string.IsNullOrEmpty(treeMap.Text))
         {
             RenderTitle(g, treeMap);
-            if (legends != null && legends.Any())
-            {
-                RenderLegends(g, treeMap, legends);
-            }
+        }
+
+        if (legends != null && legends.Any() && displayMinSize > 0)
+        {
+            RenderLegends(g, treeMap, legends);
         }
 
         RenderTreeMapContent(g, treeMap, rootNode, displayMinSize);
