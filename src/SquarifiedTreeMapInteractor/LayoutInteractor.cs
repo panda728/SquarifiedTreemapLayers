@@ -2,11 +2,11 @@
 using SquarifiedTreeMapForge.Layout;
 using SquarifiedTreeMapShared;
 
-namespace SquarifiedTreeMapCoordinator;
+namespace SquarifiedTreeMapInteractor;
 
-public class LayoutCoordinator<T>(
+public class LayoutInteractor<T>(
     LayoutGenerator<T> layoutGenerator,
-    AggregatePreparer<T> preparer,
+    DataGroupPreparer<T> preparer,
     LegendCalculator legend)
 {
     bool _isSourceOrderDec = false;
@@ -50,7 +50,7 @@ public class LayoutCoordinator<T>(
         preparer.Initialize(settings, funcNodeText, funcNodeColor);
         legend.LoadSettings(legendSettings);
 
-        _rootSeed = Aggregator<T>.CreateSeed(
+        _rootSeed = DataGrouper<T>.CreateSeed(
             sources,
             settings,
             treeMapSettings,

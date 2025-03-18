@@ -4,14 +4,14 @@ using SquarifiedTreeMapShared;
 namespace SquarifiedTreeMapForge.Layout;
 
 /// <summary>Aggregates data and prepares seeds for generating a treemap.</summary>
-public sealed class Aggregator<T>
+public sealed class DataGrouper<T>
 {
     /// <summary>Creates the root seed for the treemap.</summary>
     public static Seed<T> CreateSeed(
         IEnumerable<T> sources,
         TreeMapLayoutSettings settings,
         TreeMapSettings treeMapSettings,
-        AggregatePreparer<T> preparer)
+        DataGroupPreparer<T> preparer)
     {
         ArgumentNullException.ThrowIfNull(sources);
         ArgumentNullException.ThrowIfNull(settings);
@@ -38,7 +38,7 @@ public sealed class Aggregator<T>
         List<Seed<T>> children,
         IEnumerable<T> sources,
         TreeMapLayoutSettings settings,
-        AggregatePreparer<T> preparer,
+        DataGroupPreparer<T> preparer,
         ref int id,
         int maxDepth,
         int depth = -1,
@@ -47,7 +47,9 @@ public sealed class Aggregator<T>
         if (!sources.Any() || maxDepth < depth) return;
         if (depth >= (preparer.GroupProperties?.Length ?? 0)) return;
 
-        var grouped = sources.GroupBy(x => preparer.GetGroupKey(x, depth));
+        var grouped = sources
+            .GroupBy(x => preparer.GetGroupKey(x, depth))
+            .Where(g => !string.IsNullOrEmpty(g.Key));
         var dimensions = !settings.IsSourceOrderDec
             ? grouped.OrderBy(g => g.Sum(x => preparer.GetWeight(x)))
             : grouped.OrderByDescending(g => g.Sum(x => preparer.GetWeight(x)));
@@ -63,7 +65,7 @@ public sealed class Aggregator<T>
     static Seed<T> CreateSeed(
         IGrouping<string, T> group,
         TreeMapLayoutSettings settings,
-        AggregatePreparer<T> preparer,
+        DataGroupPreparer<T> preparer,
         ref int id,
         int depth,
         Seed<T>? parent)

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SquarifiedTreeMapCoordinator;
+using SquarifiedTreeMapInteractor;
 using SquarifiedTreeMapForge;
 using SquarifiedTreeMapConsole;
 using SquarifiedTreeMapForge.Layout;
@@ -71,9 +71,9 @@ class Program
                 services.AddTransient<GdiRenderer>();
 
                 // SquarifiedTreeMapForge.csproj
-                services.AddTransient<LayoutCoordinator<PivotDataSource>>();
+                services.AddTransient<LayoutInteractor<PivotDataSource>>();
                 services.AddTransient<LayoutGenerator<PivotDataSource>>();
-                services.AddTransient<AggregatePreparer<PivotDataSource>>();
+                services.AddTransient<DataGroupPreparer<PivotDataSource>>();
                 services.AddTransient<LegendCalculator>();
                 services.AddTransient<ITreemapGenerator, SquarifiedTreemapGenerator>();
             });

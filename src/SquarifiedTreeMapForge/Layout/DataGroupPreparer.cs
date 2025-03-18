@@ -5,7 +5,7 @@ using SquarifiedTreeMapShared;
 namespace SquarifiedTreeMapForge.Layout;
 
 /// <summary>Prepares data for generating a treemap.</summary>
-public sealed class AggregatePreparer<T>
+public sealed class DataGroupPreparer<T>
 {
     public const int MINIMUM_SIZE = 2;
     TreeMapLayoutSettings? _settings;

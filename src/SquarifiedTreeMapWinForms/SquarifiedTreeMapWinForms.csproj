@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\SquarifiedTreeMapCoordinator\SquarifiedTreeMapCoordinator.csproj" />
     <ProjectReference Include="..\..\src\SquarifiedTreeMapForge.WinForms\SquarifiedTreeMapForge.WinForms.csproj" />
     <ProjectReference Include="..\..\src\SquarifiedTreeMapForge\SquarifiedTreeMapForge.csproj" />
     <ProjectReference Include="..\..\src\SquarifiedTreeMapShared\SquarifiedTreeMapShared.csproj" />

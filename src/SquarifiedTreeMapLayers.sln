@@ -13,13 +13,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapForge.WinF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapShared", "SquarifiedTreeMapShared\SquarifiedTreeMapShared.csproj", "{E07B110F-70FA-419B-9DAA-160B3D6EA12D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapCoordinator", "SquarifiedTreeMapCoordinator\SquarifiedTreeMapCoordinator.csproj", "{EB67BDDC-AA9F-4806-A9FD-C0D3FA3DE1F8}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PopulationDataProvider.Demo", "..\Demo\PopulationDataProvider.Demo\PopulationDataProvider.Demo.csproj", "{98981CEE-4164-4D66-B443-D4680D5CDD73}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapConsole", "SquarifiedTreeMapConsole\SquarifiedTreeMapConsole.csproj", "{F9E20EE1-A53D-4048-AB0A-9DD94DE8B49D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapWinForms", "SquarifiedTreeMapWinForms\SquarifiedTreeMapWinForms.csproj", "{46888ACA-C708-4FE7-A00E-1A93E943FCEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapInteractor", "SquarifiedTreeMapInteractor\SquarifiedTreeMapInteractor.csproj", "{E1A4EB73-C7BE-4DFF-9EE4-DCB310878799}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,6 @@ Global
 		{E07B110F-70FA-419B-9DAA-160B3D6EA12D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E07B110F-70FA-419B-9DAA-160B3D6EA12D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E07B110F-70FA-419B-9DAA-160B3D6EA12D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EB67BDDC-AA9F-4806-A9FD-C0D3FA3DE1F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EB67BDDC-AA9F-4806-A9FD-C0D3FA3DE1F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EB67BDDC-AA9F-4806-A9FD-C0D3FA3DE1F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EB67BDDC-AA9F-4806-A9FD-C0D3FA3DE1F8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{98981CEE-4164-4D66-B443-D4680D5CDD73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{98981CEE-4164-4D66-B443-D4680D5CDD73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98981CEE-4164-4D66-B443-D4680D5CDD73}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,6 +59,10 @@ Global
 		{46888ACA-C708-4FE7-A00E-1A93E943FCEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46888ACA-C708-4FE7-A00E-1A93E943FCEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46888ACA-C708-4FE7-A00E-1A93E943FCEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1A4EB73-C7BE-4DFF-9EE4-DCB310878799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1A4EB73-C7BE-4DFF-9EE4-DCB310878799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1A4EB73-C7BE-4DFF-9EE4-DCB310878799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1A4EB73-C7BE-4DFF-9EE4-DCB310878799}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

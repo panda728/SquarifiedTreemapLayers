@@ -34,8 +34,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SquarifiedTreeMapCoordinator\SquarifiedTreeMapCoordinator.csproj" />
     <ProjectReference Include="..\SquarifiedTreeMapForge\SquarifiedTreeMapForge.csproj" />
+    <ProjectReference Include="..\SquarifiedTreeMapInteractor\SquarifiedTreeMapInteractor.csproj" />
     <ProjectReference Include="..\SquarifiedTreeMapShared\SquarifiedTreeMapShared.csproj" />
   </ItemGroup>
 

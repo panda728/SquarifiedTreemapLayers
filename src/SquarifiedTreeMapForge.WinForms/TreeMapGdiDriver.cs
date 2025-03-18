@@ -1,6 +1,6 @@
 using System.ComponentModel;
 using Microsoft.Extensions.Options;
-using SquarifiedTreeMapCoordinator;
+using SquarifiedTreeMapInteractor;
 using SquarifiedTreeMapShared;
 
 namespace SquarifiedTreeMapForge.WinForms;
@@ -10,7 +10,7 @@ public sealed class TreeMapGdiDriver<T>(
     IOptions<TreeMapSettings> treeMapSettingsOp,
     IOptions<TreeMapLayoutSettings> layoutSettingsOp,
     IOptions<LegendSettings> legendSettingsOp,
-    LayoutCoordinator<T> coordinator,
+    LayoutInteractor<T> coordinator,
     GdiRenderer renderer
 )
 {
@@ -82,7 +82,7 @@ public sealed class TreeMapGdiDriver<T>(
 
     static void RenderTreeMap(
         Graphics g,
-        LayoutCoordinator<T> coordinator,
+        LayoutInteractor<T> coordinator,
         GdiRenderer renderer,
         Rectangle bounds,
         string titleText)

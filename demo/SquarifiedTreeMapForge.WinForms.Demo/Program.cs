@@ -1,7 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PopulationDataProvider.Demo;
-using SquarifiedTreeMapCoordinator;
+using SquarifiedTreeMapInteractor;
 using SquarifiedTreeMapForge.Layout;
 using SquarifiedTreeMapShared;
 
@@ -48,9 +48,9 @@ internal static class Program
                 services.AddTransient<GdiRenderer>();
 
                 // SquarifiedTreeMapForge.csproj
-                services.AddTransient<LayoutCoordinator<PopulationData>>();
+                services.AddTransient<LayoutInteractor<PopulationData>>();
                 services.AddTransient<LayoutGenerator<PopulationData>>();
-                services.AddTransient<AggregatePreparer<PopulationData>>();
+                services.AddTransient<DataGroupPreparer<PopulationData>>();
                 services.AddTransient<LegendCalculator>();
                 services.AddTransient<ITreemapGenerator, SquarifiedTreemapGenerator>();
             });

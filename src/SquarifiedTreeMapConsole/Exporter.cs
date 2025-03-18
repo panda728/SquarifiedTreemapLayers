@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Text.Json;
 using Microsoft.Extensions.Options;
-using SquarifiedTreeMapCoordinator;
+using SquarifiedTreeMapInteractor;
 using SquarifiedTreeMapForge.WinForms;
 using SquarifiedTreeMapShared;
 
@@ -9,7 +9,7 @@ namespace SquarifiedTreeMapConsole;
 
 public sealed class Exporter(
     GdiRenderer renderer,
-    LayoutCoordinator<PivotDataSource> coordinator,
+    LayoutInteractor<PivotDataSource> coordinator,
     IOptions<TreeMapSettings> treeMapSettingsOp,
     IOptions<TreeMapLayoutSettings> layoutSettingsOp,
     IOptions<LegendSettings> legendSettingsOp)
