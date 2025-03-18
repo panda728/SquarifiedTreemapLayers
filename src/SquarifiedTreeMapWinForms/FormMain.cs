@@ -10,7 +10,7 @@ namespace SquarifiedTreeMapWinForms
         readonly Semaphore _semaphore = new(1, 1);
 
         readonly TreeMapGdiDriver<PivotDataSource> _driver;
-        readonly string[] _defaultAggrColumns;
+        readonly string[] _defaultGroupColumns;
         readonly string _defaultWeightColumn;
 
         readonly bool _isInit = true;
@@ -32,7 +32,7 @@ namespace SquarifiedTreeMapWinForms
             _driver.OnMouseMoveAction += treeMapControl1_MouseMove;
             _driver.OnMouseLeaveAction += treeMapControl1_MouseLeave; ;
 
-            _defaultAggrColumns = _driver.LayoutSettings.AggregateColumns;
+            _defaultGroupColumns = _driver.LayoutSettings.GroupColumns;
             _defaultWeightColumn = _driver.LayoutSettings.WeightColumn;
 
             this.checkShow.Checked = _driver.LegendSettings.IsShowLegend;
@@ -42,8 +42,8 @@ namespace SquarifiedTreeMapWinForms
             this.numericLegendFontSize.Value = (decimal)_driver.TreeMapSettings.LegendFontSize;
             this.numericLegendWidth.Value = _driver.LegendSettings.Width;
             this.numericLegendHeight.Value = _driver.LegendSettings.Height;
-            this.numericMinPer.Value = (decimal)(_driver.LegendSettings.MinValue * 100);
-            this.numericMaxPer.Value = (decimal)(_driver.LegendSettings.MaxValue * 100);
+            this.numericMinPer.Value = (decimal)(_driver.LegendSettings.MinPer * 100);
+            this.numericMaxPer.Value = (decimal)(_driver.LegendSettings.MaxPer * 100);
             this.numericMinBri.Value = (decimal)(_driver.LegendSettings.MinBrightness * 100);
             this.numericMaxBri.Value = (decimal)(_driver.LegendSettings.MaxBrightness * 100);
             this.numericSat.Value = (decimal)(_driver.LegendSettings.Saturation * 100);
@@ -53,9 +53,9 @@ namespace SquarifiedTreeMapWinForms
             this.textBoxTitle.Text = _driver.LayoutSettings.TitleText;
             this.textBoxRootName.Text = _driver.LayoutSettings.RootNodeTitle;
 
-            this.listBoxAggrSelected.Items.Clear();
-            this.listBoxAggrSelected.Items.AddRange(_driver.LayoutSettings.AggregateColumns);
-            this.listBoxAggrSelectable.Items.Clear();
+            this.listBoxGroupSelected.Items.Clear();
+            this.listBoxGroupSelected.Items.AddRange(_driver.LayoutSettings.GroupColumns);
+            this.listBoxGroupSelectable.Items.Clear();
             this.treeMapControl1.Visible = false;
             this.panel1.Visible = true;
             _isInit = false;
@@ -90,33 +90,38 @@ namespace SquarifiedTreeMapWinForms
             if (_semaphore.WaitOne(0) == false) return;
             try
             {
-                _driver.LayoutSettings.TitleText = this.textBoxTitle.Text;
+                _driver.LayoutSettings = _driver.LayoutSettings with
+                {
+                    TitleText = this.textBoxTitle.Text,
+                    LayoutAlign = GetLayout(),
+                    IsSourceOrderDec = IsOrderDec(),
+                    MaxDepth = (int)numericDepth.Value,
+                    RootNodeTitle = this.textBoxRootName.Text,
+                    WeightColumn = _defaultWeightColumn,
+                    GroupColumns = GetSelectedColumnNames(),
+                };
 
-                _driver.LayoutSettings.LayoutAlign = GetLayout();
-                _driver.LayoutSettings.IsSourceOrderDec = IsOrderDec();
-                _driver.LayoutSettings.MaxDepth = (int)numericDepth.Value;
-                _driver.LayoutSettings.RootNodeTitle = this.textBoxRootName.Text;
-                _driver.LayoutSettings.WeightColumn = _defaultWeightColumn;
+                _driver.LegendSettings = _driver.LegendSettings with
+                {
+                    MinPer = (double)(this.numericMinPer.Value / 100),
+                    MaxPer = (double)(this.numericMaxPer.Value / 100),
+                    MinBrightness = (double)(this.numericMinBri.Value / 100),
+                    MaxBrightness = (double)(this.numericMaxBri.Value / 100),
+                    Saturation = (double)(this.numericSat.Value / 100),
+                    HuePositive = (int)this.numericHuePositive.Value,
+                    HueNegative = (int)this.numericHueNegative.Value,
+                    IsShowLegend = this.checkShow.Checked,
+                    IsShowPlusSign = this.checkShowPlusSign.Checked,
+                    IsOrderAsc = this.checkLegendOrder.Checked,
+                    StepCount = (int)numericLegendSteps.Value,
+                    Width = (int)numericLegendWidth.Value,
+                    Height = (int)numericLegendHeight.Value,
+                };
 
-                var cols = GetSelectedColumnNames();
-                _driver.LayoutSettings.AggregateColumns =
-                    cols.Length > 0 ? cols : _defaultAggrColumns;
-
-                _driver.LegendSettings.MinValue = (double)(this.numericMinPer.Value / 100);
-                _driver.LegendSettings.MaxValue = (double)(this.numericMaxPer.Value / 100);
-                _driver.LegendSettings.MinBrightness = (double)(this.numericMinBri.Value / 100);
-                _driver.LegendSettings.MaxBrightness = (double)(this.numericMaxBri.Value / 100);
-                _driver.LegendSettings.Saturation = (double)(this.numericSat.Value / 100);
-                _driver.LegendSettings.HuePositive = (int)this.numericHuePositive.Value;
-                _driver.LegendSettings.HueNegative = (int)this.numericHueNegative.Value;
-                _driver.LegendSettings.IsShowLegend = this.checkShow.Checked;
-                _driver.LegendSettings.IsShowPlusSign = this.checkShowPlusSign.Checked;
-                _driver.LegendSettings.IsOrderAsc = this.checkLegendOrder.Checked;
-                _driver.LegendSettings.StepCount = (int)numericLegendSteps.Value;
-                _driver.LegendSettings.Width = (int)numericLegendWidth.Value;
-                _driver.LegendSettings.Height = (int)numericLegendHeight.Value;
-
-                _driver.TreeMapSettings.LegendFontSize = (float)numericLegendFontSize.Value;
+                _driver.TreeMapSettings = _driver.TreeMapSettings with
+                {
+                    LegendFontSize = (float)numericLegendFontSize.Value,
+                };
 
                 _driver.Invalidate(PivotDataSource);
 
@@ -192,11 +197,11 @@ namespace SquarifiedTreeMapWinForms
         string[] GetSelectedColumnNames()
         {
             var list = new List<string>();
-            foreach (object item in listBoxAggrSelected.Items)
+            foreach (object item in listBoxGroupSelected.Items)
             {
                 list.Add($"{item}");
             }
-            return [.. list];
+            return list.Count == 0 ? _defaultGroupColumns : [.. list];
         }
 
         async void numeric_ValueChanged(object sender, EventArgs e) => await RedrawTreemapAsync();
@@ -239,18 +244,18 @@ namespace SquarifiedTreeMapWinForms
             return [.. list];
         }
 
-        async void buttonAggrAdd_Click(object sender, EventArgs e)
+        async void buttonGroupAdd_Click(object sender, EventArgs e)
         {
             try
             {
-                var selectables = GetSelectedItems(listBoxAggrSelectable);
+                var selectables = GetSelectedItems(listBoxGroupSelectable);
                 if (selectables.Length == 0) { return; }
                 foreach (var s in selectables)
                 {
-                    if (listBoxAggrSelected.Items.Contains(s) == false)
+                    if (listBoxGroupSelected.Items.Contains(s) == false)
                     {
-                        listBoxAggrSelected.Items.Add(s);
-                        listBoxAggrSelectable.Items.Remove(s);
+                        listBoxGroupSelected.Items.Add(s);
+                        listBoxGroupSelectable.Items.Remove(s);
                     }
                 }
                 await RedrawTreemapAsync();
@@ -261,19 +266,19 @@ namespace SquarifiedTreeMapWinForms
             }
         }
 
-        async void buttonAggrDelete_Click(object sender, EventArgs e)
+        async void buttonGroupDelete_Click(object sender, EventArgs e)
         {
             try
             {
-                var selectedItems = GetSelectedItems(listBoxAggrSelected);
+                var selectedItems = GetSelectedItems(listBoxGroupSelected);
                 if (selectedItems.Length == 0) { return; }
                 foreach (var item in selectedItems)
                 {
-                    listBoxAggrSelected.Items.Remove(item);
-                    if (!listBoxAggrSelectable.Items.Contains(item))
+                    listBoxGroupSelected.Items.Remove(item);
+                    if (!listBoxGroupSelectable.Items.Contains(item))
                     {
-                        listBoxAggrSelectable.Items.Add(item);
-                        listBoxAggrSelected.Items.Remove(item);
+                        listBoxGroupSelectable.Items.Add(item);
+                        listBoxGroupSelected.Items.Remove(item);
                     }
                 }
                 await RedrawTreemapAsync();
@@ -284,18 +289,18 @@ namespace SquarifiedTreeMapWinForms
             }
         }
 
-        async void buttonAggerUp_Click(object sender, EventArgs e)
+        async void buttonGroupUp_Click(object sender, EventArgs e)
         {
             try
             {
-                if (listBoxAggrSelected.SelectedItem == null || listBoxAggrSelected.SelectedIndex <= 0) return;
+                if (listBoxGroupSelected.SelectedItem == null || listBoxGroupSelected.SelectedIndex <= 0) return;
 
-                int selectedIndex = listBoxAggrSelected.SelectedIndex;
-                var selectedItem = listBoxAggrSelected.SelectedItem;
+                int selectedIndex = listBoxGroupSelected.SelectedIndex;
+                var selectedItem = listBoxGroupSelected.SelectedItem;
 
-                listBoxAggrSelected.Items.RemoveAt(selectedIndex);
-                listBoxAggrSelected.Items.Insert(selectedIndex - 1, selectedItem);
-                listBoxAggrSelected.SelectedIndex = selectedIndex - 1;
+                listBoxGroupSelected.Items.RemoveAt(selectedIndex);
+                listBoxGroupSelected.Items.Insert(selectedIndex - 1, selectedItem);
+                listBoxGroupSelected.SelectedIndex = selectedIndex - 1;
                 await RedrawTreemapAsync();
             }
             catch (Exception ex)
@@ -304,18 +309,18 @@ namespace SquarifiedTreeMapWinForms
             }
         }
 
-        async void buttonAggrDown_Click(object sender, EventArgs e)
+        async void buttonGroupDown_Click(object sender, EventArgs e)
         {
             try
             {
-                if (listBoxAggrSelected.SelectedItem == null || listBoxAggrSelected.SelectedIndex < 0 || listBoxAggrSelected.SelectedIndex >= listBoxAggrSelected.Items.Count - 1) return;
+                if (listBoxGroupSelected.SelectedItem == null || listBoxGroupSelected.SelectedIndex < 0 || listBoxGroupSelected.SelectedIndex >= listBoxGroupSelected.Items.Count - 1) return;
 
-                int selectedIndex = listBoxAggrSelected.SelectedIndex;
-                var selectedItem = listBoxAggrSelected.SelectedItem;
+                int selectedIndex = listBoxGroupSelected.SelectedIndex;
+                var selectedItem = listBoxGroupSelected.SelectedItem;
 
-                listBoxAggrSelected.Items.RemoveAt(selectedIndex);
-                listBoxAggrSelected.Items.Insert(selectedIndex + 1, selectedItem);
-                listBoxAggrSelected.SelectedIndex = selectedIndex + 1;
+                listBoxGroupSelected.Items.RemoveAt(selectedIndex);
+                listBoxGroupSelected.Items.Insert(selectedIndex + 1, selectedItem);
+                listBoxGroupSelected.SelectedIndex = selectedIndex + 1;
                 await RedrawTreemapAsync();
             }
             catch (Exception ex)
@@ -324,12 +329,16 @@ namespace SquarifiedTreeMapWinForms
             }
         }
 
+        readonly JsonSerializerOptions _options = new()
+        {
+            PropertyNameCaseInsensitive = true
+        };
         async Task LoadJsonDataAsync(string filePath)
         {
             try
             {
                 using FileStream openStream = File.OpenRead(filePath);
-                PivotDataSource = await JsonSerializer.DeserializeAsync<List<PivotDataSource>>(openStream) ?? [];
+                PivotDataSource = await JsonSerializer.DeserializeAsync<List<PivotDataSource>>(openStream, _options) ?? [];
                 await RedrawTreemapAsync();
             }
             catch (Exception ex)
@@ -348,7 +357,7 @@ namespace SquarifiedTreeMapWinForms
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 await LoadJsonDataAsync(openFileDialog1.FileName);
-                if(PivotDataSource.Count > 0)
+                if (PivotDataSource.Count > 0)
                 {
                     this.treeMapControl1.Visible = true;
                     this.panel1.Visible = false;

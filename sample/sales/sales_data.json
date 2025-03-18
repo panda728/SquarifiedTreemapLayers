@@ -1,0 +1,7002 @@
+[
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 3545.757027023232,
+    "RelativeWeight": 2906.8035563932326
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 7868.9778199962175,
+    "RelativeWeight": 6608.4748249110235
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 5860.776785844898,
+    "RelativeWeight": 5203.483135338887
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 6561.2521614195475,
+    "RelativeWeight": 5671.126927180405
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 7182.4914164456495,
+    "RelativeWeight": 6699.6233146661125
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 4615.502262678308,
+    "RelativeWeight": 3758.282320240253
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 6241.713072688224,
+    "RelativeWeight": 5019.595635130966
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 7479.227142677032,
+    "RelativeWeight": 6135.620639827458
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 476.05462574069384,
+    "RelativeWeight": 373.14531062732317
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 5639.692231256793,
+    "RelativeWeight": 4586.819665002496
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 8165.0447750705935,
+    "RelativeWeight": 7316.0411756845515
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 1752.5600028637043,
+    "RelativeWeight": 1660.3259139640074
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 8326.815251365731,
+    "RelativeWeight": 6836.429739290608
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 1339.2575666118678,
+    "RelativeWeight": 1197.3365335773292
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 1320.66180791639,
+    "RelativeWeight": 1195.8479586959186
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 1554.628767892081,
+    "RelativeWeight": 1241.9315632809626
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 9304.069058208906,
+    "RelativeWeight": 7626.601174797738
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 7113.938754247681,
+    "RelativeWeight": 6720.945711399995
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 8875.814290582837,
+    "RelativeWeight": 7903.53581985065
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 9806.515573483275,
+    "RelativeWeight": 8248.257384605848
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 7340.151965831381,
+    "RelativeWeight": 6882.945529762643
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 9466.446155433123,
+    "RelativeWeight": 8194.393410515218
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 7835.101285421973,
+    "RelativeWeight": 6963.320356338508
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 3409.5880699039617,
+    "RelativeWeight": 3150.694134287068
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 7568.586621954378,
+    "RelativeWeight": 5782.406925593481
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 4488.402058103849,
+    "RelativeWeight": 3869.4165688766493
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 7760.736434455065,
+    "RelativeWeight": 6876.70760522241
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 10003.654623770219,
+    "RelativeWeight": 8080.772209995013
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 3113.8360639901284,
+    "RelativeWeight": 2651.329303650033
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 9628.629321298971,
+    "RelativeWeight": 7672.610933212779
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 6400.865080976019,
+    "RelativeWeight": 4811.999712768995
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 2723.869671397874,
+    "RelativeWeight": 2331.8737969312474
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 7075.899875403696,
+    "RelativeWeight": 5346.470523291764
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 5765.697739079251,
+    "RelativeWeight": 5152.6325807784115
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 1800.351788510387,
+    "RelativeWeight": 1622.233143911489
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 7511.673525849419,
+    "RelativeWeight": 6672.383640981449
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 6660.023690731488,
+    "RelativeWeight": 5093.9388448321115
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 9988.157262919134,
+    "RelativeWeight": 7993.290299608952
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 1117.922529795886,
+    "RelativeWeight": 933.1669767987644
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 1152.9912511217065,
+    "RelativeWeight": 874.4808271502162
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 8132.02031322215,
+    "RelativeWeight": 6434.287010169917
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 5219.180493677157,
+    "RelativeWeight": 4238.221605562951
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 8572.599293717562,
+    "RelativeWeight": 6847.644219258933
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 4434.017228293926,
+    "RelativeWeight": 4076.948082658539
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 3270.4827764178035,
+    "RelativeWeight": 2754.698995717579
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 954.6071567083613,
+    "RelativeWeight": 768.0917103667114
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 7060.358381084339,
+    "RelativeWeight": 6180.443871297476
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 2192.991749578033,
+    "RelativeWeight": 1780.7374033812364
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 9753.783686861374,
+    "RelativeWeight": 9230.11787296649
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 8746.33172696558,
+    "RelativeWeight": 6742.936828734674
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 7463.6206352556765,
+    "RelativeWeight": 6574.352525434897
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 8032.264864133921,
+    "RelativeWeight": 6995.123212720836
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 1596.3484537267168,
+    "RelativeWeight": 1439.2813267376027
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 658.5769273445285,
+    "RelativeWeight": 520.6819144143756
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 8656.823464607347,
+    "RelativeWeight": 7275.679971586321
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 1463.5309907439885,
+    "RelativeWeight": 1325.0027193560759
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 4187.07264128472,
+    "RelativeWeight": 3729.3119356271304
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 1375.3746796862276,
+    "RelativeWeight": 1105.9293648520222
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 2801.321379949345,
+    "RelativeWeight": 2227.451564796248
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 2792.4604269224706,
+    "RelativeWeight": 2535.584153117669
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 2516.6821754814837,
+    "RelativeWeight": 2055.864457734682
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 5359.558745194942,
+    "RelativeWeight": 4345.399669050108
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 8607.922794055663,
+    "RelativeWeight": 7133.333617206755
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 823.3679847684693,
+    "RelativeWeight": 777.7505204147519
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 1744.2271488577421,
+    "RelativeWeight": 1384.882684686044
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 2206.496103570661,
+    "RelativeWeight": 1933.5349552542154
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 6984.957837339824,
+    "RelativeWeight": 5542.121656456546
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 6850.88794890353,
+    "RelativeWeight": 5614.362543143092
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 2530.825717794772,
+    "RelativeWeight": 2336.3413746653455
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 2033.1493501694774,
+    "RelativeWeight": 1657.516574530362
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 1775.4462331159825,
+    "RelativeWeight": 1662.6381257742717
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 9356.559859830395,
+    "RelativeWeight": 8780.493498263595
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 3227.4847086654454,
+    "RelativeWeight": 2746.3094511507197
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 5062.174519152227,
+    "RelativeWeight": 4079.9367317244773
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 9738.208886544813,
+    "RelativeWeight": 7724.6325274568735
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 9201.647103035115,
+    "RelativeWeight": 7331.420148251227
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 3017.223642487772,
+    "RelativeWeight": 2716.140881384058
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 1700.1360124206299,
+    "RelativeWeight": 1574.3687670472398
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 1446.79456029687,
+    "RelativeWeight": 1118.8352601649556
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 2104.963502069815,
+    "RelativeWeight": 1807.5790853090325
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 983.6791703128466,
+    "RelativeWeight": 748.4704845274949
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 7812.031061012853,
+    "RelativeWeight": 6688.3469923624325
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 6256.849116171398,
+    "RelativeWeight": 5460.3798649497285
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 6117.6973389700115,
+    "RelativeWeight": 4683.093143754507
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 5905.52330671408,
+    "RelativeWeight": 4631.23461298513
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 9447.243614949828,
+    "RelativeWeight": 7568.105628945127
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 2788.234478048205,
+    "RelativeWeight": 2348.7116464971577
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 9825.986546283508,
+    "RelativeWeight": 8475.46157823696
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 2054.1333955723658,
+    "RelativeWeight": 1902.1723171625063
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 7215.860861761942,
+    "RelativeWeight": 6482.270335077786
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 8287.079806525013,
+    "RelativeWeight": 6286.479559013705
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 3290.199411741854,
+    "RelativeWeight": 2904.9579346108903
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 9812.976197304026,
+    "RelativeWeight": 8870.583382386229
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 7508.146676121109,
+    "RelativeWeight": 6150.955200782822
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 852.400316084908,
+    "RelativeWeight": 729.595297374988
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 540.278279354207,
+    "RelativeWeight": 478.748603108357
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 7959.133132422813,
+    "RelativeWeight": 6939.554383978461
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 5425.907879082183,
+    "RelativeWeight": 5129.306064192365
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 1479.4025198638903,
+    "RelativeWeight": 1221.9288333598145
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 9503.816096249238,
+    "RelativeWeight": 8935.248362174972
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 8140.476448060732,
+    "RelativeWeight": 7484.821103782597
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 1590.7786530770295,
+    "RelativeWeight": 1443.947544824229
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 7853.881092247927,
+    "RelativeWeight": 6656.816284232867
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 4746.333959145427,
+    "RelativeWeight": 3675.5502149434233
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 8348.281997774864,
+    "RelativeWeight": 7848.060896587411
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 7210.523368940602,
+    "RelativeWeight": 6053.177519503837
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 9867.203363335533,
+    "RelativeWeight": 8444.352266693659
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 4349.704035031592,
+    "RelativeWeight": 3915.5772438029817
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 9719.082274610751,
+    "RelativeWeight": 8551.895640579953
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 7134.091079039462,
+    "RelativeWeight": 6036.82284872574
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 5059.743768802525,
+    "RelativeWeight": 3876.146301872469
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 9382.659511079706,
+    "RelativeWeight": 8476.274937554559
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 3097.8959732481435,
+    "RelativeWeight": 2694.7325211491475
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 1278.5448101294437,
+    "RelativeWeight": 1092.3048385614122
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 9934.874241028872,
+    "RelativeWeight": 9266.346308597076
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 426.80221834467835,
+    "RelativeWeight": 405.40711401359846
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 5295.82661567233,
+    "RelativeWeight": 4306.644127869934
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 4263.758033512457,
+    "RelativeWeight": 3799.417435034651
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 9299.230628222855,
+    "RelativeWeight": 7625.526761502273
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 1837.6329371792187,
+    "RelativeWeight": 1433.7487329214327
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 7433.301967845053,
+    "RelativeWeight": 5585.8864115821
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 9801.035778295542,
+    "RelativeWeight": 7424.986172820459
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 3600.261910737321,
+    "RelativeWeight": 2794.4354225982643
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 8288.362213800796,
+    "RelativeWeight": 7699.6325217895
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 5271.110639151891,
+    "RelativeWeight": 4962.597979860989
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 4472.614726375831,
+    "RelativeWeight": 4218.017199705525
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 3398.7145355857792,
+    "RelativeWeight": 2976.257718927181
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 5653.909642466768,
+    "RelativeWeight": 4991.204474254687
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 8718.475796793567,
+    "RelativeWeight": 7076.568421807343
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 8380.248494574578,
+    "RelativeWeight": 7698.91792767308
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 7704.365362625603,
+    "RelativeWeight": 6522.533465034445
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 9171.61407042504,
+    "RelativeWeight": 8006.4444321893325
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 8214.232273186466,
+    "RelativeWeight": 6565.178858318334
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 7869.453950073557,
+    "RelativeWeight": 6071.065918951771
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 1278.028939691833,
+    "RelativeWeight": 1094.9669633628966
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 4521.2963400733815,
+    "RelativeWeight": 4028.877632344438
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 9716.351316006272,
+    "RelativeWeight": 8159.902228759448
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 5221.347760747037,
+    "RelativeWeight": 4647.059373551397
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 7121.326682474781,
+    "RelativeWeight": 6305.207689415225
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 9167.315849843073,
+    "RelativeWeight": 8286.855383853777
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 3480.256974953968,
+    "RelativeWeight": 2925.8174222382177
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 5808.982107152357,
+    "RelativeWeight": 4687.089499622838
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 175.35797326853498,
+    "RelativeWeight": 135.6935785671031
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 8280.72245306951,
+    "RelativeWeight": 6260.973821730744
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 4474.202682602297,
+    "RelativeWeight": 3815.668828938009
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 3313.395245455568,
+    "RelativeWeight": 2591.7943466470297
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 886.967171417241,
+    "RelativeWeight": 807.8658198021257
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 7526.53755853116,
+    "RelativeWeight": 5831.22538990313
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 2517.672087076217,
+    "RelativeWeight": 1939.7726540829628
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 5882.539826999659,
+    "RelativeWeight": 4895.3904168417575
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 6689.902455941543,
+    "RelativeWeight": 6106.476119084806
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 7475.836521856329,
+    "RelativeWeight": 6438.521942341222
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 3255.597107262609,
+    "RelativeWeight": 3038.214709525796
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 3693.5416499597363,
+    "RelativeWeight": 3458.2167290809284
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 8852.235404282312,
+    "RelativeWeight": 7616.233335723953
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 5397.063009149457,
+    "RelativeWeight": 5106.339347428135
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 887.5746725406685,
+    "RelativeWeight": 732.1343648693336
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 5990.214875801889,
+    "RelativeWeight": 4655.563579238062
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 570.5000072236998,
+    "RelativeWeight": 516.4398257250264
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 8995.268530168125,
+    "RelativeWeight": 8394.398421251544
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 1314.0206136413533,
+    "RelativeWeight": 1146.7296157013864
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 9036.265842424391,
+    "RelativeWeight": 7729.785592312319
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 6114.874327587363,
+    "RelativeWeight": 4599.978417072957
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 7286.210787705648,
+    "RelativeWeight": 6173.274794316348
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 6941.804103391494,
+    "RelativeWeight": 6093.46181618426
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 8991.986040724305,
+    "RelativeWeight": 7820.783548223315
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 7182.777043985855,
+    "RelativeWeight": 5785.836625933006
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 5603.911719148425,
+    "RelativeWeight": 4334.428409567877
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 8985.787494032464,
+    "RelativeWeight": 8010.446706279941
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 7984.142453781488,
+    "RelativeWeight": 6311.421380088834
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 3924.2273930258552,
+    "RelativeWeight": 3551.2188670821292
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 394.6049184177912,
+    "RelativeWeight": 351.4569856877391
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 9987.590736550785,
+    "RelativeWeight": 8622.573562860895
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 805.8436344868113,
+    "RelativeWeight": 708.032330062752
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 8235.881723177157,
+    "RelativeWeight": 6720.350359375711
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 4027.90108710345,
+    "RelativeWeight": 3472.8285110599377
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 6192.283019152498,
+    "RelativeWeight": 5041.0825096151475
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 4945.0617753703,
+    "RelativeWeight": 4445.636092263252
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 9411.997837450373,
+    "RelativeWeight": 7756.6002511741835
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 5792.51011832466,
+    "RelativeWeight": 4716.8212350034355
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 8186.541110725485,
+    "RelativeWeight": 6882.154933446362
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 4665.412324523564,
+    "RelativeWeight": 4202.698902886429
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 5920.2940544835965,
+    "RelativeWeight": 4488.608924301331
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 434.2543063080883,
+    "RelativeWeight": 356.3625699189985
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 9344.135090137304,
+    "RelativeWeight": 7456.3802467987
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 1236.1073462646575,
+    "RelativeWeight": 1057.0533501985194
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 7483.935135832889,
+    "RelativeWeight": 6242.9729000620455
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 9536.192662770718,
+    "RelativeWeight": 8185.656559304484
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 2634.1261955880814,
+    "RelativeWeight": 2404.356326483628
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 8838.715650094076,
+    "RelativeWeight": 8087.754615572851
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 346.5306233420472,
+    "RelativeWeight": 278.62487576696986
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 3911.483001301852,
+    "RelativeWeight": 3632.6469514626842
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 3369.1786620902476,
+    "RelativeWeight": 2885.2531305088587
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 248.07275729547652,
+    "RelativeWeight": 220.6964835788304
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 7744.501161974013,
+    "RelativeWeight": 7286.193705249039
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 5403.16686593153,
+    "RelativeWeight": 4195.293218756448
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 6659.221603608895,
+    "RelativeWeight": 6288.163789797447
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 676.0644839838625,
+    "RelativeWeight": 613.8723237953536
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 3683.22357471576,
+    "RelativeWeight": 3198.8933740968355
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 542.3847134957005,
+    "RelativeWeight": 507.82988601843346
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 8885.552902944712,
+    "RelativeWeight": 6940.94475161583
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 7167.476028897092,
+    "RelativeWeight": 6806.074948678522
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 7335.965655354356,
+    "RelativeWeight": 6146.841716321771
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 5645.664610333767,
+    "RelativeWeight": 4823.5083227281375
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 5950.826419717443,
+    "RelativeWeight": 5604.126929578131
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 4866.908966034884,
+    "RelativeWeight": 4241.306300638008
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 4817.342270097558,
+    "RelativeWeight": 3969.2720630979934
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 7394.461829434148,
+    "RelativeWeight": 5955.402754742959
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 4543.328570542559,
+    "RelativeWeight": 4109.947018728572
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 5368.344328755452,
+    "RelativeWeight": 4179.925535967324
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 6190.3278698983495,
+    "RelativeWeight": 4805.548094771448
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 4155.666875429348,
+    "RelativeWeight": 3909.8829556355936
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 8939.944310908802,
+    "RelativeWeight": 8376.907319200911
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 2606.202348436193,
+    "RelativeWeight": 2054.955312547257
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 8984.474777934536,
+    "RelativeWeight": 7434.375145350575
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 8201.81943191357,
+    "RelativeWeight": 6663.1485519141
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 396.7789411448063,
+    "RelativeWeight": 321.8123379380169
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 6587.937663440828,
+    "RelativeWeight": 6157.495923839256
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 5112.020255313948,
+    "RelativeWeight": 4259.7876443716195
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 7904.64647537935,
+    "RelativeWeight": 7123.042445316252
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 4287.113692385901,
+    "RelativeWeight": 3728.1406625452796
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 8253.820285467413,
+    "RelativeWeight": 7215.653611977235
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 5474.109925118724,
+    "RelativeWeight": 4672.6141101352305
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 3997.106449105561,
+    "RelativeWeight": 3792.7717867057677
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 1083.3084990818443,
+    "RelativeWeight": 889.7786342996848
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 3258.5073126549237,
+    "RelativeWeight": 2781.364190317999
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 301.0144856627316,
+    "RelativeWeight": 262.6654167717583
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 6500.547078219633,
+    "RelativeWeight": 5899.341625306812
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 3647.2705914464655,
+    "RelativeWeight": 3434.777658597005
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 6807.935218366246,
+    "RelativeWeight": 6111.863714651255
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 3037.8885969592548,
+    "RelativeWeight": 2845.2982463574476
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 7476.041024400563,
+    "RelativeWeight": 6554.794890791058
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 426.4862670377455,
+    "RelativeWeight": 392.0604327589489
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 9216.40866399664,
+    "RelativeWeight": 7088.458498283572
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 6601.673894729487,
+    "RelativeWeight": 5915.3969936019075
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 7657.266990141269,
+    "RelativeWeight": 5746.698242669452
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 6918.306657546234,
+    "RelativeWeight": 5478.834450383522
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 4943.306544674575,
+    "RelativeWeight": 3755.607589887886
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 7217.794349071047,
+    "RelativeWeight": 6120.234334250695
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 5444.153119635975,
+    "RelativeWeight": 4231.360917068502
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 6643.60431625352,
+    "RelativeWeight": 5724.259718308051
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 764.1026680223328,
+    "RelativeWeight": 625.7485376054115
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 5531.20141173273,
+    "RelativeWeight": 4189.333721381181
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 3666.0214783944643,
+    "RelativeWeight": 3154.500727397088
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 4869.052103251047,
+    "RelativeWeight": 4520.317402772298
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 608.1545369847662,
+    "RelativeWeight": 571.1969939151792
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 2559.8752503333976,
+    "RelativeWeight": 2021.493783378866
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 3937.8908510745478,
+    "RelativeWeight": 3727.8980422942063
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 7370.227725483155,
+    "RelativeWeight": 6938.723166324895
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 5234.246413229815,
+    "RelativeWeight": 4606.570641069422
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 1986.0386968596033,
+    "RelativeWeight": 1540.7811664744513
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 7154.205339412434,
+    "RelativeWeight": 5987.806042337281
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 9410.920426262404,
+    "RelativeWeight": 7075.070002583032
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 5298.703728848941,
+    "RelativeWeight": 4194.633571809362
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 8349.128460468835,
+    "RelativeWeight": 7821.2990250191815
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 4979.319567652389,
+    "RelativeWeight": 4195.954555856639
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 3930.040064943011,
+    "RelativeWeight": 3342.858068635688
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 9182.971438665112,
+    "RelativeWeight": 6968.230982029225
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 1618.6901470715463,
+    "RelativeWeight": 1280.605340522096
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 5453.4397544696585,
+    "RelativeWeight": 4882.342002322854
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 2664.4256596831174,
+    "RelativeWeight": 2524.8144753023507
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 2126.601213885919,
+    "RelativeWeight": 1887.6073392683402
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 473.21957266859164,
+    "RelativeWeight": 383.2825504276193
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 3598.2211628189807,
+    "RelativeWeight": 2715.9765017195305
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 4995.681112735395,
+    "RelativeWeight": 4193.1860739704925
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 1902.698103697521,
+    "RelativeWeight": 1653.5350227231836
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 1776.4726575213895,
+    "RelativeWeight": 1577.447218170659
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 9339.208984178857,
+    "RelativeWeight": 8044.7053411844945
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 8258.878866755385,
+    "RelativeWeight": 7515.287284657714
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 8948.617618906113,
+    "RelativeWeight": 7680.108299564447
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 6998.608522794823,
+    "RelativeWeight": 6052.707685888718
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 2494.03593864947,
+    "RelativeWeight": 2299.2836007205133
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 8989.172870002116,
+    "RelativeWeight": 7971.701645801585
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 4787.293335392052,
+    "RelativeWeight": 3821.928427337497
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 1845.4545887802497,
+    "RelativeWeight": 1645.7593191558278
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 7434.442754439283,
+    "RelativeWeight": 5986.972517717742
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 1555.2600313015519,
+    "RelativeWeight": 1467.5056181885411
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 8582.11461925264,
+    "RelativeWeight": 7138.805108277208
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 7012.391484920405,
+    "RelativeWeight": 5424.3071807658325
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 4613.654169996656,
+    "RelativeWeight": 4006.608312676642
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 9327.59496678272,
+    "RelativeWeight": 7382.827823271695
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 8142.520365703773,
+    "RelativeWeight": 6325.726022742418
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 3143.5103349860815,
+    "RelativeWeight": 2732.9946481833017
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 7075.419901973308,
+    "RelativeWeight": 5496.910856654936
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 1625.3751537537264,
+    "RelativeWeight": 1498.8681280548726
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 8756.79881686309,
+    "RelativeWeight": 6732.769154893201
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 5346.2045591219585,
+    "RelativeWeight": 4197.394123054129
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 9326.658757197933,
+    "RelativeWeight": 8344.833403833032
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 2168.4458549802143,
+    "RelativeWeight": 1723.540157276959
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 2436.086791698159,
+    "RelativeWeight": 2052.8698033226174
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 3578.3767618421,
+    "RelativeWeight": 2938.4512079137357
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 6802.397077756559,
+    "RelativeWeight": 5907.3215276530855
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 6618.636113645335,
+    "RelativeWeight": 5031.133880069267
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 8084.241677450779,
+    "RelativeWeight": 7343.477340901911
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 3253.3633234473036,
+    "RelativeWeight": 2625.915667853816
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 3802.3639400671273,
+    "RelativeWeight": 3120.6658101694547
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 5313.791953410708,
+    "RelativeWeight": 4216.820211953237
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 9063.234308400966,
+    "RelativeWeight": 8112.546819314397
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 4002.851173455749,
+    "RelativeWeight": 3563.580114673185
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 6988.5328496167795,
+    "RelativeWeight": 5404.681976475219
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 2958.490487987404,
+    "RelativeWeight": 2577.978238122135
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 2836.218986137815,
+    "RelativeWeight": 2335.449309754795
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 3500.0834073425735,
+    "RelativeWeight": 2877.88824336573
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 2363.710868252492,
+    "RelativeWeight": 2105.2765007823223
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 3817.8911853795903,
+    "RelativeWeight": 3218.9742794962767
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 3798.8124880224505,
+    "RelativeWeight": 2876.3588195502984
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 3618.335186295266,
+    "RelativeWeight": 3172.9182222470895
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 987.0044104036567,
+    "RelativeWeight": 769.2437250801011
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 275.27594427465317,
+    "RelativeWeight": 251.34366296021
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 7197.5697476171,
+    "RelativeWeight": 5544.865947059723
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 1419.0130353262264,
+    "RelativeWeight": 1301.7351276976983
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 5824.960345653587,
+    "RelativeWeight": 5110.129949301532
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 2821.6827800858946,
+    "RelativeWeight": 2274.6941027518483
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 9719.355113413598,
+    "RelativeWeight": 8438.997417054365
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 5431.508805327242,
+    "RelativeWeight": 4507.078704529315
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 3548.1156429685566,
+    "RelativeWeight": 2990.046770626074
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 5292.258515021521,
+    "RelativeWeight": 4913.660417381995
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 226.5196305753302,
+    "RelativeWeight": 203.29493689390472
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 421.5174770728058,
+    "RelativeWeight": 330.83304590382176
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 6688.728481722953,
+    "RelativeWeight": 5463.735799595678
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 9994.309823867785,
+    "RelativeWeight": 8412.132351649134
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 7841.486119368896,
+    "RelativeWeight": 6473.992253772639
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 4505.806756008194,
+    "RelativeWeight": 3413.1373187877402
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 8877.017810254847,
+    "RelativeWeight": 7667.405923144775
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 4597.297591000742,
+    "RelativeWeight": 3575.892540588181
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 8019.644780435097,
+    "RelativeWeight": 6813.935530516925
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 1987.360020444051,
+    "RelativeWeight": 1851.8819718574027
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 6833.564853522389,
+    "RelativeWeight": 5268.175298949934
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 6605.081644739862,
+    "RelativeWeight": 4991.686750533659
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 4751.983788926609,
+    "RelativeWeight": 3606.165893885897
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 8576.505121896798,
+    "RelativeWeight": 7247.461271094669
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 3643.6050820433798,
+    "RelativeWeight": 2751.0622755937625
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 2746.2191396877333,
+    "RelativeWeight": 2090.1683455931197
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 3192.852351032035,
+    "RelativeWeight": 2459.104947399468
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 2439.780764246756,
+    "RelativeWeight": 2009.1459572364636
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 8023.776354003276,
+    "RelativeWeight": 6051.077987172144
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 8064.061794316928,
+    "RelativeWeight": 7578.333289408646
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 8580.296004602784,
+    "RelativeWeight": 7232.147897015803
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 1224.9157335147263,
+    "RelativeWeight": 1046.7879235719158
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 3659.4509931442385,
+    "RelativeWeight": 3092.7752903916653
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 7158.910567869927,
+    "RelativeWeight": 5986.187006062934
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 4449.946197218552,
+    "RelativeWeight": 3427.1664039266157
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 7347.836326017837,
+    "RelativeWeight": 6700.125520287467
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 951.3888612683918,
+    "RelativeWeight": 720.8754780442539
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 8108.37194024706,
+    "RelativeWeight": 6329.897813442991
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 3022.359074987395,
+    "RelativeWeight": 2709.2628537598303
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 2885.298162396699,
+    "RelativeWeight": 2671.2713865671476
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 1787.5467245271302,
+    "RelativeWeight": 1349.309622977587
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 1660.9234691929207,
+    "RelativeWeight": 1481.6520264716728
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 6907.051626222524,
+    "RelativeWeight": 5702.057524164821
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 1379.8442276073686,
+    "RelativeWeight": 1310.3175007834352
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 9978.399495188143,
+    "RelativeWeight": 9235.654270041945
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 6123.983937365326,
+    "RelativeWeight": 5798.337330942255
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 9376.839068019175,
+    "RelativeWeight": 7809.30834210752
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 8972.641286850878,
+    "RelativeWeight": 6965.107192858462
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 6411.686911748301,
+    "RelativeWeight": 4982.800287113481
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 6002.631556015118,
+    "RelativeWeight": 4506.452637706369
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 7126.94771391027,
+    "RelativeWeight": 6030.059451229907
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 5084.439453032844,
+    "RelativeWeight": 4644.935603103607
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 1387.3809651348145,
+    "RelativeWeight": 1279.9848175741179
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 1423.9980213713575,
+    "RelativeWeight": 1139.9229248338056
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 5909.509893795825,
+    "RelativeWeight": 5477.551063779637
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 8156.400937992245,
+    "RelativeWeight": 6678.913605341662
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 971.5797578959972,
+    "RelativeWeight": 900.5633037795855
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 6607.0266824730925,
+    "RelativeWeight": 6218.154795697229
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 8875.271767584989,
+    "RelativeWeight": 7960.980596267117
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 4424.972663333289,
+    "RelativeWeight": 4103.557188260008
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 7859.243410270165,
+    "RelativeWeight": 6998.455715628052
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 4879.202028329877,
+    "RelativeWeight": 3825.881932155605
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 9707.7754161076,
+    "RelativeWeight": 7458.2836362421185
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 3642.934390186665,
+    "RelativeWeight": 3413.5356663686503
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 3520.913746115141,
+    "RelativeWeight": 2734.5966591104166
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 7236.244368629076,
+    "RelativeWeight": 6163.879409812867
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 3814.4472409485697,
+    "RelativeWeight": 3252.0928227272343
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 6142.913543096793,
+    "RelativeWeight": 5431.311229798406
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 6793.515944695231,
+    "RelativeWeight": 6076.246926521573
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 9571.253915885902,
+    "RelativeWeight": 7725.296663295785
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 4658.716149501579,
+    "RelativeWeight": 3621.226610936235
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 3032.316139508595,
+    "RelativeWeight": 2863.760387168264
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 5022.151271855499,
+    "RelativeWeight": 4400.554673822456
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 286.83580936238565,
+    "RelativeWeight": 250.50758537407654
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 6114.460733935723,
+    "RelativeWeight": 5170.541573482816
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 2574.4174426069344,
+    "RelativeWeight": 2075.5383498637507
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 8511.13201228894,
+    "RelativeWeight": 6857.917170635517
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 1976.1833559929453,
+    "RelativeWeight": 1649.0052506827647
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 7434.300722993637,
+    "RelativeWeight": 6974.7783201879865
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 5294.141793691632,
+    "RelativeWeight": 4098.717020132615
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 8300.019011341341,
+    "RelativeWeight": 6522.2585619218535
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 9579.47416394018,
+    "RelativeWeight": 8423.901930205604
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 5149.42380234262,
+    "RelativeWeight": 4250.591433228449
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 1196.5680352210295,
+    "RelativeWeight": 1031.4619781877718
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 2827.264118025121,
+    "RelativeWeight": 2340.359055422502
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 1766.5701825435674,
+    "RelativeWeight": 1414.1299859775736
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 7929.958320436381,
+    "RelativeWeight": 5954.293460016172
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 7273.845211558737,
+    "RelativeWeight": 6378.043218849325
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 6003.23112190746,
+    "RelativeWeight": 4768.83525812828
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 5462.061138081941,
+    "RelativeWeight": 4281.1660729899795
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 1027.738565621673,
+    "RelativeWeight": 786.909809279296
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 2194.5604227476656,
+    "RelativeWeight": 1980.3663639389745
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 7610.361967734965,
+    "RelativeWeight": 7227.952960002339
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 7974.998269082747,
+    "RelativeWeight": 6759.089911206273
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 9171.375697669218,
+    "RelativeWeight": 7073.283975057324
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 2545.4004567552934,
+    "RelativeWeight": 2123.9438023748726
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 2739.496309327727,
+    "RelativeWeight": 2546.561071994594
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 4620.25808418988,
+    "RelativeWeight": 3647.9596351003406
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 1050.4652862877806,
+    "RelativeWeight": 814.6623709339476
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 7663.375915204277,
+    "RelativeWeight": 7182.407904511097
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 6685.439187822255,
+    "RelativeWeight": 5798.3326860099505
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 8152.548395924332,
+    "RelativeWeight": 6980.90953473081
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 3818.276962248431,
+    "RelativeWeight": 3538.338460114752
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 6626.259806633805,
+    "RelativeWeight": 5366.0089938461915
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 965.4865823841207,
+    "RelativeWeight": 740.4376402750345
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 4627.94925973786,
+    "RelativeWeight": 4129.8765982641635
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 4239.760108605526,
+    "RelativeWeight": 3797.4563854280614
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 2595.759290319446,
+    "RelativeWeight": 2407.4983592986778
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 5230.572111957749,
+    "RelativeWeight": 4869.414469876648
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 1824.364385363102,
+    "RelativeWeight": 1638.9474478139475
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 8937.510298496518,
+    "RelativeWeight": 6787.776132983265
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 226.50076895276752,
+    "RelativeWeight": 180.41633323829726
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 1380.8890100811866,
+    "RelativeWeight": 1233.1272940554832
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 8382.519170249447,
+    "RelativeWeight": 7315.405072977745
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 5610.53771675696,
+    "RelativeWeight": 4269.281678482464
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 6500.467000186842,
+    "RelativeWeight": 5982.470699551202
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 4778.978837537436,
+    "RelativeWeight": 4104.656653000288
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 2244.820194807573,
+    "RelativeWeight": 2067.1501828541086
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 5060.734215209468,
+    "RelativeWeight": 4515.6608004571335
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 5619.261918123445,
+    "RelativeWeight": 5112.221421610185
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 5445.629318781664,
+    "RelativeWeight": 4723.854776348771
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 6117.6241649070835,
+    "RelativeWeight": 4792.761132269547
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 8683.755731845922,
+    "RelativeWeight": 7304.1562623359
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 833.8132966918531,
+    "RelativeWeight": 750.7719268349665
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 1104.3265152034965,
+    "RelativeWeight": 1022.6222130601703
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 997.6041478048003,
+    "RelativeWeight": 793.5906558451744
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 3459.643878111971,
+    "RelativeWeight": 2874.900141011402
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 2873.9598829679426,
+    "RelativeWeight": 2458.783330968236
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 1878.705142534538,
+    "RelativeWeight": 1637.260505495563
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 4348.310752774548,
+    "RelativeWeight": 3628.9935102007594
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 6427.5568149379105,
+    "RelativeWeight": 5199.152313473711
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 9130.437729240657,
+    "RelativeWeight": 8331.780000786666
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 2442.8146857316033,
+    "RelativeWeight": 2208.4052554043033
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 7266.838680783153,
+    "RelativeWeight": 6351.666854716888
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 1091.1271166548486,
+    "RelativeWeight": 820.847721147624
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 526.9414030523233,
+    "RelativeWeight": 469.54956649605214
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 1464.513421790594,
+    "RelativeWeight": 1169.7925504213908
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 3288.541840569983,
+    "RelativeWeight": 2597.440508374985
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 8844.48291620716,
+    "RelativeWeight": 7414.367547639774
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 2543.5685600569323,
+    "RelativeWeight": 2188.750757365068
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 7606.913546270446,
+    "RelativeWeight": 6299.321288344331
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 653.6386075043009,
+    "RelativeWeight": 561.0519935977112
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 2240.01111264868,
+    "RelativeWeight": 1842.5456458262206
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 3341.2705589941024,
+    "RelativeWeight": 2712.2440334152047
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 4244.7511123336535,
+    "RelativeWeight": 3980.5589816308734
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 3854.4995264521463,
+    "RelativeWeight": 3130.954748861903
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 8696.88822943761,
+    "RelativeWeight": 7156.073420711882
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 7832.32575576325,
+    "RelativeWeight": 6766.833461299937
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 8185.759337003434,
+    "RelativeWeight": 7436.761599391269
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 9144.513209074876,
+    "RelativeWeight": 6982.447287670859
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 6970.809353112143,
+    "RelativeWeight": 6518.361735901548
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 7291.1934675692255,
+    "RelativeWeight": 6187.696015455965
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 5892.513202898744,
+    "RelativeWeight": 5039.792549731675
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 4737.749022054174,
+    "RelativeWeight": 3739.1946944588244
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 8338.933301966756,
+    "RelativeWeight": 6486.51369332418
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 8909.760637805966,
+    "RelativeWeight": 8325.078738963202
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 1384.5697648357834,
+    "RelativeWeight": 1191.9242399693721
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 1485.8190628412415,
+    "RelativeWeight": 1311.3964553558953
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 2538.294620471545,
+    "RelativeWeight": 2248.083512394452
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 295.17485892056817,
+    "RelativeWeight": 223.77624714685888
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 962.2553102098807,
+    "RelativeWeight": 735.0932397046187
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 9520.405908422448,
+    "RelativeWeight": 8726.009729444115
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 2936.733511066205,
+    "RelativeWeight": 2384.0648540152133
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 1109.4316464038743,
+    "RelativeWeight": 849.1804547407169
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 6688.291636207687,
+    "RelativeWeight": 5099.206832215112
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 6800.589852369211,
+    "RelativeWeight": 5307.0886358786
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 1753.2123646789244,
+    "RelativeWeight": 1402.7968258852795
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 6004.788043326265,
+    "RelativeWeight": 4910.535322742384
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 6947.955093607896,
+    "RelativeWeight": 5872.806321150624
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 6356.905449524706,
+    "RelativeWeight": 5571.676675275873
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 1604.1722459398388,
+    "RelativeWeight": 1346.7493992989753
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 1192.789840892,
+    "RelativeWeight": 978.4041199651621
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 7942.2060521900885,
+    "RelativeWeight": 7265.887923614538
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 7718.089315627611,
+    "RelativeWeight": 6302.2329672550795
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 9219.79277113224,
+    "RelativeWeight": 7479.783546776763
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 1848.9779365359425,
+    "RelativeWeight": 1559.8435590865308
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 1948.7270417278069,
+    "RelativeWeight": 1815.8468818184672
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 4852.109689524617,
+    "RelativeWeight": 4101.432918737879
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 5822.124718380937,
+    "RelativeWeight": 5417.58555290203
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 8279.174289045519,
+    "RelativeWeight": 7573.152836430159
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 1802.0016696094776,
+    "RelativeWeight": 1394.7447913847282
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 5507.101249184376,
+    "RelativeWeight": 4606.87246388479
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 5185.181408506799,
+    "RelativeWeight": 4722.791132441588
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 9616.67993240606,
+    "RelativeWeight": 9090.525950959405
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 8241.845102530446,
+    "RelativeWeight": 6557.081809188039
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 6569.371472266322,
+    "RelativeWeight": 5353.338606455137
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 4432.832430648653,
+    "RelativeWeight": 3915.910612815172
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 2682.86964869041,
+    "RelativeWeight": 2423.9963499293967
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 8165.363248245604,
+    "RelativeWeight": 7198.146311509614
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 2983.311996551735,
+    "RelativeWeight": 2296.1643426717274
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 670.1267686869716,
+    "RelativeWeight": 596.6073021844012
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 4731.752017450589,
+    "RelativeWeight": 4198.388735256212
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 8509.988517247362,
+    "RelativeWeight": 7901.095462075931
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 7190.412016081671,
+    "RelativeWeight": 6165.926801530693
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 9855.264500605414,
+    "RelativeWeight": 8419.877929905873
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 9706.7774644273,
+    "RelativeWeight": 8844.032987284372
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 5711.397087660269,
+    "RelativeWeight": 5269.929516825122
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 8911.5449262461,
+    "RelativeWeight": 6706.905374744585
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 2619.432453553365,
+    "RelativeWeight": 2259.7094688459315
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 10050.110149456266,
+    "RelativeWeight": 9425.834654928807
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 9871.688889761253,
+    "RelativeWeight": 7447.1765024481065
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 4653.735845788971,
+    "RelativeWeight": 3545.434472271832
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 3897.2686726233082,
+    "RelativeWeight": 3382.6779679533465
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 4517.523276853731,
+    "RelativeWeight": 3690.4901362981323
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 6478.440617848999,
+    "RelativeWeight": 5103.580638635353
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 5939.7295383643395,
+    "RelativeWeight": 5403.339822596369
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 1469.0247390374466,
+    "RelativeWeight": 1190.669050813897
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 3373.83122831014,
+    "RelativeWeight": 2597.480908435105
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 3461.535421197509,
+    "RelativeWeight": 3265.3445650046237
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 8484.681995526786,
+    "RelativeWeight": 7270.817326885096
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 1781.2443706026359,
+    "RelativeWeight": 1541.1840160031406
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 1703.0449624265764,
+    "RelativeWeight": 1540.13049117646
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 5522.860775780417,
+    "RelativeWeight": 5073.232062001844
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 2410.699879979867,
+    "RelativeWeight": 2170.9418152333874
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 1331.947115351496,
+    "RelativeWeight": 1153.687178244164
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 3057.6775477006645,
+    "RelativeWeight": 2498.5078251457494
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 8743.76986020279,
+    "RelativeWeight": 7333.943877038737
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 3000.5026047665415,
+    "RelativeWeight": 2533.6408114047263
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 9155.281406273873,
+    "RelativeWeight": 8686.214251284535
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 641.8119271406885,
+    "RelativeWeight": 599.2698543706234
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 8268.007427248485,
+    "RelativeWeight": 7517.490316905566
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 8695.783695027365,
+    "RelativeWeight": 7912.857140850992
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 10046.954272932198,
+    "RelativeWeight": 9326.055652716377
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 4136.84300448485,
+    "RelativeWeight": 3484.423600522675
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 2585.778877274103,
+    "RelativeWeight": 2448.3619113664204
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 6274.995192571789,
+    "RelativeWeight": 5867.948119011649
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 6280.7097893462205,
+    "RelativeWeight": 5387.804929859852
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 1220.7100906525945,
+    "RelativeWeight": 1110.5913986791977
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 9473.076328268895,
+    "RelativeWeight": 8595.957496791241
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 7680.329650079727,
+    "RelativeWeight": 6547.766459915228
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 7603.307904649901,
+    "RelativeWeight": 6155.233579867781
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 8842.604386704996,
+    "RelativeWeight": 6764.255548746347
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 3909.07968849577,
+    "RelativeWeight": 3160.9167637094033
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 6698.147251293509,
+    "RelativeWeight": 5479.674786048419
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 6942.698994912509,
+    "RelativeWeight": 6165.920634332478
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 6246.249840919253,
+    "RelativeWeight": 5003.704956595401
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 5914.831283908203,
+    "RelativeWeight": 5114.781813361433
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 1469.5075760713637,
+    "RelativeWeight": 1274.8638640932684
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 8134.802495170138,
+    "RelativeWeight": 6358.451217700239
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 2047.5984340671903,
+    "RelativeWeight": 1588.3805583992503
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 7994.653281119119,
+    "RelativeWeight": 6586.821897630153
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 1857.3975028193302,
+    "RelativeWeight": 1746.5871055859568
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 3389.4223776131494,
+    "RelativeWeight": 3006.9817833775046
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 3314.431091103077,
+    "RelativeWeight": 2858.9393446024774
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 8634.4852602536,
+    "RelativeWeight": 7936.314028598668
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 6786.690637549735,
+    "RelativeWeight": 5966.935422034779
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 7296.503127677388,
+    "RelativeWeight": 5571.635256038693
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 6235.264593484851,
+    "RelativeWeight": 5437.284573374264
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 8590.834815703935,
+    "RelativeWeight": 8160.746018728531
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 674.6936334521569,
+    "RelativeWeight": 573.7129770585035
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 4179.269198681419,
+    "RelativeWeight": 3753.818276206046
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 9205.33833253185,
+    "RelativeWeight": 7038.380794148126
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 232.03730553626113,
+    "RelativeWeight": 178.44999986542004
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 4061.0622006760022,
+    "RelativeWeight": 3484.9018040985306
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 1155.8072327937696,
+    "RelativeWeight": 892.8705165866174
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 2770.433435564357,
+    "RelativeWeight": 2425.653439633764
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 1607.1308458040332,
+    "RelativeWeight": 1297.3316560800401
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 819.9662382959004,
+    "RelativeWeight": 714.1033396298794
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 6391.410200311254,
+    "RelativeWeight": 5607.247622147056
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 2245.1417463945654,
+    "RelativeWeight": 1968.894358318077
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 6805.694115294295,
+    "RelativeWeight": 5288.438763020067
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 5456.133173722232,
+    "RelativeWeight": 4197.870918933435
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 6247.403044019453,
+    "RelativeWeight": 5485.500830394186
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 833.0643275234028,
+    "RelativeWeight": 657.9025407124232
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 8108.94301326548,
+    "RelativeWeight": 6558.115495403764
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 1795.538908161599,
+    "RelativeWeight": 1398.1115752791732
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 4894.47896873466,
+    "RelativeWeight": 3680.6286996518475
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 7501.0802387471795,
+    "RelativeWeight": 6975.889086034027
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 6863.027655078099,
+    "RelativeWeight": 6476.422467604579
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 6366.672844246176,
+    "RelativeWeight": 4848.82500206015
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 5638.572202107094,
+    "RelativeWeight": 4446.3987320823935
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 5420.343869341074,
+    "RelativeWeight": 4154.289397163643
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 265.80312183204217,
+    "RelativeWeight": 239.27227777892674
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 4067.3980088616877,
+    "RelativeWeight": 3817.3562444619724
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 3064.4268233518546,
+    "RelativeWeight": 2375.8760293204523
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 9455.81678085611,
+    "RelativeWeight": 8503.677170000334
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 8076.518384691886,
+    "RelativeWeight": 6429.150897034178
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 8754.333785704643,
+    "RelativeWeight": 7030.624375124221
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 2702.236933615345,
+    "RelativeWeight": 2093.1032616742623
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 8816.71285842065,
+    "RelativeWeight": 7895.5398005283105
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 9293.052641763581,
+    "RelativeWeight": 7852.660110089202
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 6383.786549875014,
+    "RelativeWeight": 5056.194855903338
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 5880.633353441062,
+    "RelativeWeight": 5307.397766853267
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 1500.0017115994367,
+    "RelativeWeight": 1253.2738200815177
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 10091.968291152476,
+    "RelativeWeight": 8994.293126730277
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 2962.6869505073505,
+    "RelativeWeight": 2366.464460996897
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 4063.1617308492073,
+    "RelativeWeight": 3472.0529589765465
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 3712.6405308169574,
+    "RelativeWeight": 2862.184729882502
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 7892.608368841637,
+    "RelativeWeight": 7141.252429425995
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 1988.9518924678305,
+    "RelativeWeight": 1741.766852528521
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 3937.9161013770936,
+    "RelativeWeight": 3188.65046448891
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 5028.748073136097,
+    "RelativeWeight": 4324.618910860394
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 502.7781539435615,
+    "RelativeWeight": 454.68714858637287
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 2051.2456395674417,
+    "RelativeWeight": 1801.0056077053
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 2941.634832574017,
+    "RelativeWeight": 2626.7352409157584
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 3597.0123830662124,
+    "RelativeWeight": 3091.5147192667832
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 6767.8515031736415,
+    "RelativeWeight": 5497.004974781501
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 3877.300943528167,
+    "RelativeWeight": 3254.3245589530047
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 482.96547850896644,
+    "RelativeWeight": 370.1294757797139
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 4210.500738446866,
+    "RelativeWeight": 3169.5802075784823
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 10080.819522353106,
+    "RelativeWeight": 8938.681262325128
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 8499.993773489785,
+    "RelativeWeight": 7863.760442852302
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 210.05734288217826,
+    "RelativeWeight": 164.27442223352068
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 8881.475826905797,
+    "RelativeWeight": 8091.062832469226
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 1801.985422364205,
+    "RelativeWeight": 1676.7896522361887
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 8828.19678453996,
+    "RelativeWeight": 7432.545823075521
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 494.52872045125264,
+    "RelativeWeight": 373.8133046869074
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 7470.872685712215,
+    "RelativeWeight": 6373.226256880553
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 1080.905253364187,
+    "RelativeWeight": 998.733731866547
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 8234.129802223424,
+    "RelativeWeight": 7538.458970947174
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 7085.881007115081,
+    "RelativeWeight": 6369.211355011329
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 7454.942983928238,
+    "RelativeWeight": 6063.216541344888
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 8602.647164011158,
+    "RelativeWeight": 6786.559885235221
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 6659.552051652924,
+    "RelativeWeight": 6074.737790221109
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 3474.5077947850646,
+    "RelativeWeight": 3192.607186479393
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 394.34787958574015,
+    "RelativeWeight": 318.0989893574475
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 1094.4743792940135,
+    "RelativeWeight": 945.616872827788
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 8396.80506945326,
+    "RelativeWeight": 6902.08949327413
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 10008.951340490465,
+    "RelativeWeight": 9021.865500486507
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 8394.872128625364,
+    "RelativeWeight": 7446.303769568298
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 4766.459669733071,
+    "RelativeWeight": 3899.730391617165
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 4491.511079960899,
+    "RelativeWeight": 3788.2252151261337
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 4263.597150691889,
+    "RelativeWeight": 3605.401785640987
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 3448.8422889088297,
+    "RelativeWeight": 3246.8833107178866
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 279.07424874770265,
+    "RelativeWeight": 220.0304653296414
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 3697.232597586244,
+    "RelativeWeight": 3355.5668870780714
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 1770.4403012607195,
+    "RelativeWeight": 1426.1571060482154
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 3204.460889032309,
+    "RelativeWeight": 2931.615763723441
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 7527.2969707249395,
+    "RelativeWeight": 5651.209856285627
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 6875.023388616385,
+    "RelativeWeight": 5197.805525231527
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 3304.870987380748,
+    "RelativeWeight": 2937.053632923466
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 6930.36602290358,
+    "RelativeWeight": 6537.099260901031
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 4695.058267848322,
+    "RelativeWeight": 4093.800555617578
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 7661.107807968117,
+    "RelativeWeight": 6401.196235533095
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 6529.1980720310885,
+    "RelativeWeight": 5552.449954000754
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 4069.964433852795,
+    "RelativeWeight": 3170.6708058979398
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 7434.019336296816,
+    "RelativeWeight": 6752.388916020213
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 2196.421484243256,
+    "RelativeWeight": 1650.434961768246
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 2807.2881882738366,
+    "RelativeWeight": 2481.403353466005
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 2449.985894040959,
+    "RelativeWeight": 2026.6178609238532
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 5716.599449166696,
+    "RelativeWeight": 5393.98529834278
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 554.2373409601486,
+    "RelativeWeight": 420.96444246163884
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 1178.1732069041605,
+    "RelativeWeight": 1080.4796205159778
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 6819.522346277279,
+    "RelativeWeight": 5626.243277182412
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 8974.500113295555,
+    "RelativeWeight": 6895.8215405863875
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 2297.161224943668,
+    "RelativeWeight": 1864.7321392887136
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 9022.936803525527,
+    "RelativeWeight": 7652.078962101654
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 184.78778427387311,
+    "RelativeWeight": 168.34552697589623
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 4499.954610469662,
+    "RelativeWeight": 3515.8994347309313
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 8874.93478125632,
+    "RelativeWeight": 6881.330366583542
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 3087.381494205856,
+    "RelativeWeight": 2435.995273863416
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 9842.559715933217,
+    "RelativeWeight": 7926.558460932753
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 8804.15259892022,
+    "RelativeWeight": 7869.3325524597485
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 9285.058067389216,
+    "RelativeWeight": 8142.812794086095
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 6513.6695783871955,
+    "RelativeWeight": 5307.041201399372
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 7178.767786082803,
+    "RelativeWeight": 5509.638464161077
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 3989.870804288781,
+    "RelativeWeight": 3445.097091224266
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 9669.229463932767,
+    "RelativeWeight": 9078.897320776325
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 9196.078699298881,
+    "RelativeWeight": 6953.112879025872
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 9689.410254314642,
+    "RelativeWeight": 7710.599133684101
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 1051.5619908053618,
+    "RelativeWeight": 800.0749695425599
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 2567.3337960559347,
+    "RelativeWeight": 1998.0806474888082
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 3420.334742609543,
+    "RelativeWeight": 2752.1409813310675
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 6741.742696808781,
+    "RelativeWeight": 5194.479387351465
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 6310.120491692992,
+    "RelativeWeight": 5366.394954876698
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 6779.000325887755,
+    "RelativeWeight": 6338.0000802994555
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 7916.018054615527,
+    "RelativeWeight": 5949.681911394192
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 1524.9992897503182,
+    "RelativeWeight": 1385.3888749947857
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 3638.873862891154,
+    "RelativeWeight": 2893.895417844603
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 2165.2727281710304,
+    "RelativeWeight": 1824.0626483815354
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 8462.587179197068,
+    "RelativeWeight": 7892.543430554316
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 7637.41104612766,
+    "RelativeWeight": 7094.725755583674
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 6547.600981247162,
+    "RelativeWeight": 5519.720118988634
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 744.4859640544154,
+    "RelativeWeight": 604.0089731249855
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 1117.3558503662116,
+    "RelativeWeight": 915.9204095214077
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 3606.323372913851,
+    "RelativeWeight": 2838.5608921521766
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 112.50507256604361,
+    "RelativeWeight": 89.99149020288571
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 4186.987616781296,
+    "RelativeWeight": 3492.4697174845746
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 952.9615222179222,
+    "RelativeWeight": 899.0535367278976
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 8867.174860025685,
+    "RelativeWeight": 7003.052810429196
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 10019.674738363088,
+    "RelativeWeight": 8843.804454898032
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 8485.324624565592,
+    "RelativeWeight": 7578.265892645129
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 7506.308643573447,
+    "RelativeWeight": 5694.525124773409
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 7622.731187207773,
+    "RelativeWeight": 7086.078391392783
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 5940.786048140818,
+    "RelativeWeight": 4474.963230011889
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 7802.365713525274,
+    "RelativeWeight": 5881.478502043839
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 7198.793141636304,
+    "RelativeWeight": 6382.989595761096
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 4359.9351118172535,
+    "RelativeWeight": 3388.9292661851414
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 9363.056727660782,
+    "RelativeWeight": 8583.918843437219
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 720.0210837731269,
+    "RelativeWeight": 557.4563423180085
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 8670.98247880667,
+    "RelativeWeight": 7219.256130842646
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 8191.592816267957,
+    "RelativeWeight": 6935.353488648005
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 5549.044361635452,
+    "RelativeWeight": 4657.170733689862
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 9471.965584177591,
+    "RelativeWeight": 7238.650799308308
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 3928.227240584725,
+    "RelativeWeight": 3529.0488820317123
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 5907.975041703547,
+    "RelativeWeight": 5094.010593936383
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 2334.9475317189062,
+    "RelativeWeight": 2095.3316885836734
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 9748.254838419867,
+    "RelativeWeight": 7417.969684938519
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 9103.395124275356,
+    "RelativeWeight": 7863.489839804941
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 369.0399718338787,
+    "RelativeWeight": 301.40715809804
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 8665.10574269507,
+    "RelativeWeight": 7788.892069956091
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 6306.035624863025,
+    "RelativeWeight": 4734.593369137473
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 3338.445582441084,
+    "RelativeWeight": 2834.1843938050292
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 9423.91340970361,
+    "RelativeWeight": 8543.066887139088
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 3758.8778787248843,
+    "RelativeWeight": 3005.2516622268963
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 2625.6963588724657,
+    "RelativeWeight": 2419.1751288069663
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 5204.670721872232,
+    "RelativeWeight": 4637.548849610478
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 6800.734686364245,
+    "RelativeWeight": 5403.786848068458
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 6947.6828494222955,
+    "RelativeWeight": 6102.545675529631
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 1785.6585054296258,
+    "RelativeWeight": 1427.7225645707078
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 4800.544397879746,
+    "RelativeWeight": 4485.456513438506
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 583.734643908964,
+    "RelativeWeight": 448.4423855556997
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 3368.8441484339105,
+    "RelativeWeight": 2980.4681634398216
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 754.5244128063166,
+    "RelativeWeight": 689.3149839315414
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 9201.74476440586,
+    "RelativeWeight": 7843.184833040996
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 2220.234835191944,
+    "RelativeWeight": 1741.6565447275232
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 5786.393906712681,
+    "RelativeWeight": 5045.897754293727
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 1190.382625583306,
+    "RelativeWeight": 1067.0630656064666
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 9186.781263131195,
+    "RelativeWeight": 8120.895133645043
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 2844.2562411426543,
+    "RelativeWeight": 2452.532596809148
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 3671.1463432891833,
+    "RelativeWeight": 3467.8110529080486
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 390.19238452856257,
+    "RelativeWeight": 337.248941010439
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 1246.6411450239877,
+    "RelativeWeight": 1145.8960350105888
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 9202.868466375929,
+    "RelativeWeight": 8503.188656343902
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 811.6305881106122,
+    "RelativeWeight": 714.5350097800696
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 3853.553234719482,
+    "RelativeWeight": 3444.6978453235033
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 4128.607849485015,
+    "RelativeWeight": 3156.6285215377384
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 6157.939604229499,
+    "RelativeWeight": 5199.828074036776
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 2882.0856886495303,
+    "RelativeWeight": 2570.9925357041284
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 6912.478221963943,
+    "RelativeWeight": 5571.193605825845
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 1875.9893698432284,
+    "RelativeWeight": 1475.6347484501155
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 8277.72818063915,
+    "RelativeWeight": 7306.474525666386
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 6479.382190190875,
+    "RelativeWeight": 6126.384494584617
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 633.1309478816248,
+    "RelativeWeight": 552.2974073314059
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 6975.198551436904,
+    "RelativeWeight": 6471.562599266537
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 5669.812042004669,
+    "RelativeWeight": 4766.612168581295
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 3303.696256493931,
+    "RelativeWeight": 3089.9348135170235
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 7267.4166600890585,
+    "RelativeWeight": 6752.111423758889
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 2491.435607198221,
+    "RelativeWeight": 2009.8079549363977
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 5267.885816572103,
+    "RelativeWeight": 4274.770996978919
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 3581.1844246606906,
+    "RelativeWeight": 2771.985866246533
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 8650.387242012934,
+    "RelativeWeight": 7099.823814790635
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 7643.831387318009,
+    "RelativeWeight": 6267.5438992019535
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 6685.638196935052,
+    "RelativeWeight": 5550.33095944243
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 7132.815512706646,
+    "RelativeWeight": 6341.421444372965
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 3587.9696640607694,
+    "RelativeWeight": 3143.3596656364853
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 9378.82530596836,
+    "RelativeWeight": 8724.654897302751
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 6151.48539587604,
+    "RelativeWeight": 5802.612927495982
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 8473.241897789616,
+    "RelativeWeight": 6914.1778817044315
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 4781.491358403699,
+    "RelativeWeight": 3848.23152017921
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 2895.6359985705694,
+    "RelativeWeight": 2295.6133452462336
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 4492.53315430992,
+    "RelativeWeight": 3403.7610295706486
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 9461.193967660303,
+    "RelativeWeight": 7518.498881082501
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 6053.809711177164,
+    "RelativeWeight": 4580.204024045505
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 433.2978766465777,
+    "RelativeWeight": 362.68380803670846
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 5064.7075022165045,
+    "RelativeWeight": 4477.461308930734
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 5160.064422403493,
+    "RelativeWeight": 4100.520581192662
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 3562.912472703732,
+    "RelativeWeight": 2751.9669098334184
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 7418.755231678292,
+    "RelativeWeight": 6720.816269955461
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 5253.193156777725,
+    "RelativeWeight": 4464.2021825496795
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 9601.212127992223,
+    "RelativeWeight": 8102.51788235375
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 7254.606153301841,
+    "RelativeWeight": 6119.058804545264
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 1880.4440609055382,
+    "RelativeWeight": 1481.7712468498646
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 1401.5584300644034,
+    "RelativeWeight": 1136.9670769750942
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 7597.181432363993,
+    "RelativeWeight": 6571.095695228254
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 5382.816177851679,
+    "RelativeWeight": 4953.3960974659985
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 3695.505110618974,
+    "RelativeWeight": 2874.7447345472865
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 4353.002346949293,
+    "RelativeWeight": 4015.843018744977
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 4490.94657768418,
+    "RelativeWeight": 4024.74859393401
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 1796.7792718346652,
+    "RelativeWeight": 1387.2645745812945
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 860.7763110648724,
+    "RelativeWeight": 747.3020659159616
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 2658.5882478430053,
+    "RelativeWeight": 2504.5551083224495
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 3820.204500092872,
+    "RelativeWeight": 3448.245540923113
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 2108.9911863341267,
+    "RelativeWeight": 1880.104810026007
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 2237.884584923656,
+    "RelativeWeight": 1802.8144886868783
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 10075.981154059287,
+    "RelativeWeight": 8553.615864211839
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 202.1069851527967,
+    "RelativeWeight": 190.64079837259953
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 1894.9501910960375,
+    "RelativeWeight": 1435.4513741876463
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 1045.6680707100072,
+    "RelativeWeight": 840.9287455316987
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 9421.28980255745,
+    "RelativeWeight": 7961.205030842294
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 1282.2600291483498,
+    "RelativeWeight": 1212.4480616005892
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 5113.21416701396,
+    "RelativeWeight": 3854.7799901994094
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 3293.9233958604873,
+    "RelativeWeight": 3048.0443764494316
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 3943.2108414278523,
+    "RelativeWeight": 3665.052012171539
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 9006.176826708612,
+    "RelativeWeight": 7661.4130762678615
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 3202.180665310925,
+    "RelativeWeight": 2443.797198648127
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 2055.795013791056,
+    "RelativeWeight": 1657.7235737751712
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 7596.52792284582,
+    "RelativeWeight": 6166.3680567628135
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 8842.479017613969,
+    "RelativeWeight": 7664.645777488804
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 8624.991882598433,
+    "RelativeWeight": 8102.131948789329
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 5478.398184175397,
+    "RelativeWeight": 4298.083359529427
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 2744.2553630991174,
+    "RelativeWeight": 2145.951196995866
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 6760.903002725672,
+    "RelativeWeight": 6098.273649901015
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 5523.659968487767,
+    "RelativeWeight": 5067.223405262641
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 3246.4766900002874,
+    "RelativeWeight": 2558.577732193741
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 4658.526494424184,
+    "RelativeWeight": 4023.8702570686232
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 7964.0144458846635,
+    "RelativeWeight": 6918.263043149132
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 215.4650766811538,
+    "RelativeWeight": 193.9374782748992
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 6243.151464353706,
+    "RelativeWeight": 4983.128965842338
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 4427.520381060272,
+    "RelativeWeight": 3815.0418341861455
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 9788.31348207626,
+    "RelativeWeight": 8100.977832406167
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 3411.505140668152,
+    "RelativeWeight": 3184.4766050439353
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 1607.1934398003384,
+    "RelativeWeight": 1471.7674980108343
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 3467.1903618671163,
+    "RelativeWeight": 2650.92133098218
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 9030.919927112158,
+    "RelativeWeight": 7951.734939856962
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 2135.8586941878184,
+    "RelativeWeight": 1669.2856232909148
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 8798.068046725924,
+    "RelativeWeight": 6809.442499507849
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 6404.650032428503,
+    "RelativeWeight": 5406.0380507522905
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 1350.3318825379683,
+    "RelativeWeight": 1126.6526028009587
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 2398.5181583963945,
+    "RelativeWeight": 2087.4087275361144
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 9013.585534516476,
+    "RelativeWeight": 8210.857597337606
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 3733.0237366566344,
+    "RelativeWeight": 3065.3893713273724
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 737.158411093508,
+    "RelativeWeight": 565.7052915304587
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 4549.343316894684,
+    "RelativeWeight": 3475.7445252716475
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 440.2168467435007,
+    "RelativeWeight": 345.3019348228347
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 3711.5814811312375,
+    "RelativeWeight": 3226.9275481107675
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 4892.389680362999,
+    "RelativeWeight": 4528.359594817533
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 8157.918883718853,
+    "RelativeWeight": 7027.0239186966555
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 4557.297864893136,
+    "RelativeWeight": 4022.0984720346887
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 9430.863964394899,
+    "RelativeWeight": 7580.414544920881
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 4749.807564878307,
+    "RelativeWeight": 4049.5723818548495
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 7303.164568841128,
+    "RelativeWeight": 5704.072944497069
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 5842.878012898449,
+    "RelativeWeight": 4608.252601932487
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 8129.157521997086,
+    "RelativeWeight": 6378.406787138625
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 328.61713299466845,
+    "RelativeWeight": 266.7951892818147
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 736.8980178558759,
+    "RelativeWeight": 565.7029288658855
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 6979.675496448957,
+    "RelativeWeight": 5827.453101147453
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 5028.4027461985515,
+    "RelativeWeight": 4754.61934441076
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 4503.385317983367,
+    "RelativeWeight": 3789.14205981445
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 3224.940230268746,
+    "RelativeWeight": 3012.648758598885
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 2481.189911703703,
+    "RelativeWeight": 2290.5955513970935
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 4372.16675768579,
+    "RelativeWeight": 4043.7192079939837
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 3811.381503575201,
+    "RelativeWeight": 3588.2722723663214
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 7492.749462833792,
+    "RelativeWeight": 6393.5952035633945
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 3469.330490994886,
+    "RelativeWeight": 2976.3301689694695
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 8519.185297432892,
+    "RelativeWeight": 6590.2083785025025
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 9021.632325938102,
+    "RelativeWeight": 7083.503270386847
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 5218.196272805377,
+    "RelativeWeight": 4243.2269603259765
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 9609.607778593347,
+    "RelativeWeight": 7529.892197490001
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 1268.5702414253085,
+    "RelativeWeight": 1006.7541716211986
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 7705.5094214078745,
+    "RelativeWeight": 6357.556379532244
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Tablet",
+    "Weight": 3434.0812975524213,
+    "RelativeWeight": 2892.9239811548064
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 2862.8784093227955,
+    "RelativeWeight": 2196.7910506070552
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 2927.6718906898814,
+    "RelativeWeight": 2542.833110774496
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 9674.092708743041,
+    "RelativeWeight": 8046.079117309201
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 3772.5580428394446,
+    "RelativeWeight": 3210.5474914616257
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 5749.104761612477,
+    "RelativeWeight": 4927.952952628606
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 3199.3904469384183,
+    "RelativeWeight": 2643.2243566504008
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 9483.965889961128,
+    "RelativeWeight": 8511.426045666278
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 4301.342895877507,
+    "RelativeWeight": 3810.4387352353633
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 2394.1231810220766,
+    "RelativeWeight": 2154.2105486075357
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 8654.28742188217,
+    "RelativeWeight": 6692.15588998925
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 6242.430118226473,
+    "RelativeWeight": 5857.264077378092
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 3718.1218424680637,
+    "RelativeWeight": 3146.0607203893837
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 6357.762192539624,
+    "RelativeWeight": 6021.666738393871
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 4663.850113961311,
+    "RelativeWeight": 3919.9015158688285
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 9756.289816720351,
+    "RelativeWeight": 7987.5027606516
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 5143.629111256652,
+    "RelativeWeight": 4600.215363821062
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 9172.346440553849,
+    "RelativeWeight": 8172.195810480209
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 356.2738213128801,
+    "RelativeWeight": 316.2737209704838
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 1142.2643746730564,
+    "RelativeWeight": 875.9911656244481
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 4706.690521158553,
+    "RelativeWeight": 3945.909394776237
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 7366.744445126271,
+    "RelativeWeight": 5901.792284328208
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 5921.12132502038,
+    "RelativeWeight": 4836.611607148129
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 4039.4500173633373,
+    "RelativeWeight": 3593.256127110624
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 499.3270131617421,
+    "RelativeWeight": 461.6145691859292
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 3857.333261741104,
+    "RelativeWeight": 3442.231355246456
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 8059.703659687467,
+    "RelativeWeight": 6318.842960392165
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 4872.021337005887,
+    "RelativeWeight": 3859.1499689069715
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 8360.021610603058,
+    "RelativeWeight": 6394.66058498953
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 786.4192505262234,
+    "RelativeWeight": 710.0635206758056
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 8603.81852674928,
+    "RelativeWeight": 7698.441991873139
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 8854.281150291527,
+    "RelativeWeight": 6997.7919420955095
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 8564.255975526674,
+    "RelativeWeight": 7991.823825864158
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 6944.687160214058,
+    "RelativeWeight": 5644.3198022902925
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 2903.482140789366,
+    "RelativeWeight": 2662.3906210997884
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 3190.0935278591414,
+    "RelativeWeight": 2837.9142288815124
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 8045.259273450932,
+    "RelativeWeight": 6358.579149260771
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 3438.864072687865,
+    "RelativeWeight": 2786.847736474945
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 6470.523733925845,
+    "RelativeWeight": 5465.110835332295
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 6514.709862364295,
+    "RelativeWeight": 5516.389703525983
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 6271.831342023059,
+    "RelativeWeight": 5789.138533544127
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 10058.986391473973,
+    "RelativeWeight": 8223.470981064896
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 8558.753048380602,
+    "RelativeWeight": 8035.935731508445
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 4074.8512735220534,
+    "RelativeWeight": 3829.0501501934873
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 1870.1554604900682,
+    "RelativeWeight": 1425.5093220568078
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 9738.130139886676,
+    "RelativeWeight": 8806.30757893996
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 9362.910586008024,
+    "RelativeWeight": 8595.201471423175
+  },
+  {
+    "group1": "South",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 7347.1631477519495,
+    "RelativeWeight": 5682.215939885669
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 571.3804760021312,
+    "RelativeWeight": 483.85492982093876
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 5002.700042579564,
+    "RelativeWeight": 4045.485003041131
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 7192.0934937695865,
+    "RelativeWeight": 5655.708001393655
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 5321.048276356139,
+    "RelativeWeight": 4174.973712803872
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 217.25353388120863,
+    "RelativeWeight": 203.64658327531512
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 4674.508105929208,
+    "RelativeWeight": 4175.762860949206
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 3894.1093915579536,
+    "RelativeWeight": 2983.18395460428
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 4930.9311168512095,
+    "RelativeWeight": 4095.151776507936
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 1979.7824859828916,
+    "RelativeWeight": 1720.8666301682463
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 304.56806525840034,
+    "RelativeWeight": 259.9752066182101
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 1684.7365073842645,
+    "RelativeWeight": 1527.0276667029432
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 7060.025592959247,
+    "RelativeWeight": 5596.908095064926
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 2662.092221599035,
+    "RelativeWeight": 2271.0277389739113
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 1973.8774282443892,
+    "RelativeWeight": 1728.691792870463
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 4704.992583493379,
+    "RelativeWeight": 4265.458175259914
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 6725.989601810005,
+    "RelativeWeight": 6096.38823462703
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 1614.813835815898,
+    "RelativeWeight": 1386.5335421569791
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 2077.5291270749594,
+    "RelativeWeight": 1586.750192097336
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 568.3694910639102,
+    "RelativeWeight": 479.0056780716248
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 7891.828608124042,
+    "RelativeWeight": 7279.074976962178
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 10085.828737333017,
+    "RelativeWeight": 9454.398606983685
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 9812.132671427613,
+    "RelativeWeight": 7935.950696986543
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 1599.8841669806206,
+    "RelativeWeight": 1372.8452245728504
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 730.3535009267591,
+    "RelativeWeight": 570.3168990652824
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 1115.0677888323,
+    "RelativeWeight": 961.7862931997518
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 6839.843944519857,
+    "RelativeWeight": 6120.910349621652
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 1150.5303409992396,
+    "RelativeWeight": 1084.5109963108298
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 7028.395256572477,
+    "RelativeWeight": 5987.095732123983
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 6639.075868439074,
+    "RelativeWeight": 5813.795003706637
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Laptop",
+    "Weight": 2375.8227915458597,
+    "RelativeWeight": 1791.47486587247
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 10013.459902037559,
+    "RelativeWeight": 8499.309137495853
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 7211.66635054891,
+    "RelativeWeight": 6664.521421579947
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 2426.761083516873,
+    "RelativeWeight": 2167.878605767385
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 8579.96273781076,
+    "RelativeWeight": 7434.557587362747
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 1546.468464401658,
+    "RelativeWeight": 1162.3215731861171
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 233.49521278208653,
+    "RelativeWeight": 207.6819879417912
+  },
+  {
+    "group1": "West",
+    "group2": "Electronics",
+    "group3": "Smartwatch",
+    "Weight": 6017.334229249242,
+    "RelativeWeight": 4651.084236053384
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 9976.093745331302,
+    "RelativeWeight": 7846.442092143117
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 4761.419495015706,
+    "RelativeWeight": 3922.9710628738885
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 6489.906502368319,
+    "RelativeWeight": 6075.43167034001
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 3850.7296620394914,
+    "RelativeWeight": 3469.988961737434
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 8271.717392191258,
+    "RelativeWeight": 7096.021252025554
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 3746.3023799321927,
+    "RelativeWeight": 3058.281420540126
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 5637.650033137721,
+    "RelativeWeight": 4908.224926313688
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 4822.3171451341605,
+    "RelativeWeight": 3903.7414980148214
+  },
+  {
+    "group1": "Central",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 266.324450948121,
+    "RelativeWeight": 250.70923123308307
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 921.5063834057679,
+    "RelativeWeight": 848.7483574216598
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 5909.764496471617,
+    "RelativeWeight": 5210.931465864109
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Snacks",
+    "Weight": 4983.683912938364,
+    "RelativeWeight": 4543.8624017236125
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 7689.382259816718,
+    "RelativeWeight": 5930.933979307938
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 9185.255731572857,
+    "RelativeWeight": 7925.2914583679485
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 4214.460214188392,
+    "RelativeWeight": 3823.3712866449614
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 4087.7489129818723,
+    "RelativeWeight": 3312.7822442193537
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 6667.738873275955,
+    "RelativeWeight": 6060.466230084235
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 5032.683595472731,
+    "RelativeWeight": 4385.696712038617
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 1273.500904459447,
+    "RelativeWeight": 1043.0147144452662
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 9375.110136932339,
+    "RelativeWeight": 8422.79673636844
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 3308.8256634494837,
+    "RelativeWeight": 2989.4711113418994
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 3223.3584213373224,
+    "RelativeWeight": 2752.585333713052
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 2256.8037663306973,
+    "RelativeWeight": 1765.5801612579685
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 1723.9046796966727,
+    "RelativeWeight": 1304.4726271152283
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 8574.665436430332,
+    "RelativeWeight": 7783.709920009112
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Fiction",
+    "Weight": 3629.4987150155453,
+    "RelativeWeight": 2764.7345717710223
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 4595.733720349417,
+    "RelativeWeight": 3805.8681510396614
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 6156.510856570413,
+    "RelativeWeight": 4844.615015335803
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 6765.0735585550965,
+    "RelativeWeight": 6157.086922654012
+  },
+  {
+    "group1": "Central",
+    "group2": "Food",
+    "group3": "Meat",
+    "Weight": 1790.6749379710784,
+    "RelativeWeight": 1548.6116387191107
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 8792.531936649308,
+    "RelativeWeight": 7520.68969303268
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 4447.970426099006,
+    "RelativeWeight": 4102.1824653424555
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 4084.182232319338,
+    "RelativeWeight": 3175.679466679701
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 2929.940193423649,
+    "RelativeWeight": 2685.074285128897
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 7321.934330079252,
+    "RelativeWeight": 5831.92100023911
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 986.7890847425907,
+    "RelativeWeight": 911.4541117107212
+  },
+  {
+    "group1": "North",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 8432.908950679544,
+    "RelativeWeight": 6420.948404164184
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 7281.22868817633,
+    "RelativeWeight": 6544.423581160301
+  },
+  {
+    "group1": "West",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 2008.8103922432585,
+    "RelativeWeight": 1755.4208403054356
+  },
+  {
+    "group1": "West",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 5608.4290744952,
+    "RelativeWeight": 4632.514988379571
+  },
+  {
+    "group1": "East",
+    "group2": "Food",
+    "group3": "Beverages",
+    "Weight": 5849.0883374384985,
+    "RelativeWeight": 5488.989992488067
+  },
+  {
+    "group1": "West",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 5252.085825329138,
+    "RelativeWeight": 4043.4138126922853
+  },
+  {
+    "group1": "South",
+    "group2": "Food",
+    "group3": "Dairy",
+    "Weight": 6275.338081140618,
+    "RelativeWeight": 5456.143813554029
+  },
+  {
+    "group1": "East",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 281.3328826724969,
+    "RelativeWeight": 263.5371741418858
+  },
+  {
+    "group1": "North",
+    "group2": "Clothing",
+    "group3": "Jacket",
+    "Weight": 9547.199823654717,
+    "RelativeWeight": 7658.1479592271
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 9013.569656106727,
+    "RelativeWeight": 8325.953386442423
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 6531.981356321729,
+    "RelativeWeight": 5996.402598132753
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Lamp",
+    "Weight": 2067.2290998959143,
+    "RelativeWeight": 1845.1704726650319
+  },
+  {
+    "group1": "North",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 2202.2477302290963,
+    "RelativeWeight": 1952.0046932963937
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 7595.543685349011,
+    "RelativeWeight": 6653.932129530047
+  },
+  {
+    "group1": "South",
+    "group2": "Books",
+    "group3": "Biography",
+    "Weight": 1698.7324157661608,
+    "RelativeWeight": 1497.7202837916666
+  },
+  {
+    "group1": "East",
+    "group2": "Home Goods",
+    "group3": "Bedding",
+    "Weight": 7602.840239869867,
+    "RelativeWeight": 6771.329419425233
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 6382.495199214391,
+    "RelativeWeight": 5329.038230887383
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Mystery",
+    "Weight": 8170.722422516349,
+    "RelativeWeight": 6471.763025530964
+  },
+  {
+    "group1": "East",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 630.8718585631267,
+    "RelativeWeight": 487.0098372478829
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "Jeans",
+    "Weight": 4173.06843032623,
+    "RelativeWeight": 3341.5394744958967
+  },
+  {
+    "group1": "South",
+    "group2": "Electronics",
+    "group3": "Headphones",
+    "Weight": 7598.832595729853,
+    "RelativeWeight": 6362.845541331741
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Chair",
+    "Weight": 3254.972268674313,
+    "RelativeWeight": 2475.8315435696204
+  },
+  {
+    "group1": "West",
+    "group2": "Clothing",
+    "group3": "Dress",
+    "Weight": 5447.496043537261,
+    "RelativeWeight": 5132.084845075602
+  },
+  {
+    "group1": "South",
+    "group2": "Home Goods",
+    "group3": "Table",
+    "Weight": 6879.4416948293265,
+    "RelativeWeight": 5731.6765073595625
+  },
+  {
+    "group1": "Central",
+    "group2": "Electronics",
+    "group3": "Smartphone",
+    "Weight": 6461.492632056931,
+    "RelativeWeight": 5395.372464109864
+  },
+  {
+    "group1": "North",
+    "group2": "Food",
+    "group3": "Produce",
+    "Weight": 3525.415567337242,
+    "RelativeWeight": 2841.9793429970614
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Non-Fiction",
+    "Weight": 4118.525542115963,
+    "RelativeWeight": 3565.6995246347437
+  },
+  {
+    "group1": "East",
+    "group2": "Clothing",
+    "group3": "T-Shirt",
+    "Weight": 3026.6499130292577,
+    "RelativeWeight": 2649.551331928813
+  },
+  {
+    "group1": "Central",
+    "group2": "Home Goods",
+    "group3": "Cookware",
+    "Weight": 232.80509701594335,
+    "RelativeWeight": 215.28883931117153
+  },
+  {
+    "group1": "Central",
+    "group2": "Clothing",
+    "group3": "Sweater",
+    "Weight": 4126.44080218752,
+    "RelativeWeight": 3701.3285984736035
+  },
+  {
+    "group1": "North",
+    "group2": "Books",
+    "group3": "Sci-Fi",
+    "Weight": 7124.763563617384,
+    "RelativeWeight": 6726.726462617764
+  }
+]

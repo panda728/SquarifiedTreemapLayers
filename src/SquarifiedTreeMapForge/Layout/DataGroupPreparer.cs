@@ -22,11 +22,11 @@ public sealed class DataGroupPreparer<T>
         WeightProperty = Cache<T>.Properties
             .FirstOrDefault(p => p.Name.Equals(_settings.WeightColumn, StringComparison.OrdinalIgnoreCase))
             ?? throw new KeyNotFoundException($"Weight column '{_settings.WeightColumn}' not found.");
-        GroupProperties = [.. _settings.AggregateColumns.Select(c =>
+        GroupProperties = [.. _settings.GroupColumns.Select(c =>
             Cache<T>.Properties.FirstOrDefault(p => p.Name.Equals(c, StringComparison.OrdinalIgnoreCase))
-            ?? throw new KeyNotFoundException($"Aggregate column '{c}' not found."))];
-        GroupColumnFormats = InitializeGroupColumnFormats(_settings.AggregateColumnFormats, _settings.AggregateColumns.Length);
-        GroupBorderWidths = InitializeGroupBorderWidth(_settings.AggregateColumnBorderWidths, _settings.AggregateColumns.Length);
+            ?? throw new KeyNotFoundException($"Group column '{c}' not found."))];
+        GroupColumnFormats = InitializeGroupColumnFormats(_settings.GroupColumnFormats, _settings.GroupColumns.Length);
+        GroupBorderWidths = InitializeGroupBorderWidth(_settings.GroupBorderWidths, _settings.GroupColumns.Length);
     }
 
     static int[] InitializeGroupBorderWidth(int[]? groupBorderWidth, int length)
@@ -63,7 +63,7 @@ public sealed class DataGroupPreparer<T>
     public Func<string, IEnumerable<T>, string>? FuncNodeText { get; private set; }
     public Func<IEnumerable<T>, Color>? FuncNodeColor { get; private set; }
 
-    public string GetAggregateText(string aggregateValue, IEnumerable<T> sources)
+    public string GetGroupText(string aggregateValue, IEnumerable<T> sources)
         => FuncNodeText?.Invoke(aggregateValue, sources) ?? aggregateValue;
 
     public Color GetColor(IEnumerable<T> sources)
@@ -90,7 +90,7 @@ public sealed class DataGroupPreparer<T>
     public string GetGroupKey(T x, int depth = 0)
     {
         if (GroupProperties == null || GroupColumnFormats == null) { return ""; }
-        if (x == null || _settings?.AggregateColumns == null) { return ""; }
+        if (x == null || _settings?.GroupColumns == null) { return ""; }
         if (depth < 0) return _settings.RootNodeTitle;
         if (depth >= GroupProperties.Length) { return ""; }
 

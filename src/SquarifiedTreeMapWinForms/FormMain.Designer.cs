@@ -36,12 +36,12 @@ namespace SquarifiedTreeMapWinForms
             groupBox6 = new GroupBox();
             label5 = new Label();
             label4 = new Label();
-            buttonAggrDown = new Button();
-            listBoxAggrSelectable = new ListBox();
-            buttonAggrDelete = new Button();
-            buttonAggerUp = new Button();
-            buttonAggrAdd = new Button();
-            listBoxAggrSelected = new ListBox();
+            buttonGroupDown = new Button();
+            listBoxGroupSelectable = new ListBox();
+            buttonGroupDelete = new Button();
+            buttonGroupUp = new Button();
+            buttonGroupAdd = new Button();
+            listBoxGroupSelected = new ListBox();
             groupBox3 = new GroupBox();
             radioAT = new RadioButton();
             radioRB = new RadioButton();
@@ -169,12 +169,12 @@ namespace SquarifiedTreeMapWinForms
             // 
             groupBox6.Controls.Add(label5);
             groupBox6.Controls.Add(label4);
-            groupBox6.Controls.Add(buttonAggrDown);
-            groupBox6.Controls.Add(listBoxAggrSelectable);
-            groupBox6.Controls.Add(buttonAggrDelete);
-            groupBox6.Controls.Add(buttonAggerUp);
-            groupBox6.Controls.Add(buttonAggrAdd);
-            groupBox6.Controls.Add(listBoxAggrSelected);
+            groupBox6.Controls.Add(buttonGroupDown);
+            groupBox6.Controls.Add(listBoxGroupSelectable);
+            groupBox6.Controls.Add(buttonGroupDelete);
+            groupBox6.Controls.Add(buttonGroupUp);
+            groupBox6.Controls.Add(buttonGroupAdd);
+            groupBox6.Controls.Add(listBoxGroupSelected);
             groupBox6.Location = new Point(7, 25);
             groupBox6.Name = "groupBox6";
             groupBox6.Size = new Size(282, 257);
@@ -200,65 +200,65 @@ namespace SquarifiedTreeMapWinForms
             label4.TabIndex = 7;
             label4.Text = "selected";
             // 
-            // buttonAggrDown
+            // buttonGroupDown
             // 
-            buttonAggrDown.Location = new Point(64, 226);
-            buttonAggrDown.Name = "buttonAggrDown";
-            buttonAggrDown.Size = new Size(48, 28);
-            buttonAggrDown.TabIndex = 6;
-            buttonAggrDown.Text = "down";
-            buttonAggrDown.UseVisualStyleBackColor = true;
-            buttonAggrDown.Click += buttonAggrDown_Click;
+            buttonGroupDown.Location = new Point(64, 226);
+            buttonGroupDown.Name = "buttonGroupDown";
+            buttonGroupDown.Size = new Size(48, 28);
+            buttonGroupDown.TabIndex = 6;
+            buttonGroupDown.Text = "down";
+            buttonGroupDown.UseVisualStyleBackColor = true;
+            buttonGroupDown.Click += buttonGroupDown_Click;
             // 
-            // listBoxAggrSelectable
+            // listBoxGroupSelectable
             // 
-            listBoxAggrSelectable.FormattingEnabled = true;
-            listBoxAggrSelectable.ItemHeight = 17;
-            listBoxAggrSelectable.Items.AddRange(new object[] { "***", "***", "***" });
-            listBoxAggrSelectable.Location = new Point(167, 46);
-            listBoxAggrSelectable.Name = "listBoxAggrSelectable";
-            listBoxAggrSelectable.Size = new Size(100, 174);
-            listBoxAggrSelectable.TabIndex = 4;
+            listBoxGroupSelectable.FormattingEnabled = true;
+            listBoxGroupSelectable.ItemHeight = 17;
+            listBoxGroupSelectable.Items.AddRange(new object[] { "***", "***", "***" });
+            listBoxGroupSelectable.Location = new Point(167, 46);
+            listBoxGroupSelectable.Name = "listBoxGroupSelectable";
+            listBoxGroupSelectable.Size = new Size(100, 174);
+            listBoxGroupSelectable.TabIndex = 4;
             // 
-            // buttonAggrDelete
+            // buttonGroupDelete
             // 
-            buttonAggrDelete.Location = new Point(120, 147);
-            buttonAggrDelete.Name = "buttonAggrDelete";
-            buttonAggrDelete.Size = new Size(41, 51);
-            buttonAggrDelete.TabIndex = 3;
-            buttonAggrDelete.Text = ">>>";
-            buttonAggrDelete.UseVisualStyleBackColor = true;
-            buttonAggrDelete.Click += buttonAggrDelete_Click;
+            buttonGroupDelete.Location = new Point(120, 147);
+            buttonGroupDelete.Name = "buttonGroupDelete";
+            buttonGroupDelete.Size = new Size(41, 51);
+            buttonGroupDelete.TabIndex = 3;
+            buttonGroupDelete.Text = ">>>";
+            buttonGroupDelete.UseVisualStyleBackColor = true;
+            buttonGroupDelete.Click += buttonGroupDelete_Click;
             // 
-            // buttonAggerUp
+            // buttonGroupUp
             // 
-            buttonAggerUp.Location = new Point(16, 226);
-            buttonAggerUp.Name = "buttonAggerUp";
-            buttonAggerUp.Size = new Size(48, 28);
-            buttonAggerUp.TabIndex = 5;
-            buttonAggerUp.Text = "up";
-            buttonAggerUp.UseVisualStyleBackColor = true;
-            buttonAggerUp.Click += buttonAggerUp_Click;
+            buttonGroupUp.Location = new Point(16, 226);
+            buttonGroupUp.Name = "buttonGroupUp";
+            buttonGroupUp.Size = new Size(48, 28);
+            buttonGroupUp.TabIndex = 5;
+            buttonGroupUp.Text = "up";
+            buttonGroupUp.UseVisualStyleBackColor = true;
+            buttonGroupUp.Click += buttonGroupUp_Click;
             // 
-            // buttonAggrAdd
+            // buttonGroupAdd
             // 
-            buttonAggrAdd.Location = new Point(120, 66);
-            buttonAggrAdd.Name = "buttonAggrAdd";
-            buttonAggrAdd.Size = new Size(41, 51);
-            buttonAggrAdd.TabIndex = 2;
-            buttonAggrAdd.Text = "<<<";
-            buttonAggrAdd.UseVisualStyleBackColor = true;
-            buttonAggrAdd.Click += buttonAggrAdd_Click;
+            buttonGroupAdd.Location = new Point(120, 66);
+            buttonGroupAdd.Name = "buttonGroupAdd";
+            buttonGroupAdd.Size = new Size(41, 51);
+            buttonGroupAdd.TabIndex = 2;
+            buttonGroupAdd.Text = "<<<";
+            buttonGroupAdd.UseVisualStyleBackColor = true;
+            buttonGroupAdd.Click += buttonGroupAdd_Click;
             // 
-            // listBoxAggrSelected
+            // listBoxGroupSelected
             // 
-            listBoxAggrSelected.FormattingEnabled = true;
-            listBoxAggrSelected.ItemHeight = 17;
-            listBoxAggrSelected.Items.AddRange(new object[] { "***", "***", "***" });
-            listBoxAggrSelected.Location = new Point(15, 46);
-            listBoxAggrSelected.Name = "listBoxAggrSelected";
-            listBoxAggrSelected.Size = new Size(100, 174);
-            listBoxAggrSelected.TabIndex = 0;
+            listBoxGroupSelected.FormattingEnabled = true;
+            listBoxGroupSelected.ItemHeight = 17;
+            listBoxGroupSelected.Items.AddRange(new object[] { "***", "***", "***" });
+            listBoxGroupSelected.Location = new Point(15, 46);
+            listBoxGroupSelected.Name = "listBoxGroupSelected";
+            listBoxGroupSelected.Size = new Size(100, 174);
+            listBoxGroupSelected.TabIndex = 0;
             // 
             // groupBox3
             // 
@@ -1023,12 +1023,12 @@ namespace SquarifiedTreeMapWinForms
         private TextBox textBoxTitle;
         private Label labelTitle;
         private GroupBox groupBox6;
-        private Button buttonAggrDelete;
-        private Button buttonAggrAdd;
-        private ListBox listBoxAggrSelected;
-        private ListBox listBoxAggrSelectable;
-        private Button buttonAggrDown;
-        private Button buttonAggerUp;
+        private Button buttonGroupDelete;
+        private Button buttonGroupAdd;
+        private ListBox listBoxGroupSelected;
+        private ListBox listBoxGroupSelectable;
+        private Button buttonGroupDown;
+        private Button buttonGroupUp;
         private Label label5;
         private Label label4;
         private GroupBox groupBox7;

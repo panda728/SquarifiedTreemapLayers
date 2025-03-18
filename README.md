@@ -26,7 +26,7 @@ using System.Drawing;
 
 var settings = new TreeMapSettings { TitleText = "Sample TreeMap", TitleFontName = "Arial", TitleFontSize = 12, ForeColor = Color.Black, BackColor = Color.White, HighlightColor = Color.Red, HighlightWidth = 2, Margin = 1 };
 
-var layoutSettings = new TreeMapLayoutSettings { WeightColumn = "Value", AggregateColumns = new string[] { "Category" }, AggregateColumnFormats = new string[] { "0.0" }, AggregateColumnBorderWidths = new int[] { 1 }, ForeColor = Color.Black, NodeFontName = "Arial", NodeFontSize = 10, BorderColor = Color.Gray, MaxDepth = 5, IsSourceOrderDec = true, LayoutAlign = LayoutAlign.LeftTop };
+var layoutSettings = new TreeMapLayoutSettings { WeightColumn = "Value", GroupColumns = new string[] { "Category" }, GroupColumnFormats = new string[] { "0.0" }, GroupBorderWidths = new int[] { 1 }, ForeColor = Color.Black, NodeFontName = "Arial", NodeFontSize = 10, BorderColor = Color.Gray, MaxDepth = 5, IsSourceOrderDec = true, LayoutAlign = LayoutAlign.LeftTop };
 
 var renderer = new GdiRenderer(); 
 var coordinator = new LayoutCoordinator<YourDataType>(new LayoutGenerator<YourDataType>()); 

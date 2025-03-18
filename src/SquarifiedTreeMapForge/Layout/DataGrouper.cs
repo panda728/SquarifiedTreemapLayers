@@ -70,7 +70,7 @@ public sealed class DataGrouper<T>
         int depth,
         Seed<T>? parent)
     {
-        var text = preparer.GetAggregateText(group.Key, group);
+        var text = preparer.GetGroupText(group.Key, group);
         var weight = group.Sum(preparer.GetWeight);
 
         var format = new NodeFormat(
