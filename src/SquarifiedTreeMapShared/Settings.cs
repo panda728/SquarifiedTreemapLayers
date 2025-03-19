@@ -15,8 +15,8 @@ public record TreemapSettings
     public bool IsTitleFontBold { get; init; } = false;
 
     public int Margin { get; init; } = 1;
-    public Color ForeColor { get; init; } = Color.Black;
-    public Color BackColor { get; init; } = Color.White;
+    public Color ForeColor { get; init; } = Color.White;
+    public Color BackColor { get; init; } = Color.Black;
     public Color HighlightColor { get; init; } = Color.White;
     public int HighlightWidth { get; init; } = 2;
 
@@ -37,7 +37,7 @@ public record TreemapLayoutSettings
     public string[] GroupColumns { get; init; } = [];
     public string[] GroupColumnFormats { get; init; } = [];
     public int[] GroupBorderWidths { get; init; } = [];
-    public Color ForeColor { get; init; } = Color.Black;
+    public Color ForeColor { get; init; } = Color.White;
     public Color BorderColor { get; init; } = Color.DimGray;
     public int MaxDepth { get; init; } = 32;
     public bool IsSourceOrderDec { get; init; } = true;

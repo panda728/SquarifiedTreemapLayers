@@ -1,0 +1,102 @@
+{
+  "treemapSettings": {
+    "TitleFontFamily": "Yu Gothic UI",
+    "TitleFontSize": 9.5,
+    "IsTitleFontBold": false,
+    "Margin": 1,
+    "ForeColor": {
+      "R": 255,
+      "G": 255,
+      "B": 255,
+      "A": 255,
+      "IsKnownColor": true,
+      "IsEmpty": false,
+      "IsNamedColor": true,
+      "IsSystemColor": false,
+      "Name": "White"
+    },
+    "BackColor": {
+      "R": 0,
+      "G": 0,
+      "B": 0,
+      "A": 255,
+      "IsKnownColor": true,
+      "IsEmpty": false,
+      "IsNamedColor": true,
+      "IsSystemColor": false,
+      "Name": "Black"
+    },
+    "HighlightColor": {
+      "R": 255,
+      "G": 255,
+      "B": 255,
+      "A": 255,
+      "IsKnownColor": true,
+      "IsEmpty": false,
+      "IsNamedColor": true,
+      "IsSystemColor": false,
+      "Name": "White"
+    },
+    "HighlightWidth": 2,
+    "NodeFontFamily": "Yu Gothic UI",
+    "NodeFontSize": 9.5,
+    "IsNodeFontBold": false,
+    "LegendFontFamily": "Yu Gothic UI",
+    "LegendFontSize": 7.5,
+    "IsLegendFontBold": false
+  },
+  "treemapLayoutSettings": {
+    "TitleText": "Visualizing Sales Revenue (Area) and Cost of Goods Sold Ratio (Color)",
+    "RootNodeTitle": "Total Sales",
+    "WeightColumn": "Weight",
+    "GroupColumns": [
+      "Group1",
+      "Group2",
+      "Group3"
+    ],
+    "GroupColumnFormats": [],
+    "GroupBorderWidths": [],
+    "ForeColor": {
+      "R": 255,
+      "G": 255,
+      "B": 255,
+      "A": 255,
+      "IsKnownColor": true,
+      "IsEmpty": false,
+      "IsNamedColor": true,
+      "IsSystemColor": false,
+      "Name": "White"
+    },
+    "BorderColor": {
+      "R": 128,
+      "G": 128,
+      "B": 128,
+      "A": 255,
+      "IsKnownColor": true,
+      "IsEmpty": false,
+      "IsNamedColor": true,
+      "IsSystemColor": false,
+      "Name": "Gray"
+    },
+    "MaxDepth": 32,
+    "IsSourceOrderDec": true,
+    "LayoutAlign": 4
+  },
+  "legendSettings": {
+    "Width": 250,
+    "Height": 20,
+    "MinPer": 0.73,
+    "MaxPer": 1,
+    "MinBrightness": 0.2,
+    "MaxBrightness": 0.9,
+    "HuePositive": 2,
+    "HueNegative": 205,
+    "Saturation": 0.85,
+    "StepCount": 7,
+    "Margin": 1,
+    "IsOrderAsc": false,
+    "LegendFormat": "0%",
+    "IsShowLegend": true,
+    "IsShowPlusSign": true
+  }
+}

@@ -108,4 +108,20 @@ public record PivotDataSource(
   string Group7 = "",
   string Group8 = "",
   string Group9 = ""
-);
+)
+{
+    public static string GetTitle(string k, IEnumerable<PivotDataSource> d)
+    {
+        var total = (double)d.Sum(d => d.Weight);
+        var purchaseTotal = (double)d.Sum(d => d.RelativeWeight);
+        var per = purchaseTotal / total;
+        return $"{k}({d.Sum(d => d.Weight) / 1000:#,##0} {per:+0.0%;-0.0%}) ";
+    }
+    public static double GetPercentage(IEnumerable<PivotDataSource> d)
+    {
+        var total = (double)d.Sum(d => d.Weight);
+        var diff = (double)d.Sum(d => d.RelativeWeight);
+        var percentage = Math.Round(diff / total * 1000) / 1000;
+        return percentage;
+    }
+};

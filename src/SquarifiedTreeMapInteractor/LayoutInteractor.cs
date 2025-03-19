@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using SquarifiedTreemapForge.Helpers;
 using SquarifiedTreemapForge.Layout;
 using SquarifiedTreemapShared;
 
@@ -41,14 +42,17 @@ public class LayoutInteractor<T>(
         TreemapLayoutSettings settings,
         TreemapSettings treemapSettings,
         LegendSettings legendSettings,
-        Func<string, IEnumerable<T>, string>? funcNodeText,
-        Func<IEnumerable<T>, Color>? funcNodeColor)
+        Func<string, IEnumerable<T>, string>? funcNodeText = null,
+        Func<IEnumerable<T>, Color>? funcNodeColor = null,
+        Func<IEnumerable<T>, double>? funcPercentage = null)
     {
         _isSourceOrderDec = settings.IsSourceOrderDec;
         _layoutAlign = settings.LayoutAlign;
 
-        preparer.Initialize(settings, funcNodeText, funcNodeColor);
         legend.LoadSettings(legendSettings);
+        FuncPercentage = funcPercentage;
+
+        preparer.Initialize(settings, funcNodeText, funcNodeColor ?? GetColor);
 
         _rootSeed = DataGrouper<T>.CreateSeed(
             sources,
@@ -92,6 +96,12 @@ public class LayoutInteractor<T>(
             treemapSettings.HighlightColor
         );
     }
+
+    public Func<IEnumerable<T>, double>? FuncPercentage { get; set; }
+
+    Color GetColor(IEnumerable<T> d) => FuncPercentage == null
+        ? ColorHelper.GenerateRandomColor()
+        : legend.GetPercentageColor(FuncPercentage.Invoke(d));
 
     /// <summary>Calculates the layout of the treemap.</summary>
     public bool Layout(Rectangle bounds, int nodeFontHeight)

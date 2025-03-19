@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreemapWinForms",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreemapInteractor", "SquarifiedTreemapInteractor\SquarifiedTreemapInteractor.csproj", "{E1A4EB73-C7BE-4DFF-9EE4-DCB310878799}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreemapMinimumConsole", "..\Demo\SquarifiedTreemapMinimumConsole\SquarifiedTreemapMinimumConsole.csproj", "{52086F8E-A1CD-465D-BC0E-D17990B70E1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{E1A4EB73-C7BE-4DFF-9EE4-DCB310878799}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1A4EB73-C7BE-4DFF-9EE4-DCB310878799}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1A4EB73-C7BE-4DFF-9EE4-DCB310878799}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52086F8E-A1CD-465D-BC0E-D17990B70E1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52086F8E-A1CD-465D-BC0E-D17990B70E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52086F8E-A1CD-465D-BC0E-D17990B70E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52086F8E-A1CD-465D-BC0E-D17990B70E1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,4 @@
 ﻿using System.Drawing;
-using Microsoft.Extensions.Options;
 using SquarifiedTreemapForge.Helpers;
 using SquarifiedTreemapShared;
 
@@ -7,8 +6,6 @@ namespace SquarifiedTreemapForge.Layout;
 
 public sealed class LegendCalculator
 {
-    public LegendCalculator(IOptions<LegendSettings> settingsOp) => LoadSettings(settingsOp.Value);
-
     LegendSettings Settings { get; set; } = new();
     LegendState State { get; set; } = new();
 

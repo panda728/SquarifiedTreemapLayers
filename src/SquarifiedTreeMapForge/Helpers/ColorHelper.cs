@@ -4,6 +4,14 @@ namespace SquarifiedTreemapForge.Helpers;
 
 public static class ColorHelper
 {
+    public static Color GenerateRandomColor()
+    {
+        return Color.FromArgb(
+            red: Random.Shared.Next(64, 192),
+            green: Random.Shared.Next(64, 192),
+            blue: Random.Shared.Next(64, 192));
+    }
+
     public static Color HslToRgb(double h, double s, double l)
     {
         double c = (1 - Math.Abs(2 * l - 1)) * s;

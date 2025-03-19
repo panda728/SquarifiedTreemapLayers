@@ -6,30 +6,56 @@ using SquarifiedTreemapShared;
 namespace SquarifiedTreemapForge.WinForms;
 
 /// <summary>Manages the data source and rendering for a treemap.</summary>
-public sealed class TreemapGdiDriver<T>(
-    GdiRenderer renderer,
-    LayoutInteractor<T> coordinator,
-    IOptions<TreemapSettings> treemapSettingsOp,
-    IOptions<TreemapLayoutSettings> layoutSettingsOp,
-    IOptions<LegendSettings> legendSettingsOp
-)
+public sealed class TreemapGdiDriver<T>
 {
     const string FONT_HEIGHT_DEFALUT = "A";
     readonly Semaphore _semaphore = new(1, 1);
-
+    private readonly GdiRenderer renderer;
+    private readonly LayoutInteractor<T> interactor;
     TreemapControl? _treemapControl;
 
-    [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-    public TreemapSettings TreemapSettings { get; set; } = treemapSettingsOp.Value;
+    public TreemapGdiDriver(
+        GdiRenderer renderer,
+        LayoutInteractor<T> interactor,
+        TreemapSettings treemapSettings,
+        TreemapLayoutSettings layoutSettings,
+        LegendSettings legendSettings
+)
+    {
+        this.renderer = renderer;
+        this.interactor = interactor;
+        TreemapSettings = treemapSettings;
+        LayoutSettings = layoutSettings;
+        LegendSettings = legendSettings;
+    }
+
+    public TreemapGdiDriver(
+        GdiRenderer renderer,
+        LayoutInteractor<T> interactor,
+        IOptions<TreemapSettings> treemapSettingsOp,
+        IOptions<TreemapLayoutSettings> layoutSettingsOp,
+        IOptions<LegendSettings> legendSettingsOp
+)
+    {
+        this.renderer = renderer;
+        this.interactor = interactor;
+        TreemapSettings = treemapSettingsOp.Value;
+        LayoutSettings = layoutSettingsOp.Value;
+        LegendSettings = legendSettingsOp.Value;
+    }
 
     [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-    public TreemapLayoutSettings LayoutSettings { get; set; } = layoutSettingsOp.Value;
+    public TreemapSettings TreemapSettings { get; set; }
 
     [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-    public LegendSettings LegendSettings { get; set; } = legendSettingsOp.Value;
+    public TreemapLayoutSettings LayoutSettings { get; set; }
+
+    [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+    public LegendSettings LegendSettings { get; set; }
 
     public Func<string, IEnumerable<T>, string>? FuncNodeText { get; set; }
     public Func<IEnumerable<T>, Color>? FuncNodeColor { get; set; }
+    public Func<IEnumerable<T>, double>? FuncPercentage { get; set; }
 
     public TreemapControl? TreemapControl
     {
@@ -57,14 +83,14 @@ public sealed class TreemapGdiDriver<T>(
     }
 
     public Color GetPercentageColor(double per)
-        => coordinator.GetPercentageColor(per);
+        => interactor.GetPercentageColor(per);
 
     public void Invalidate() => _treemapControl?.Invalidate();
 
     public void Invalidate(IEnumerable<T> sources)
     {
-        coordinator.SetDataSource(
-            sources, LayoutSettings, TreemapSettings, LegendSettings, FuncNodeText, FuncNodeColor);
+        interactor.SetDataSource(
+            sources, LayoutSettings, TreemapSettings, LegendSettings, FuncNodeText, FuncNodeColor, FuncPercentage);
         _treemapControl?.Invalidate();
     }
 
@@ -73,7 +99,7 @@ public sealed class TreemapGdiDriver<T>(
         if (_semaphore.WaitOne(0) == false) return;
         try
         {
-            RenderTreemap(e.Graphics, coordinator, renderer, e.ClipRectangle, LayoutSettings.TitleText);
+            RenderTreemap(e.Graphics, interactor, renderer, e.ClipRectangle, LayoutSettings.TitleText);
         }
         finally
         {
@@ -83,20 +109,20 @@ public sealed class TreemapGdiDriver<T>(
 
     static void RenderTreemap(
         Graphics g,
-        LayoutInteractor<T> coordinator,
+        LayoutInteractor<T> interactor,
         GdiRenderer renderer,
         Rectangle bounds,
         string titleText)
     {
         var nodeHeight = renderer.GetFontHeight(
-            g, coordinator.NodeFont, string.IsNullOrEmpty(titleText) ? FONT_HEIGHT_DEFALUT : titleText);
+            g, interactor.NodeFont, string.IsNullOrEmpty(titleText) ? FONT_HEIGHT_DEFALUT : titleText);
 
-        if (coordinator.Layout(bounds, nodeHeight)
-            && coordinator.Treemap != null && coordinator.RootNode != null)
+        if (interactor.Layout(bounds, nodeHeight)
+            && interactor.Treemap != null && interactor.RootNode != null)
         {
-            var legends = coordinator.GenerateLegends(bounds);
+            var legends = interactor.GenerateLegends(bounds);
             renderer.Render(
-                g, coordinator.Treemap, coordinator.RootNode, nodeHeight, legends, coordinator.HighLightBounds);
+                g, interactor.Treemap, interactor.RootNode, nodeHeight, legends, interactor.HighLightBounds);
         }
     }
 
@@ -106,7 +132,7 @@ public sealed class TreemapGdiDriver<T>(
     public Action<object?, EventArgs>? OnMouseLeaveAction { get; set; }
 
     public TreemapNode? GetContainsItem(Point cp)
-        => coordinator.GetContainsItem(cp);
+        => interactor.GetContainsItem(cp);
 
     void treemapControl_DoubleClick(object? sender, EventArgs e)
     {
@@ -117,7 +143,7 @@ public sealed class TreemapGdiDriver<T>(
         }
 
         var cp = _treemapControl.PointToClient(Cursor.Position);
-        coordinator.SetFilterIfContains(cp);
+        interactor.SetFilterIfContains(cp);
         _treemapControl?.Invalidate();
     }
 
@@ -130,7 +156,7 @@ public sealed class TreemapGdiDriver<T>(
         }
 
         var cp = _treemapControl.PointToClient(Cursor.Position);
-        if (coordinator.SetHighLightIfContains(cp))
+        if (interactor.SetHighLightIfContains(cp))
         {
             _treemapControl?.Invalidate();
         }
@@ -139,7 +165,7 @@ public sealed class TreemapGdiDriver<T>(
 
     void treemapControl_LeaveAction(object? sender, EventArgs e)
     {
-        if (_treemapControl != null && coordinator.ResetHighlight())
+        if (_treemapControl != null && interactor.ResetHighlight())
         {
             _treemapControl?.Invalidate();
         }
@@ -152,7 +178,7 @@ public sealed class TreemapGdiDriver<T>(
     {
         var bmp = new Bitmap(width, height);
         using var g = Graphics.FromImage(bmp);
-        RenderTreemap(g, coordinator, renderer, new Rectangle(Point.Empty, bmp.Size), LayoutSettings.TitleText);
+        RenderTreemap(g, interactor, renderer, new Rectangle(Point.Empty, bmp.Size), LayoutSettings.TitleText);
         return bmp;
     }
 }

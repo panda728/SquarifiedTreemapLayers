@@ -9,9 +9,99 @@ SquarifiedTreemapLayers is a library for generating and rendering treemap layout
 - Legend generation and display
 - Compatible with .NET 8
 
+## System Architecture
+
+### SquarifiedTreemapConsole
+
+The `SquarifiedTreemapConsole` application is structured as follows:
+
+```mermaid
+graph TD 
+A[Program] -->|Dependency| B[Exporter] 
+A -->|Dependency| C[TreemapGdiDriver<T>] 
+A -->|Dependency| D[GdiRenderer] 
+A -->|Dependency| E[LayoutInteractor<T>] 
+A -->|Dependency| F[DataGroupPreparer<T>] 
+A -->|Dependency| G[LayoutGenerator<T>] 
+A -->|Dependency| H[LegendCalculator] 
+A -->|Dependency| I[SquarifiedTreemapGenerator]
+B -->|Uses| C
+C -->|Uses| D
+C -->|Uses| E
+E -->|Uses| F
+E -->|Uses| G
+E -->|Uses| H
+E -->|Uses| I
+```
+
+#### Components
+
+- **Program**: The entry point of the application. It parses command-line arguments, builds the host, and runs the `Exporter`.
+- **Exporter**: Handles the export process, including reading data, generating the treemap, and saving the output.
+- **TreemapGdiDriver<PivotDataSource>**: Responsible for rendering the treemap.
+- **GdiRenderer**: Uses GDI+ for rendering.
+- **LayoutInteractor<PivotDataSource>**, **LayoutGenerator<PivotDataSource>**, **DataGroupPreparer<PivotDataSource>**, **LegendCalculator**, **SquarifiedTreemapGenerator**: Handle various aspects of treemap layout, data preparation, and legend calculation.
+
+This architecture ensures a modular and maintainable codebase, allowing for easy extension and customization of the treemap functionalities.
+
+### SquarifiedTreemapWinForms
+
+The `SquarifiedTreemapWinForms` application is structured as follows:
+
+```mermaid
+graph TD;
+A[Program] -->|Dependency| B[FormMain] 
+A -->|Dependency| C[TreemapGdiDriver<T>] 
+A -->|Dependency| D[GdiRenderer] 
+A -->|Dependency| E[LayoutInteractor<T>] 
+A -->|Dependency| F[LayoutGenerator<T>] 
+A -->|Dependency| G[DataGroupPreparer<T>] 
+A -->|Dependency| H[LegendCalculator] 
+A -->|Dependency| I[SquarifiedTreemapGenerator]
+B -->|Uses| C
+C -->|Uses| D
+C -->|Uses| E
+E -->|Uses| F
+E -->|Uses| G
+E -->|Uses| H
+E -->|Uses| I
+```
+
+#### Components
+
+- **Program**: The entry point of the application. It builds the host and runs the `FormMain`.
+- **FormMain**: The main Windows form that provides the user interface.
+- **TreemapGdiDriver<PivotDataSource>**: Responsible for rendering the treemap.
+- **GdiRenderer**: Uses GDI+ for rendering.
+- **LayoutInteractor<PivotDataSource>**, **LayoutGenerator<PivotDataSource>**, **DataGroupPreparer<PivotDataSource>**, **LegendCalculator**, **SquarifiedTreemapGenerator**: Handle various aspects of treemap layout, data preparation, and legend calculation.
+
+This architecture ensures a modular and maintainable codebase, allowing for easy extension and customization of the treemap functionalities.
+
 ## Installation
 
-Clone this repository and open it in Visual Studio 2022.
+To install and run the `SquarifiedTreemapConsole` application, follow these steps:
+
+1. Clone the repository:
+
+```
+git clone https://github.com/yourusername/SquarifiedTreemapLayers.git cd SquarifiedTreemapLayers/SquarifiedTreemapConsole
+```
+
+2. Build the project in Release mode to generate the executable:
+```
+dotnet publish -c Release -r win-x64 --self-contained
+```
+This command will create a self-contained executable in the `bin\Release\net8.0\win-x64\publish` directory.
+
+3. Navigate to the publish directory and run the executable:
+```
+cd bin\Release\net8.0\win-x64\publish SquarifiedTreemapConsole.exe <width> <height> <datapath> [pngfullpath]
+```
+Replace `<width>`, `<height>`, `<datapath>`, and `[pngfullpath]` with the appropriate values for your use case.
+
+### Sample Data and Configuration
+
+Sample data and configuration examples can be found in the `SquarifiedTreemapLayers\sample\population` folder. 
 
 ## Usage
 
@@ -19,33 +109,40 @@ Clone this repository and open it in Visual Studio 2022.
 
 The following code demonstrates how to generate and render a treemap layout.
 
-```
-using SquarifiedTreemapForge.WinForms; 
-using SquarifiedTreemapShared; 
-using System.Drawing;
+```csharp
+using System.Text.Json;
+using SquarifiedTreemapForge;
+using SquarifiedTreemapForge.Layout;
+using SquarifiedTreemapForge.WinForms;
+using SquarifiedTreemapInteractor;
+using SquarifiedTreemapShared;
 
-var settings = new TreemapSettings { TitleText = "Sample Treemap", TitleFontName = "Arial", TitleFontSize = 12, ForeColor = Color.Black, BackColor = Color.White, HighlightColor = Color.Red, HighlightWidth = 2, Margin = 1 };
+var settings = new TreemapSettings();
+var layoutSettings = new TreemapLayoutSettings { TitleText = "Visualizing Sales Revenue (Area) and Cost of Goods Sold Ratio (Color)", RootNodeTitle = "Total Sales", WeightColumn = "Weight", GroupColumns = ["Group1", "Group2", "Group3"], GroupBorderWidths = [4, 2], };
+var legendSettings = new LegendSettings() { Width = 250, Height = 20, MinPer = 0.73, MaxPer = 1, MinBrightness = 0.2, MaxBrightness = 0.9, HuePositive = 2, HueNegative = 205, Saturation = 0.85, StepCount = 7, Margin = 1, IsOrderAsc = false, LegendFormat = "0%", IsShowLegend = true, IsShowPlusSign = true };
+var renderer = new GdiRenderer();
 
-var layoutSettings = new TreemapLayoutSettings { WeightColumn = "Value", GroupColumns = new string[] { "Category" }, GroupColumnFormats = new string[] { "0.0" }, GroupBorderWidths = new int[] { 1 }, ForeColor = Color.Black, NodeFontName = "Arial", NodeFontSize = 10, BorderColor = Color.Gray, MaxDepth = 5, IsSourceOrderDec = true, LayoutAlign = LayoutAlign.LeftTop };
+var interactor = new LayoutInteractor<PivotDataSource>(
+    new LayoutGenerator<PivotDataSource>(new SquarifiedTreemapGenerator()),
+    new DataGroupPreparer<PivotDataSource>(),
+    new LegendCalculator()
+);
 
-var renderer = new GdiRenderer(); 
-var coordinator = new LayoutCoordinator<YourDataType>(new LayoutGenerator<YourDataType>()); 
-var driver = new TreemapDriver<YourDataType>(settings, layoutSettings, coordinator, renderer);
-driver.SetDataSource(yourDataSource); 
-driver.Render(800, 600).Save("treemap.png", System.Drawing.Imaging.ImageFormat.Png);
-```
+var driver = new TreemapGdiDriver<PivotDataSource>(renderer, interactor, settings, layoutSettings, legendSettings)
+{
+    FuncNodeText = PivotDataSource.GetTitle,
+    FuncPercentage = PivotDataSource.GetPercentage
+};
 
-### Generating Legends
+var json = File.ReadAllText(@"..\..\..\..\..\sample\sales\sales_data.json");
+var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+var data = JsonSerializer.Deserialize<IEnumerable<PivotDataSource>>(json, options) ?? [];
+driver.Invalidate(data);
 
-The following code demonstrates how to generate legends.
+driver.Render(1024, 768)
+    .Save("treemap.png", System.Drawing.Imaging.ImageFormat.Png);
 
-```
-using SquarifiedTreemapForge.Layout; 
-using SquarifiedTreemapShared; 
-using System.Drawing;
-
-var legendSettings = new LegendSettings { MinValue = -0.1, MaxValue = 0.1, MinBrightness = 0.08, MaxBrightness = 0.78, HuePositive = 205.0, HueNegative = 2.0, Saturation = 0.9, Steps = 7, Margin = 1, IsOrderAsc = false, IsShowLegend = true, IsShowPlusSign = true, LegendFormat = "0%" };
-var legendCalculator = new LegendCalculator(Options.Create(legendSettings)); var legends = legendCalculator.GenerateLegends(new Rectangle(0, 0, 800, 50));
+Console.WriteLine($"Treemap image saved to {new FileInfo("treemap.png").FullName}");
 ```
 
 ## Contributing

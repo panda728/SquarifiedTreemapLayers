@@ -9,7 +9,7 @@ namespace SquarifiedTreemapConsole;
 
 public sealed class Exporter(
     GdiRenderer renderer,
-    LayoutInteractor<PivotDataSource> coordinator,
+    LayoutInteractor<PivotDataSource> interactor,
     IOptions<TreemapSettings> treemapSettingsOp,
     IOptions<TreemapLayoutSettings> layoutSettingsOp,
     IOptions<LegendSettings> legendSettingsOp)
@@ -27,7 +27,7 @@ public sealed class Exporter(
         var json = File.ReadAllText(dataPath);
         var data = JsonSerializer.Deserialize<IEnumerable<PivotDataSource>>(json) ?? [];
 
-        coordinator.SetDataSource(
+        interactor.SetDataSource(
             data, LayoutSettings, TreemapSettings, LegendSettings, GetTitle, GetColor);
 
         var bmp = Render(width, height) ?? throw new ApplicationException("no data.");
@@ -43,7 +43,7 @@ public sealed class Exporter(
         return $"data:image/png;base64,{Convert.ToBase64String(ms.ToArray())}";
     }
 
-    string GetTitle(string text, IEnumerable<PivotDataSource> d)
+    static string GetTitle(string text, IEnumerable<PivotDataSource> d)
     {
         var total = (double)d.Sum(d => d.Weight);
         var purchaseTotal = (double)d.Sum(d => d.RelativeWeight);
@@ -56,7 +56,7 @@ public sealed class Exporter(
         var total = (double)d.Sum(d => d.Weight);
         var diff = (double)d.Sum(d => d.RelativeWeight);
         var percentage = Math.Round(diff / total * 1000) / 1000;
-        return coordinator.GetPercentageColor(percentage);
+        return interactor.GetPercentageColor(percentage);
     }
 
     /// <summary>Renders the treemap to a bitmap.</summary>
@@ -66,12 +66,12 @@ public sealed class Exporter(
         using var g = Graphics.FromImage(bmp);
 
         var nodeHeight = renderer.GetFontHeight(
-            g, coordinator.NodeFont, LayoutSettings.TitleText);
+            g, interactor.NodeFont, LayoutSettings.TitleText);
 
-        if (coordinator.Layout(new Rectangle(Point.Empty, bmp.Size), nodeHeight)
-            && coordinator.Treemap != null && coordinator.RootNode != null)
+        if (interactor.Layout(new Rectangle(Point.Empty, bmp.Size), nodeHeight)
+            && interactor.Treemap != null && interactor.RootNode != null)
         {
-            renderer.Render(g, coordinator.Treemap, coordinator.RootNode, nodeHeight);
+            renderer.Render(g, interactor.Treemap, interactor.RootNode, nodeHeight);
             return bmp;
         }
         throw new ApplicationException("no data.");
