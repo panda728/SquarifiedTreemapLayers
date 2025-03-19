@@ -145,6 +145,10 @@ driver.Render(1024, 768)
 Console.WriteLine($"Treemap image saved to {new FileInfo("treemap.png").FullName}");
 ```
 
+### Treemap image
+
+![Image](https://github.com/user-attachments/assets/c64b0c15-c753-4978-afa0-f73f93567d6a)
+
 ## Contributing
 
 Contributions are welcome. Feel free to report bugs, suggest new features, or submit pull requests.
