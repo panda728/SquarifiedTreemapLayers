@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using Microsoft.Extensions.Options;
 using SquarifiedTreemapForge;
 using SquarifiedTreemapForge.Layout;
 using SquarifiedTreemapForge.WinForms;
@@ -16,7 +17,8 @@ var interactor = new LayoutInteractor<PivotDataSource>(
     new LegendCalculator()
 );
 
-var driver = new TreemapGdiDriver<PivotDataSource>(renderer, interactor, settings, layoutSettings, legendSettings)
+var driver = new TreemapGdiDriver<PivotDataSource>(
+    renderer, interactor, Options.Create(settings), Options.Create(layoutSettings), Options.Create(legendSettings))
 {
     FuncNodeText = PivotDataSource.GetTitle,
     FuncPercentage = PivotDataSource.GetPercentage

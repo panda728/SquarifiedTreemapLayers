@@ -23,9 +23,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\SquarifiedTreemapForge.WinForms\SquarifiedTreemapForge.WinForms.csproj" />
-    <ProjectReference Include="..\..\src\SquarifiedTreemapForge\SquarifiedTreemapForge.csproj" />
-    <ProjectReference Include="..\..\src\SquarifiedTreemapShared\SquarifiedTreemapShared.csproj" />
+    <ProjectReference Include="..\SquarifiedTreemapForge.WinForms\SquarifiedTreemapForge.WinForms.csproj" />
+    <ProjectReference Include="..\SquarifiedTreemapForge\SquarifiedTreemapForge.csproj" />
+    <ProjectReference Include="..\SquarifiedTreemapInteractor\SquarifiedTreemapInteractor.csproj" />
+    <ProjectReference Include="..\SquarifiedTreemapShared\SquarifiedTreemapShared.csproj" />
   </ItemGroup>
 
   <ItemGroup>

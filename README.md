@@ -149,6 +149,14 @@ Console.WriteLine($"Treemap image saved to {new FileInfo("treemap.png").FullName
 
 ![Image](https://github.com/user-attachments/assets/c64b0c15-c753-4978-afa0-f73f93567d6a)
 
+## Customizable
+
+layout color legend
+
+see SquarifiedTreemapLayers\src\SquarifiedTreemapWinForms
+
+https://github.com/panda728/SquarifiedTreemapLayers/issues/2#issue-2932191192
+
 ## Contributing
 
 Contributions are welcome. Feel free to report bugs, suggest new features, or submit pull requests.

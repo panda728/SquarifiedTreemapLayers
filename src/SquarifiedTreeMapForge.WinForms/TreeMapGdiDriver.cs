@@ -6,52 +6,27 @@ using SquarifiedTreemapShared;
 namespace SquarifiedTreemapForge.WinForms;
 
 /// <summary>Manages the data source and rendering for a treemap.</summary>
-public sealed class TreemapGdiDriver<T>
+public sealed class TreemapGdiDriver<T>(
+    GdiRenderer renderer,
+    LayoutInteractor<T> interactor,
+    IOptions<TreemapSettings> treemapSettingsOp,
+    IOptions<TreemapLayoutSettings> layoutSettingsOp,
+    IOptions<LegendSettings> legendSettingsOp
+    )
 {
     const string FONT_HEIGHT_DEFALUT = "A";
+
     readonly Semaphore _semaphore = new(1, 1);
-    private readonly GdiRenderer renderer;
-    private readonly LayoutInteractor<T> interactor;
     TreemapControl? _treemapControl;
 
-    public TreemapGdiDriver(
-        GdiRenderer renderer,
-        LayoutInteractor<T> interactor,
-        TreemapSettings treemapSettings,
-        TreemapLayoutSettings layoutSettings,
-        LegendSettings legendSettings
-)
-    {
-        this.renderer = renderer;
-        this.interactor = interactor;
-        TreemapSettings = treemapSettings;
-        LayoutSettings = layoutSettings;
-        LegendSettings = legendSettings;
-    }
-
-    public TreemapGdiDriver(
-        GdiRenderer renderer,
-        LayoutInteractor<T> interactor,
-        IOptions<TreemapSettings> treemapSettingsOp,
-        IOptions<TreemapLayoutSettings> layoutSettingsOp,
-        IOptions<LegendSettings> legendSettingsOp
-)
-    {
-        this.renderer = renderer;
-        this.interactor = interactor;
-        TreemapSettings = treemapSettingsOp.Value;
-        LayoutSettings = layoutSettingsOp.Value;
-        LegendSettings = legendSettingsOp.Value;
-    }
+    [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+    public TreemapSettings TreemapSettings { get; set; } = treemapSettingsOp.Value;
 
     [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-    public TreemapSettings TreemapSettings { get; set; }
+    public TreemapLayoutSettings LayoutSettings { get; set; } = layoutSettingsOp.Value;
 
     [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-    public TreemapLayoutSettings LayoutSettings { get; set; }
-
-    [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-    public LegendSettings LegendSettings { get; set; }
+    public LegendSettings LegendSettings { get; set; } = legendSettingsOp.Value;
 
     public Func<string, IEnumerable<T>, string>? FuncNodeText { get; set; }
     public Func<IEnumerable<T>, Color>? FuncNodeColor { get; set; }
