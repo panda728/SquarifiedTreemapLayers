@@ -14,6 +14,8 @@ public sealed class Exporter(
     IOptions<TreemapLayoutSettings> layoutSettingsOp,
     IOptions<LegendSettings> legendSettingsOp)
 {
+    readonly JsonSerializerOptions _options = new() { PropertyNameCaseInsensitive = true };
+
     public TreemapSettings TreemapSettings { get; set; } = treemapSettingsOp.Value;
     public TreemapLayoutSettings LayoutSettings { get; set; } = layoutSettingsOp.Value;
     public LegendSettings LegendSettings { get; set; } = legendSettingsOp.Value;
@@ -25,7 +27,7 @@ public sealed class Exporter(
         if (!File.Exists(dataPath)) { throw new FileNotFoundException("Data file not found.", dataPath); }
 
         var json = File.ReadAllText(dataPath);
-        var data = JsonSerializer.Deserialize<IEnumerable<PivotDataSource>>(json) ?? [];
+        var data = JsonSerializer.Deserialize<IEnumerable<PivotDataSource>>(json, _options) ?? [];
 
         interactor.SetDataSource(
             data, LayoutSettings, TreemapSettings, LegendSettings, GetTitle, GetColor);

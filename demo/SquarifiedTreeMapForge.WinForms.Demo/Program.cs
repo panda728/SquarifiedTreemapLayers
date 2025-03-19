@@ -4,6 +4,7 @@ using PopulationDataProvider.Demo;
 using SquarifiedTreemapInteractor;
 using SquarifiedTreemapForge.Layout;
 using SquarifiedTreemapShared;
+using Microsoft.Extensions.Configuration;
 
 namespace SquarifiedTreemapForge.WinForms.Demo;
 
@@ -25,6 +26,13 @@ internal static class Program
 
     public static IHostBuilder CreateHostBuilder(string[]? args = null) =>
         Host.CreateDefaultBuilder(args)
+             .ConfigureAppConfiguration((hostingContext, config) =>
+             {
+                 var env = hostingContext.HostingEnvironment;
+                 config.AddJsonFile("treemapsettings.json", optional: true, reloadOnChange: true)
+                       .AddJsonFile($"treemapsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
+                 config.AddEnvironmentVariables();
+             })
             .ConfigureServices((hostContext, services) =>
             {
                 services.Configure<TreemapSettings>(
