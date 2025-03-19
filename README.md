@@ -16,9 +16,9 @@ SquarifiedTreemapLayers is a library for generating and rendering treemap layout
 
 ![Image](https://github.com/user-attachments/assets/c64b0c15-c753-4978-afa0-f73f93567d6a)
 
-### Configuration Screen
+### SquarifiedTreemapWinForms Screen
 
-Setting Sample (layout, color, legend)
+Setting Screen (layout, color, legend)
 
 See: `SquarifiedTreemapLayers\src\SquarifiedTreemapWinForms`
 
@@ -150,9 +150,9 @@ driver.Render(1024, 768)
 Console.WriteLine($"Treemap image saved to {new FileInfo("treemap.png").FullName}");
 ```
 
-### CreateDefaultBuilder Sample
+### Dependency injection configuration examples.
 
-The following code demonstrates how to generate and render a treemap layout using Dependency Injection (DI).  
+The following code examples using Dependency Injection (DI).  
 
 ```csharp
 Host.CreateDefaultBuilder(args)
