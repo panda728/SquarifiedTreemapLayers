@@ -4,7 +4,7 @@ using SquarifiedTreemapShared;
 
 namespace SquarifiedTreemapForge.Layout;
 
-public sealed class LegendCalculator
+public sealed class LegendGenerator
 {
     LegendSettings Settings { get; set; } = new();
     LegendState State { get; set; } = new();

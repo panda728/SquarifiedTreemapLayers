@@ -61,7 +61,7 @@ internal static class Program
                 services.AddTransient<LayoutInteractor<PivotDataSource>>();
                 services.AddTransient<LayoutGenerator<PivotDataSource>>();
                 services.AddTransient<DataGroupPreparer<PivotDataSource>>();
-                services.AddTransient<LegendCalculator>();
+                services.AddTransient<LegendGenerator>();
                 services.AddTransient<ITreemapGenerator, SquarifiedTreemapGenerator>();
             });
 }

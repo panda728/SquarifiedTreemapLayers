@@ -59,7 +59,7 @@ internal static class Program
                 services.AddTransient<LayoutInteractor<PopulationData>>();
                 services.AddTransient<LayoutGenerator<PopulationData>>();
                 services.AddTransient<DataGroupPreparer<PopulationData>>();
-                services.AddTransient<LegendCalculator>();
+                services.AddTransient<LegendGenerator>();
                 services.AddTransient<ITreemapGenerator, SquarifiedTreemapGenerator>();
             });
 }

@@ -26,69 +26,52 @@ See: `SquarifiedTreemapLayers\src\SquarifiedTreemapWinForms`
 
 ## System Architecture
 
+### SquarifiedTreemapWinForms
+
+The `SquarifiedTreemapWinForms` application is structured as follows:
+
+```mermaid
+graph TD 
+A[Program] -->|Run| B[FormMain] 
+B -->|Controls.Add| C[TreemapControl] 
+B -->|SetData| D[TreemapGdiDriver<T>]
+D -->|SetData| E[LayoutInteractor<T>] 
+E -->|SetData| F[DataGroupPreparer<T>] 
+D -->|OnPaint| E
+E -->|OnPaint| G[LayoutGenerator<T>] 
+G -->|OnPaint| H[SquarifiedTreemapGenerator] 
+E -->|OnPaint| I[LegendGenerator]
+C --> |Action| D
+D -->|OnPaint| J[GdiRenderer] 
+```
+- **Program**: The entry point of the application. It builds the host and runs the `FormMain`.
+- **FormMain**: The main Windows form that provides the user interface.
+- **TreemapGdiDriver<T>**: Responsible for rendering the treemap.
+- **GdiRenderer**: Uses GDI+ for rendering.
+- **LayoutInteractor<T>**, **LayoutGenerator<T>**, **DataGroupPreparer<T>**, **LegendGenerator**, **SquarifiedTreemapGenerator**: Handle various aspects of treemap layout, data preparation, and legend calculation.
+
+This architecture ensures a modular and maintainable codebase, allowing for easy extension and customization of the treemap functionalities.
+
 ### SquarifiedTreemapConsole
 
 The `SquarifiedTreemapConsole` application is structured as follows:
 
 ```mermaid
 graph TD 
-A[Program] -->|Dependency| B[Exporter] 
-A -->|Dependency| C[TreemapGdiDriver<T>] 
-A -->|Dependency| D[GdiRenderer] 
-A -->|Dependency| E[LayoutInteractor<T>] 
-A -->|Dependency| F[DataGroupPreparer<T>] 
-A -->|Dependency| G[LayoutGenerator<T>] 
-A -->|Dependency| H[LegendCalculator] 
-A -->|Dependency| I[SquarifiedTreemapGenerator]
-B -->|Uses| C
-C -->|Uses| D
-C -->|Uses| E
-E -->|Uses| F
-E -->|Uses| G
-E -->|Uses| H
-E -->|Uses| I
+A[Program] -->|Run| B[Exporter] 
+B -->|SetData| C[LayoutInteractor<T>] 
+C -->|SetData| D[DataGroupPreparer<T>]
+B --> |Render| C
+C -->|Render| E[LayoutGenerator<T>] 
+E -->|Render| F[SquarifiedTreemapGenerator] 
+C -->|Render| G[LegendGenerator]
+B -->|Render| H[GdiRenderer] 
 ```
-
-#### The `SquarifiedTreemapConsole` Components
 
 - **Program**: The entry point of the application. It parses command-line arguments, builds the host, and runs the `Exporter`.
 - **Exporter**: Handles the export process, including reading data, generating the treemap, and saving the output.
-- **TreemapGdiDriver<T>**: Responsible for rendering the treemap.
 - **GdiRenderer**: Uses GDI+ for rendering.
-- **LayoutInteractor<T>**, **LayoutGenerator<T>**, **DataGroupPreparer<T>**, **LegendCalculator**, **SquarifiedTreemapGenerator**: Handle various aspects of treemap layout, data preparation, and legend calculation.
-
-This architecture ensures a modular and maintainable codebase, allowing for easy extension and customization of the treemap functionalities.
-
-### SquarifiedTreemapWinForms
-
-The `SquarifiedTreemapWinForms` application is structured as follows:
-
-```mermaid
-graph TD;
-A[Program] -->|Dependency| B[FormMain] 
-A -->|Dependency| C[TreemapGdiDriver<T>] 
-A -->|Dependency| D[GdiRenderer] 
-A -->|Dependency| E[LayoutInteractor<T>] 
-A -->|Dependency| F[LayoutGenerator<T>] 
-A -->|Dependency| G[DataGroupPreparer<T>] 
-A -->|Dependency| H[LegendCalculator] 
-A -->|Dependency| I[SquarifiedTreemapGenerator]
-B -->|Uses| C
-C -->|Uses| D
-C -->|Uses| E
-E -->|Uses| F
-E -->|Uses| G
-E -->|Uses| H
-E -->|Uses| I
-```
-
-#### The `SquarifiedTreemapWinForms` Components
-
-- **Program**: The entry point of the application. It builds the host and runs the `FormMain`.
-- **FormMain**: The main Windows form that provides the user interface.
-- **TreemapGdiDriver<T>**: Responsible for rendering the treemap.
-- **GdiRenderer**: Uses GDI+ for rendering.
-- **LayoutInteractor<T>**, **LayoutGenerator<T>**, **DataGroupPreparer<T>**, **LegendCalculator**, **SquarifiedTreemapGenerator**: Handle various aspects of treemap layout, data preparation, and legend calculation.
+- **LayoutInteractor<T>**, **LayoutGenerator<T>**, **DataGroupPreparer<T>**, **LegendGenerator**, **SquarifiedTreemapGenerator**: Handle various aspects of treemap layout, data preparation, and legend calculation.
 
 This architecture ensures a modular and maintainable codebase, allowing for easy extension and customization of the treemap functionalities.
 
@@ -146,7 +129,7 @@ var legendSettings = new LegendSettings() { Width = 250, Height = 20, MinPer = 0
 var interactor = new LayoutInteractor<PivotDataSource>(
     new LayoutGenerator<PivotDataSource>(new SquarifiedTreemapGenerator()),
     new DataGroupPreparer<PivotDataSource>(),
-    new LegendCalculator()
+    new LegendGenerator()
 );
 
 var driver = new TreemapGdiDriver<PivotDataSource>(
@@ -198,7 +181,7 @@ Host.CreateDefaultBuilder(args)
         services.AddTransient<LayoutInteractor<PivotDataSource>>();
         services.AddTransient<LayoutGenerator<PivotDataSource>>();
         services.AddTransient<DataGroupPreparer<PivotDataSource>>();
-        services.AddTransient<LegendCalculator>();
+        services.AddTransient<LegendGenerator>();
         services.AddTransient<ITreemapGenerator, SquarifiedTreemapGenerator>();
     });
 ```

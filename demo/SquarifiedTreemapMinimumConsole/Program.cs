@@ -13,7 +13,7 @@ var legendSettings = new LegendSettings() { Width = 250, Height = 20, MinPer = 0
 var interactor = new LayoutInteractor<PivotDataSource>(
     new LayoutGenerator<PivotDataSource>(new SquarifiedTreemapGenerator()),
     new DataGroupPreparer<PivotDataSource>(),
-    new LegendCalculator()
+    new LegendGenerator()
 );
 
 var driver = new TreemapGdiDriver<PivotDataSource>(

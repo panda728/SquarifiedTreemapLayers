@@ -8,7 +8,7 @@ namespace SquarifiedTreemapInteractor;
 public class LayoutInteractor<T>(
     LayoutGenerator<T> layoutGenerator,
     DataGroupPreparer<T> preparer,
-    LegendCalculator legend)
+    LegendGenerator legend)
 {
     bool _isSourceOrderDec = false;
     LayoutAlign _layoutAlign = LayoutAlign.LeftTop;
