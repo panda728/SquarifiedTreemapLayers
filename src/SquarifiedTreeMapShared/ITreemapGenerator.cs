@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace SquarifiedTreeMapShared;
+namespace SquarifiedTreemapShared;
 
 public interface ITreemapGenerator
 {

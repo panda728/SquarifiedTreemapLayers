@@ -1,8 +1,14 @@
 ﻿using System.Drawing;
 
-namespace SquarifiedTreeMapShared;
+namespace SquarifiedTreemapShared;
 
-public record TreeMapSettings
+public record AppSettings
+{
+    public bool IsAutoLoad { get; set; } = false;
+    public string AutoLoadFilePath { get; init; } = "";
+}
+
+public record TreemapSettings
 {
     public string TitleFontFamily { get; init; } = "Alial";
     public float TitleFontSize { get; init; } = 12;
@@ -23,7 +29,7 @@ public record TreeMapSettings
     public bool IsLegendFontBold { get; init; } = false;
 }
 
-public record TreeMapLayoutSettings
+public record TreemapLayoutSettings
 {
     public string TitleText { get; init; } = "Title";
     public string RootNodeTitle { get; init; } = "Root";

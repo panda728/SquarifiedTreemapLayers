@@ -1,16 +1,16 @@
 ﻿using System.ComponentModel;
 
-namespace SquarifiedTreeMapForge.WinForms;
+namespace SquarifiedTreemapForge.WinForms;
 
-public partial class TreeMapControl : Control
+public partial class TreemapControl : Control
 {
-    public TreeMapControl()
+    public TreemapControl()
     {
         InitializeComponent();
         DoubleBuffered = true;
     }
 
-    private void TreeMapControl_SizeChanged(object sender, EventArgs e)
+    private void TreemapControl_SizeChanged(object sender, EventArgs e)
     {
         this.Invalidate();
     }

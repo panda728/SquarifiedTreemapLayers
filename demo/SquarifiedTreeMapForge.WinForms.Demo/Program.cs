@@ -1,11 +1,11 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PopulationDataProvider.Demo;
-using SquarifiedTreeMapInteractor;
-using SquarifiedTreeMapForge.Layout;
-using SquarifiedTreeMapShared;
+using SquarifiedTreemapInteractor;
+using SquarifiedTreemapForge.Layout;
+using SquarifiedTreemapShared;
 
-namespace SquarifiedTreeMapForge.WinForms.Demo;
+namespace SquarifiedTreemapForge.WinForms.Demo;
 
 internal static class Program
 {
@@ -27,27 +27,27 @@ internal static class Program
         Host.CreateDefaultBuilder(args)
             .ConfigureServices((hostContext, services) =>
             {
-                services.Configure<TreeMapSettings>(
-                    hostContext.Configuration.GetSection("TreeMapSettings"));
-                services.Configure<TreeMapLayoutSettings>(
-                    hostContext.Configuration.GetSection("TreeMapLayoutSettings"));
+                services.Configure<TreemapSettings>(
+                    hostContext.Configuration.GetSection("TreemapSettings"));
+                services.Configure<TreemapLayoutSettings>(
+                    hostContext.Configuration.GetSection("TreemapLayoutSettings"));
                 services.Configure<LegendSettings>(
                     hostContext.Configuration.GetSection("LegendSettings"));
 
                 // Settings
-                services.AddTransient<TreeMapSettings>();
-                services.AddTransient<TreeMapLayoutSettings>();
+                services.AddTransient<TreemapSettings>();
+                services.AddTransient<TreemapLayoutSettings>();
                 services.AddTransient<LegendSettings>();
 
                 // this project
                 services.AddTransient<FormMain>();
                 services.AddTransient<PopulationDataProvider.Demo.PopulationDataProvider>();
 
-                // SquarifiedTreeMapForge.WinForms.csproj
-                services.AddTransient<TreeMapGdiDriver<PopulationData>>();
+                // SquarifiedTreemapForge.WinForms.csproj
+                services.AddTransient<TreemapGdiDriver<PopulationData>>();
                 services.AddTransient<GdiRenderer>();
 
-                // SquarifiedTreeMapForge.csproj
+                // SquarifiedTreemapForge.csproj
                 services.AddTransient<LayoutInteractor<PopulationData>>();
                 services.AddTransient<LayoutGenerator<PopulationData>>();
                 services.AddTransient<DataGroupPreparer<PopulationData>>();

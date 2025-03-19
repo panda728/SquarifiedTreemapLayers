@@ -1,7 +1,7 @@
 using System.Drawing;
 using NUnit.Framework;
 
-namespace SquarifiedTreeMapForge.Tests
+namespace SquarifiedTreemapForge.Tests
 {
     [TestFixture]
     public class SquarifiedTreemapGeneratorTests
@@ -10,7 +10,7 @@ namespace SquarifiedTreeMapForge.Tests
         public void GenerateTreemap_EmptyWeights_ReturnsEmpty()
         {
             var gen = new SquarifiedTreemapGenerator();
-            var result = gen.Layout(new Rectangle(0, 0, 100, 100),[]);
+            var result = gen.Layout(new Rectangle(0, 0, 100, 100), []);
             Assert.That(result, Is.Empty);
         }
 
@@ -19,7 +19,7 @@ namespace SquarifiedTreeMapForge.Tests
         {
             var weights = new List<double> { 1.0, 2.0, 3.0 };
             var gen = new SquarifiedTreemapGenerator();
-            var result = gen.Layout(new Rectangle(0, 0, 1, 1),weights);
+            var result = gen.Layout(new Rectangle(0, 0, 1, 1), weights);
 
             Assert.That(result, Is.Empty);
         }
@@ -35,9 +35,9 @@ namespace SquarifiedTreeMapForge.Tests
         [Test]
         public void GenerateTreemap_ValidWeights_ReturnsRectangles()
         {
-            var weights = new List<double> { 3.0, 2.0, 1.0 }; 
+            var weights = new List<double> { 3.0, 2.0, 1.0 };
             var gen = new SquarifiedTreemapGenerator();
-            var result = gen.Layout(new Rectangle(0, 0, 100, 100),weights).ToList();
+            var result = gen.Layout(new Rectangle(0, 0, 100, 100), weights).ToList();
 
             Assert.That(result.Count, Is.EqualTo(3));
             Assert.That(result.All(r => r.Width > 0 && r.Height > 0), Is.True);
@@ -48,7 +48,7 @@ namespace SquarifiedTreeMapForge.Tests
         {
             var weights = new List<double> { 3.0, 2.0, 1.0 };
             var gen = new SquarifiedTreemapGenerator();
-            var result = gen.Layout(new Rectangle(0, 0, 100, 100),weights).ToList();
+            var result = gen.Layout(new Rectangle(0, 0, 100, 100), weights).ToList();
 
             foreach (var rect in result)
             {

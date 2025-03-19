@@ -1,23 +1,23 @@
 using System.Drawing;
-using SquarifiedTreeMapShared;
+using SquarifiedTreemapShared;
 
-namespace SquarifiedTreeMapForge.Layout;
+namespace SquarifiedTreemapForge.Layout;
 
 /// <summary>Manages the layout of a treemap.</summary>
 public sealed class LayoutGenerator<T>(ITreemapGenerator treemapGenerator)
 {
     /// <summary>Recursively calculates the layout of the treemap nodes.</summary>
-    public TreeMapNode Layout(
+    public TreemapNode Layout(
         Seed<T> current,
         bool isSourceOrderDec,
         LayoutAlign layoutAlign,
-        TreeMapNode? parent,
+        TreemapNode? parent,
         IEnumerable<Seed<T>> children,
         Rectangle bounds,
         int height,
         HashSet<int> filter)
     {
-        var treeNode = new TreeMapNode(
+        var treeNode = new TreemapNode(
             current.Id,
             current.Depth,
             current.Text,

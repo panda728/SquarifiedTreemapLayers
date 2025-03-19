@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
-using SquarifiedTreeMapShared;
+using SquarifiedTreemapShared;
 
-namespace SquarifiedTreeMapForge;
+namespace SquarifiedTreemapForge;
 
 /// <summary>Generates a squarified treemap based on the given weights and canvas area.</summary>
 public class SquarifiedTreemapGenerator : ITreemapGenerator
@@ -23,7 +23,7 @@ public class SquarifiedTreemapGenerator : ITreemapGenerator
         * Squarified Treemaps Mark Bruls, Kees Huizing, and Jarke J. van Wijk
         * https://vanwijk.win.tue.nl/stm.pdf
         * 
-        * Extension of Network Traffic Visualization System Using TreeMap and Edge Bundling Ryo Akiyoshi, Yoshihiro Okada
+        * Extension of Network Traffic Visualization System Using Treemap and Edge Bundling Ryo Akiyoshi, Yoshihiro Okada
         * https://www.ipsj-kyushu.jp/page/ronbun/hinokuni/1005/2B/2B-4.pdf
         */
         if (bounds == Rectangle.Empty || !weights.Any()) { yield break; }

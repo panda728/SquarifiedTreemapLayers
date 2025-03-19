@@ -1,6 +1,6 @@
-﻿namespace SquarifiedTreeMapForge.WinForms
+﻿namespace SquarifiedTreemapForge.WinForms
 {
-    partial class TreeMapControl
+    partial class TreemapControl
     {
         /// <summary>
         /// 必要なデザイナー変数です。
@@ -30,9 +30,9 @@
         {
             SuspendLayout();
             // 
-            // TreeMapControl
+            // TreemapControl
             // 
-            SizeChanged += TreeMapControl_SizeChanged;
+            SizeChanged += TreemapControl_SizeChanged;
             ResumeLayout(false);
         }
 

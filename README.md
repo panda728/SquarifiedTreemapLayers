@@ -1,6 +1,6 @@
-# SquarifiedTreeMapLayers
+# SquarifiedTreemapLayers
 
-SquarifiedTreeMapLayers is a library for generating and rendering treemap layouts. This solution provides various functionalities related to treemaps, including layout generation, color calculation, and legend generation.
+SquarifiedTreemapLayers is a library for generating and rendering treemap layouts. This solution provides various functionalities related to treemaps, including layout generation, color calculation, and legend generation.
 
 ## Features
 
@@ -20,17 +20,17 @@ Clone this repository and open it in Visual Studio 2022.
 The following code demonstrates how to generate and render a treemap layout.
 
 ```
-using SquarifiedTreeMapForge.WinForms; 
-using SquarifiedTreeMapShared; 
+using SquarifiedTreemapForge.WinForms; 
+using SquarifiedTreemapShared; 
 using System.Drawing;
 
-var settings = new TreeMapSettings { TitleText = "Sample TreeMap", TitleFontName = "Arial", TitleFontSize = 12, ForeColor = Color.Black, BackColor = Color.White, HighlightColor = Color.Red, HighlightWidth = 2, Margin = 1 };
+var settings = new TreemapSettings { TitleText = "Sample Treemap", TitleFontName = "Arial", TitleFontSize = 12, ForeColor = Color.Black, BackColor = Color.White, HighlightColor = Color.Red, HighlightWidth = 2, Margin = 1 };
 
-var layoutSettings = new TreeMapLayoutSettings { WeightColumn = "Value", GroupColumns = new string[] { "Category" }, GroupColumnFormats = new string[] { "0.0" }, GroupBorderWidths = new int[] { 1 }, ForeColor = Color.Black, NodeFontName = "Arial", NodeFontSize = 10, BorderColor = Color.Gray, MaxDepth = 5, IsSourceOrderDec = true, LayoutAlign = LayoutAlign.LeftTop };
+var layoutSettings = new TreemapLayoutSettings { WeightColumn = "Value", GroupColumns = new string[] { "Category" }, GroupColumnFormats = new string[] { "0.0" }, GroupBorderWidths = new int[] { 1 }, ForeColor = Color.Black, NodeFontName = "Arial", NodeFontSize = 10, BorderColor = Color.Gray, MaxDepth = 5, IsSourceOrderDec = true, LayoutAlign = LayoutAlign.LeftTop };
 
 var renderer = new GdiRenderer(); 
 var coordinator = new LayoutCoordinator<YourDataType>(new LayoutGenerator<YourDataType>()); 
-var driver = new TreeMapDriver<YourDataType>(settings, layoutSettings, coordinator, renderer);
+var driver = new TreemapDriver<YourDataType>(settings, layoutSettings, coordinator, renderer);
 driver.SetDataSource(yourDataSource); 
 driver.Render(800, 600).Save("treemap.png", System.Drawing.Imaging.ImageFormat.Png);
 ```
@@ -40,8 +40,8 @@ driver.Render(800, 600).Save("treemap.png", System.Drawing.Imaging.ImageFormat.P
 The following code demonstrates how to generate legends.
 
 ```
-using SquarifiedTreeMapForge.Layout; 
-using SquarifiedTreeMapShared; 
+using SquarifiedTreemapForge.Layout; 
+using SquarifiedTreemapShared; 
 using System.Drawing;
 
 var legendSettings = new LegendSettings { MinValue = -0.1, MaxValue = 0.1, MinBrightness = 0.08, MaxBrightness = 0.78, HuePositive = 205.0, HueNegative = 2.0, Saturation = 0.9, Steps = 7, Margin = 1, IsOrderAsc = false, IsShowLegend = true, IsShowPlusSign = true, LegendFormat = "0%" };

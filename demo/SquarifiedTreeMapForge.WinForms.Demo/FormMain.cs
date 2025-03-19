@@ -1,23 +1,33 @@
 using System.Text;
+using System.Text.Json;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using PopulationDataProvider.Demo;
-using SquarifiedTreeMapShared;
+using SquarifiedTreemapShared;
 
-namespace SquarifiedTreeMapForge.WinForms.Demo
+namespace SquarifiedTreemapForge.WinForms.Demo
 {
     public partial class FormMain : Form
     {
-        readonly Semaphore _semaphore = new(1, 1);
-
-        readonly TreeMapGdiDriver<PopulationData> _driver;
-        readonly IReadOnlyList<PopulationData> _populationPivots;
-        readonly string[] _defaultGroupColumns;
-        readonly string _defaultWeightColumn;
+        const string SETTING_FLIE = "treemapsettings.{0}.json";
 
         readonly bool _isInit = true;
+        readonly string[] _defaultGroupColumns;
+        readonly string _defaultWeightColumn;
+        readonly Semaphore _semaphore = new(1, 1);
+        readonly IHostEnvironment _hostEnvironment;
+        readonly IReadOnlyList<PopulationData> _populationPivots;
+        readonly TreemapGdiDriver<PopulationData> _driver;
+        readonly JsonSerializerOptions _options = new() { PropertyNameCaseInsensitive = true, WriteIndented = true };
 
-        public FormMain(TreeMapGdiDriver<PopulationData> driver, PopulationDataProvider.Demo.PopulationDataProvider provider)
+        public FormMain(
+            IHostEnvironment hostEnvironment,
+            TreemapGdiDriver<PopulationData> driver,
+            PopulationDataProvider.Demo.PopulationDataProvider provider)
         {
             InitializeComponent();
+
+            _hostEnvironment = hostEnvironment;
 
             toolStripStatusLabel1.Text = "";
             radioLT.Checked = true;
@@ -28,9 +38,9 @@ namespace SquarifiedTreeMapForge.WinForms.Demo
             _driver = driver;
             _driver.FuncNodeText = GetTitle;
             _driver.FuncNodeColor = GetColor;
-            _driver.TreeMapControl = this.treeMapControl1;
-            _driver.OnMouseMoveAction += treeMapControl1_MouseMove;
-            _driver.OnMouseLeaveAction += treeMapControl1_MouseLeave; ;
+            _driver.TreemapControl = this.treemapControl1;
+            _driver.OnMouseMoveAction += treemapControl1_MouseMove;
+            _driver.OnMouseLeaveAction += treemapControl1_MouseLeave; ;
 
             _defaultGroupColumns = _driver.LayoutSettings.GroupColumns;
             _defaultWeightColumn = _driver.LayoutSettings.WeightColumn;
@@ -39,7 +49,7 @@ namespace SquarifiedTreeMapForge.WinForms.Demo
             this.checkShowPlusSign.Checked = _driver.LegendSettings.IsShowPlusSign;
             this.checkLegendOrder.Checked = _driver.LegendSettings.IsOrderAsc;
             this.numericLegendSteps.Value = _driver.LegendSettings.StepCount;
-            this.numericLegendFontSize.Value = (decimal)_driver.TreeMapSettings.LegendFontSize;
+            this.numericLegendFontSize.Value = (decimal)_driver.TreemapSettings.LegendFontSize;
             this.numericLegendWidth.Value = _driver.LegendSettings.Width;
             this.numericLegendHeight.Value = _driver.LegendSettings.Height;
             this.numericMinPer.Value = (decimal)(_driver.LegendSettings.MinPer * 100);
@@ -88,6 +98,11 @@ namespace SquarifiedTreeMapForge.WinForms.Demo
             if (_semaphore.WaitOne(0) == false) return;
             try
             {
+                _driver.TreemapSettings = _driver.TreemapSettings with
+                {
+                    LegendFontSize = (float)numericLegendFontSize.Value,
+                };
+
                 _driver.LayoutSettings = _driver.LayoutSettings with
                 {
                     TitleText = this.textBoxTitle.Text,
@@ -116,17 +131,17 @@ namespace SquarifiedTreeMapForge.WinForms.Demo
                     Height = (int)numericLegendHeight.Value,
                 };
 
-                _driver.TreeMapSettings = _driver.TreeMapSettings with
-                {
-                    LegendFontSize = (float)numericLegendFontSize.Value,
-                };
-
                 _driver.Invalidate(_populationPivots);
 
                 if (!string.IsNullOrEmpty(_driver.LayoutSettings.TitleText))
                 {
                     this.Text = _driver.LayoutSettings.TitleText;
                 }
+
+                SaveSettingsJson(
+                    _driver.TreemapSettings,
+                    _driver.LayoutSettings,
+                    _driver.LegendSettings);
 
                 await Task.Delay(10);
             }
@@ -143,9 +158,18 @@ namespace SquarifiedTreeMapForge.WinForms.Demo
             }
         }
 
-        void treeMapControl1_MouseMove(object? sender, MouseEventArgs e)
+        void SaveSettingsJson(
+            TreemapSettings treemapSettings,
+            TreemapLayoutSettings treemapLayoutSettings,
+            LegendSettings legendSettings)
         {
-            var cp = treeMapControl1.PointToClient(Cursor.Position);
+            var json = JsonSerializer.Serialize(new { treemapSettings, treemapLayoutSettings, legendSettings }, _options);
+            File.WriteAllText(string.Format(SETTING_FLIE, _hostEnvironment.EnvironmentName), json);
+        }
+
+        void treemapControl1_MouseMove(object? sender, MouseEventArgs e)
+        {
+            var cp = treemapControl1.PointToClient(Cursor.Position);
             var node = _driver.GetContainsItem(cp);
             if (node == null)
             {
@@ -158,7 +182,7 @@ namespace SquarifiedTreeMapForge.WinForms.Demo
             }
         }
 
-        void treeMapControl1_MouseLeave(object? sender, EventArgs e)
+        void treemapControl1_MouseLeave(object? sender, EventArgs e)
         {
             this.toolStripStatusLabel1.Text = "";
         }

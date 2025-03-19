@@ -1,27 +1,29 @@
 using System.ComponentModel;
 using Microsoft.Extensions.Options;
-using SquarifiedTreeMapInteractor;
-using SquarifiedTreeMapShared;
+using SquarifiedTreemapInteractor;
+using SquarifiedTreemapShared;
 
-namespace SquarifiedTreeMapForge.WinForms;
+namespace SquarifiedTreemapForge.WinForms;
 
 /// <summary>Manages the data source and rendering for a treemap.</summary>
-public sealed class TreeMapGdiDriver<T>(
-    IOptions<TreeMapSettings> treeMapSettingsOp,
-    IOptions<TreeMapLayoutSettings> layoutSettingsOp,
-    IOptions<LegendSettings> legendSettingsOp,
+public sealed class TreemapGdiDriver<T>(
+    GdiRenderer renderer,
     LayoutInteractor<T> coordinator,
-    GdiRenderer renderer
+    IOptions<TreemapSettings> treemapSettingsOp,
+    IOptions<TreemapLayoutSettings> layoutSettingsOp,
+    IOptions<LegendSettings> legendSettingsOp
 )
 {
     const string FONT_HEIGHT_DEFALUT = "A";
     readonly Semaphore _semaphore = new(1, 1);
 
-    [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-    public TreeMapSettings TreeMapSettings { get; set; } = treeMapSettingsOp.Value;
+    TreemapControl? _treemapControl;
 
     [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-    public TreeMapLayoutSettings LayoutSettings { get; set; } = layoutSettingsOp.Value;
+    public TreemapSettings TreemapSettings { get; set; } = treemapSettingsOp.Value;
+
+    [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+    public TreemapLayoutSettings LayoutSettings { get; set; } = layoutSettingsOp.Value;
 
     [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
     public LegendSettings LegendSettings { get; set; } = legendSettingsOp.Value;
@@ -29,28 +31,27 @@ public sealed class TreeMapGdiDriver<T>(
     public Func<string, IEnumerable<T>, string>? FuncNodeText { get; set; }
     public Func<IEnumerable<T>, Color>? FuncNodeColor { get; set; }
 
-    TreeMapControl? _treeMapControl;
-    public TreeMapControl? TreeMapControl
+    public TreemapControl? TreemapControl
     {
-        get { return _treeMapControl; }
+        get { return _treemapControl; }
         set
         {
-            if (_treeMapControl != null)
+            if (_treemapControl != null)
             {
-                _treeMapControl.OnPaintAction = null;
-                _treeMapControl.OnDoubleClickAction -= treeMapControl_DoubleClick;
-                _treeMapControl.OnMouseMoveAction -= treeMapControl_MoveAction;
-                _treeMapControl.OnMouseLeaveAction -= treeMapControl_LeaveAction;
+                _treemapControl.OnPaintAction = null;
+                _treemapControl.OnDoubleClickAction -= treemapControl_DoubleClick;
+                _treemapControl.OnMouseMoveAction -= treemapControl_MoveAction;
+                _treemapControl.OnMouseLeaveAction -= treemapControl_LeaveAction;
             }
 
-            _treeMapControl = value;
+            _treemapControl = value;
 
-            if (_treeMapControl != null)
+            if (_treemapControl != null)
             {
-                _treeMapControl.OnPaintAction = OnPaint;
-                _treeMapControl.OnDoubleClickAction += treeMapControl_DoubleClick;
-                _treeMapControl.OnMouseMoveAction += treeMapControl_MoveAction;
-                _treeMapControl.OnMouseLeaveAction += treeMapControl_LeaveAction;
+                _treemapControl.OnPaintAction = OnPaint;
+                _treemapControl.OnDoubleClickAction += treemapControl_DoubleClick;
+                _treemapControl.OnMouseMoveAction += treemapControl_MoveAction;
+                _treemapControl.OnMouseLeaveAction += treemapControl_LeaveAction;
             }
         }
     }
@@ -58,13 +59,13 @@ public sealed class TreeMapGdiDriver<T>(
     public Color GetPercentageColor(double per)
         => coordinator.GetPercentageColor(per);
 
-    public void Invalidate() => _treeMapControl?.Invalidate();
+    public void Invalidate() => _treemapControl?.Invalidate();
 
     public void Invalidate(IEnumerable<T> sources)
     {
         coordinator.SetDataSource(
-            sources, LayoutSettings, TreeMapSettings, LegendSettings, FuncNodeText, FuncNodeColor);
-        _treeMapControl?.Invalidate();
+            sources, LayoutSettings, TreemapSettings, LegendSettings, FuncNodeText, FuncNodeColor);
+        _treemapControl?.Invalidate();
     }
 
     public void OnPaint(PaintEventArgs e)
@@ -72,7 +73,7 @@ public sealed class TreeMapGdiDriver<T>(
         if (_semaphore.WaitOne(0) == false) return;
         try
         {
-            RenderTreeMap(e.Graphics, coordinator, renderer, e.ClipRectangle, LayoutSettings.TitleText);
+            RenderTreemap(e.Graphics, coordinator, renderer, e.ClipRectangle, LayoutSettings.TitleText);
         }
         finally
         {
@@ -80,7 +81,7 @@ public sealed class TreeMapGdiDriver<T>(
         }
     }
 
-    static void RenderTreeMap(
+    static void RenderTreemap(
         Graphics g,
         LayoutInteractor<T> coordinator,
         GdiRenderer renderer,
@@ -91,11 +92,11 @@ public sealed class TreeMapGdiDriver<T>(
             g, coordinator.NodeFont, string.IsNullOrEmpty(titleText) ? FONT_HEIGHT_DEFALUT : titleText);
 
         if (coordinator.Layout(bounds, nodeHeight)
-            && coordinator.TreeMap != null && coordinator.RootNode != null)
+            && coordinator.Treemap != null && coordinator.RootNode != null)
         {
             var legends = coordinator.GenerateLegends(bounds);
             renderer.Render(
-                g, coordinator.TreeMap, coordinator.RootNode, nodeHeight, legends, coordinator.HighLightBounds);
+                g, coordinator.Treemap, coordinator.RootNode, nodeHeight, legends, coordinator.HighLightBounds);
         }
     }
 
@@ -104,43 +105,43 @@ public sealed class TreeMapGdiDriver<T>(
     public Action<object?, MouseEventArgs>? OnMouseMoveAction { get; set; }
     public Action<object?, EventArgs>? OnMouseLeaveAction { get; set; }
 
-    public TreeMapNode? GetContainsItem(Point cp)
+    public TreemapNode? GetContainsItem(Point cp)
         => coordinator.GetContainsItem(cp);
 
-    void treeMapControl_DoubleClick(object? sender, EventArgs e)
+    void treemapControl_DoubleClick(object? sender, EventArgs e)
     {
-        if (_treeMapControl == null)
+        if (_treemapControl == null)
         {
             OnDoubleClickAction?.Invoke(this, e);
             return;
         }
 
-        var cp = _treeMapControl.PointToClient(Cursor.Position);
+        var cp = _treemapControl.PointToClient(Cursor.Position);
         coordinator.SetFilterIfContains(cp);
-        _treeMapControl?.Invalidate();
+        _treemapControl?.Invalidate();
     }
 
-    void treeMapControl_MoveAction(object? sender, MouseEventArgs e)
+    void treemapControl_MoveAction(object? sender, MouseEventArgs e)
     {
-        if (_treeMapControl == null)
+        if (_treemapControl == null)
         {
             OnMouseMoveAction?.Invoke(this, e);
             return;
         }
 
-        var cp = _treeMapControl.PointToClient(Cursor.Position);
+        var cp = _treemapControl.PointToClient(Cursor.Position);
         if (coordinator.SetHighLightIfContains(cp))
         {
-            _treeMapControl?.Invalidate();
+            _treemapControl?.Invalidate();
         }
         OnMouseMoveAction?.Invoke(this, e);
     }
 
-    void treeMapControl_LeaveAction(object? sender, EventArgs e)
+    void treemapControl_LeaveAction(object? sender, EventArgs e)
     {
-        if (_treeMapControl != null && coordinator.ResetHighlight())
+        if (_treemapControl != null && coordinator.ResetHighlight())
         {
-            _treeMapControl?.Invalidate();
+            _treemapControl?.Invalidate();
         }
         OnMouseLeaveAction?.Invoke(this, e);
     }
@@ -151,7 +152,7 @@ public sealed class TreeMapGdiDriver<T>(
     {
         var bmp = new Bitmap(width, height);
         using var g = Graphics.FromImage(bmp);
-        RenderTreeMap(g, coordinator, renderer, new Rectangle(Point.Empty, bmp.Size), LayoutSettings.TitleText);
+        RenderTreemap(g, coordinator, renderer, new Rectangle(Point.Empty, bmp.Size), LayoutSettings.TitleText);
         return bmp;
     }
 }

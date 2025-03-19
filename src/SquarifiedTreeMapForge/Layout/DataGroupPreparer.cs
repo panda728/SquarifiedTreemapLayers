@@ -1,17 +1,17 @@
 ﻿using System.Drawing;
-using SquarifiedTreeMapForge.Helpers;
-using SquarifiedTreeMapShared;
+using SquarifiedTreemapForge.Helpers;
+using SquarifiedTreemapShared;
 
-namespace SquarifiedTreeMapForge.Layout;
+namespace SquarifiedTreemapForge.Layout;
 
 /// <summary>Prepares data for generating a treemap.</summary>
 public sealed class DataGroupPreparer<T>
 {
     public const int MINIMUM_SIZE = 2;
-    TreeMapLayoutSettings? _settings;
+    TreemapLayoutSettings? _settings;
 
     public void Initialize(
-        TreeMapLayoutSettings settings,
+        TreemapLayoutSettings settings,
         Func<string, IEnumerable<T>, string>? funcNodeText,
         Func<IEnumerable<T>, Color>? funcNodeColor)
     {

@@ -1,23 +1,34 @@
 using System.Text;
-using SquarifiedTreeMapShared;
-using SquarifiedTreeMapForge.WinForms;
 using System.Text.Json;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
+using SquarifiedTreemapForge.WinForms;
+using SquarifiedTreemapShared;
 
-namespace SquarifiedTreeMapWinForms
+namespace SquarifiedTreemapWinForms
 {
     public partial class FormMain : Form
     {
-        readonly Semaphore _semaphore = new(1, 1);
-
-        readonly TreeMapGdiDriver<PivotDataSource> _driver;
-        readonly string[] _defaultGroupColumns;
-        readonly string _defaultWeightColumn;
+        const string SETTING_FLIE = "treemapsettings.{0}.json";
 
         readonly bool _isInit = true;
+        readonly AppSettings _appSettings;
+        readonly string[] _defaultGroupColumns;
+        readonly string _defaultWeightColumn;
+        readonly Semaphore _semaphore = new(1, 1);
+        readonly IHostEnvironment _hostEnvironment;
+        readonly TreemapGdiDriver<PivotDataSource> _driver;
+        readonly JsonSerializerOptions _options = new() { PropertyNameCaseInsensitive = true, WriteIndented = true };
 
-        public FormMain(TreeMapGdiDriver<PivotDataSource> driver)
+        public FormMain(
+            IHostEnvironment hostEnvironment,
+            IOptions<AppSettings> appSettingsOp,
+            TreemapGdiDriver<PivotDataSource> driver)
         {
             InitializeComponent();
+
+            _hostEnvironment = hostEnvironment;
+            _appSettings = appSettingsOp.Value;
 
             toolStripStatusLabel1.Text = "";
             radioLT.Checked = true;
@@ -28,9 +39,9 @@ namespace SquarifiedTreeMapWinForms
             _driver = driver;
             _driver.FuncNodeText = GetTitle;
             _driver.FuncNodeColor = GetColor;
-            _driver.TreeMapControl = this.treeMapControl1;
-            _driver.OnMouseMoveAction += treeMapControl1_MouseMove;
-            _driver.OnMouseLeaveAction += treeMapControl1_MouseLeave; ;
+            _driver.TreemapControl = this.treemapControl1;
+            _driver.OnMouseMoveAction += treemapControl1_MouseMove;
+            _driver.OnMouseLeaveAction += treemapControl1_MouseLeave; ;
 
             _defaultGroupColumns = _driver.LayoutSettings.GroupColumns;
             _defaultWeightColumn = _driver.LayoutSettings.WeightColumn;
@@ -39,7 +50,7 @@ namespace SquarifiedTreeMapWinForms
             this.checkShowPlusSign.Checked = _driver.LegendSettings.IsShowPlusSign;
             this.checkLegendOrder.Checked = _driver.LegendSettings.IsOrderAsc;
             this.numericLegendSteps.Value = _driver.LegendSettings.StepCount;
-            this.numericLegendFontSize.Value = (decimal)_driver.TreeMapSettings.LegendFontSize;
+            this.numericLegendFontSize.Value = (decimal)_driver.TreemapSettings.LegendFontSize;
             this.numericLegendWidth.Value = _driver.LegendSettings.Width;
             this.numericLegendHeight.Value = _driver.LegendSettings.Height;
             this.numericMinPer.Value = (decimal)(_driver.LegendSettings.MinPer * 100);
@@ -56,7 +67,7 @@ namespace SquarifiedTreeMapWinForms
             this.listBoxGroupSelected.Items.Clear();
             this.listBoxGroupSelected.Items.AddRange(_driver.LayoutSettings.GroupColumns);
             this.listBoxGroupSelectable.Items.Clear();
-            this.treeMapControl1.Visible = false;
+            this.treemapControl1.Visible = false;
             this.panel1.Visible = true;
             _isInit = false;
         }
@@ -79,9 +90,28 @@ namespace SquarifiedTreeMapWinForms
             return _driver.GetPercentageColor(percentage);
         }
 
-        void Form1_Shown(object sender, EventArgs e)
+        async void Form1_Shown(object sender, EventArgs e)
         {
-            _driver.Invalidate(PivotDataSource);
+            try
+            {
+                if (_appSettings.IsAutoLoad && File.Exists(_appSettings.AutoLoadFilePath))
+                {
+                    await LoadJsonDataAsync(_appSettings.AutoLoadFilePath);
+                }
+                InitDataSource();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        void InitDataSource()
+        {
+            var showTreemap = PivotDataSource.Count > 0;
+            this.treemapControl1.Visible = showTreemap;
+            this.panel1.Visible = !showTreemap;
+                _driver.Invalidate(PivotDataSource);
         }
 
         async Task RedrawTreemapAsync()
@@ -90,6 +120,11 @@ namespace SquarifiedTreeMapWinForms
             if (_semaphore.WaitOne(0) == false) return;
             try
             {
+                _driver.TreemapSettings = _driver.TreemapSettings with
+                {
+                    LegendFontSize = (float)numericLegendFontSize.Value,
+                };
+
                 _driver.LayoutSettings = _driver.LayoutSettings with
                 {
                     TitleText = this.textBoxTitle.Text,
@@ -118,11 +153,6 @@ namespace SquarifiedTreeMapWinForms
                     Height = (int)numericLegendHeight.Value,
                 };
 
-                _driver.TreeMapSettings = _driver.TreeMapSettings with
-                {
-                    LegendFontSize = (float)numericLegendFontSize.Value,
-                };
-
                 _driver.Invalidate(PivotDataSource);
 
                 if (!string.IsNullOrEmpty(_driver.LayoutSettings.TitleText))
@@ -130,6 +160,10 @@ namespace SquarifiedTreeMapWinForms
                     this.Text = _driver.LayoutSettings.TitleText;
                 }
 
+                SaveSettingsJson(
+                    _driver.TreemapSettings,
+                    _driver.LayoutSettings,
+                    _driver.LegendSettings);
 
                 await Task.Delay(10);
             }
@@ -146,9 +180,18 @@ namespace SquarifiedTreeMapWinForms
             }
         }
 
-        void treeMapControl1_MouseMove(object? sender, MouseEventArgs e)
+        void SaveSettingsJson(
+            TreemapSettings treemapSettings,
+            TreemapLayoutSettings treemapLayoutSettings,
+            LegendSettings legendSettings)
         {
-            var cp = treeMapControl1.PointToClient(Cursor.Position);
+            var json = JsonSerializer.Serialize(new { treemapSettings, treemapLayoutSettings, legendSettings }, _options);
+            File.WriteAllText(string.Format(SETTING_FLIE, _hostEnvironment.EnvironmentName), json);
+        }
+
+        void treemapControl1_MouseMove(object? sender, MouseEventArgs e)
+        {
+            var cp = treemapControl1.PointToClient(Cursor.Position);
             var node = _driver.GetContainsItem(cp);
             if (node == null)
             {
@@ -161,7 +204,7 @@ namespace SquarifiedTreeMapWinForms
             }
         }
 
-        void treeMapControl1_MouseLeave(object? sender, EventArgs e)
+        void treemapControl1_MouseLeave(object? sender, EventArgs e)
         {
             this.toolStripStatusLabel1.Text = "";
         }
@@ -329,39 +372,39 @@ namespace SquarifiedTreeMapWinForms
             }
         }
 
-        readonly JsonSerializerOptions _options = new()
-        {
-            PropertyNameCaseInsensitive = true
-        };
         async Task LoadJsonDataAsync(string filePath)
         {
+            if (!File.Exists(filePath))
+            {
+                throw new FileNotFoundException("File not found.", filePath);
+            }
+            using FileStream openStream = File.OpenRead(filePath);
+            PivotDataSource = await JsonSerializer.DeserializeAsync<List<PivotDataSource>>(openStream, _options) ?? [];
+        }
+
+        async void toolStripLoad_Click(object sender, EventArgs e)
+        {
+            this.Enabled = false;
             try
             {
-                using FileStream openStream = File.OpenRead(filePath);
-                PivotDataSource = await JsonSerializer.DeserializeAsync<List<PivotDataSource>>(openStream, _options) ?? [];
-                await RedrawTreemapAsync();
+                openFileDialog1.Filter = "JSON Files (*.json)|*.json|All Files (*.*)|*.*";
+                openFileDialog1.DefaultExt = "json";
+                openFileDialog1.FileName = "data.json";
+                openFileDialog1.AddExtension = true;
+
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    await LoadJsonDataAsync(openFileDialog1.FileName);
+                }
+                InitDataSource();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error loading JSON data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        async void toolStripLoad_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.Filter = "JSON Files (*.json)|*.json|All Files (*.*)|*.*";
-            openFileDialog1.DefaultExt = "json";
-            openFileDialog1.FileName = "data.json";
-            openFileDialog1.AddExtension = true;
-
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            finally
             {
-                await LoadJsonDataAsync(openFileDialog1.FileName);
-                if (PivotDataSource.Count > 0)
-                {
-                    this.treeMapControl1.Visible = true;
-                    this.panel1.Visible = false;
-                }
+                this.Enabled = false;
             }
         }
         #endregion

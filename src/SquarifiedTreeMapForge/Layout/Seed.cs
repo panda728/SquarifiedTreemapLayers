@@ -1,6 +1,6 @@
-﻿using SquarifiedTreeMapShared;
+﻿using SquarifiedTreemapShared;
 
-namespace SquarifiedTreeMapForge.Layout;
+namespace SquarifiedTreemapForge.Layout;
 
 public sealed class Seed<T>(
     int id,

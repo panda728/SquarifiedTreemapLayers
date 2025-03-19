@@ -1,7 +1,7 @@
 ﻿using System.Drawing.Drawing2D;
-using SquarifiedTreeMapShared;
+using SquarifiedTreemapShared;
 
-namespace SquarifiedTreeMapForge.WinForms;
+namespace SquarifiedTreemapForge.WinForms;
 
 public class GdiRenderer : IDisposable
 {
@@ -75,60 +75,60 @@ public class GdiRenderer : IDisposable
 
     public void Render(
         Graphics g,
-        TreeMap? treeMap,
-        TreeMapNode rootNode,
+        Treemap? treemap,
+        TreemapNode rootNode,
         int displayMinSize = 20,
         IEnumerable<Legend>? legends = null,
         Rectangle? highLightBounds = null)
     {
-        if (treeMap == null)
+        if (treemap == null)
         {
             g.Clear(Color.Black);
             return;
         }
 
         g.SmoothingMode = SmoothingMode.AntiAlias;
-        g.Clear(treeMap.Format.BackColor);
-        if (!string.IsNullOrEmpty(treeMap.Text))
+        g.Clear(treemap.Format.BackColor);
+        if (!string.IsNullOrEmpty(treemap.Text))
         {
-            RenderTitle(g, treeMap);
+            RenderTitle(g, treemap);
         }
 
         if (legends != null && legends.Any() && displayMinSize > 0)
         {
-            RenderLegends(g, treeMap, legends);
+            RenderLegends(g, treemap, legends);
         }
 
-        RenderTreeMapContent(g, treeMap, rootNode, displayMinSize);
+        RenderTreemapContent(g, treemap, rootNode, displayMinSize);
 
         if (highLightBounds == null) { return; }
-        var pen = GetPen(treeMap.HighlightColor, treeMap.Format.BorderWidth);
+        var pen = GetPen(treemap.HighlightColor, treemap.Format.BorderWidth);
         g.DrawRectangle(pen, highLightBounds.Value);
 
         CacheClear();
     }
 
-    void RenderTreeMapContent(
-        Graphics g, TreeMap treeMap, TreeMapNode rootNode, int displayMinSize)
+    void RenderTreemapContent(
+        Graphics g, Treemap treemap, TreemapNode rootNode, int displayMinSize)
     {
-        var nodeFont = GetFont(treeMap.NodeFont);
+        var nodeFont = GetFont(treemap.NodeFont);
         foreach (var child in rootNode.Nodes)
         {
             RenderNodes(g, child, nodeFont, displayMinSize);
         }
     }
 
-    void RenderTitle(Graphics g, TreeMap treeMap)
+    void RenderTitle(Graphics g, Treemap treemap)
     {
-        var brushText = GetBrush(treeMap.Format.ForeColor);
-        var titleFont = GetFont(treeMap.TextFont);
-        g.DrawString(treeMap.Text, titleFont, brushText, 0, 0);
+        var brushText = GetBrush(treemap.Format.ForeColor);
+        var titleFont = GetFont(treemap.TextFont);
+        g.DrawString(treemap.Text, titleFont, brushText, 0, 0);
     }
 
-    void RenderLegends(Graphics g, TreeMap treeMap, IEnumerable<Legend> legends)
+    void RenderLegends(Graphics g, Treemap treemap, IEnumerable<Legend> legends)
     {
-        var brushText = GetBrush(treeMap.Format.ForeColor);
-        var legendFont = GetFont(treeMap.LegendFont);
+        var brushText = GetBrush(treemap.Format.ForeColor);
+        var legendFont = GetFont(treemap.LegendFont);
         foreach (var legend in legends)
         {
             var brush = GetBrush(legend.BackColor);
@@ -143,7 +143,7 @@ public class GdiRenderer : IDisposable
         }
     }
 
-    void RenderNodes(Graphics g, TreeMapNode node, Font nodeFont, int displayMinSize)
+    void RenderNodes(Graphics g, TreemapNode node, Font nodeFont, int displayMinSize)
     {
         RenderNode(g, node, nodeFont, displayMinSize);
         foreach (var child in node.Nodes)
@@ -152,7 +152,7 @@ public class GdiRenderer : IDisposable
         }
     }
 
-    public void RenderNode(Graphics g, TreeMapNode node, Font nodeFont, int displayMinSize)
+    public void RenderNode(Graphics g, TreemapNode node, Font nodeFont, int displayMinSize)
     {
         var brush = GetBrush(node.Format.BackColor);
         g.FillRectangle(brush, node.Bounds);

@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
-using SquarifiedTreeMapShared;
+using SquarifiedTreemapShared;
 
-namespace SquarifiedTreeMapForge.Layout;
+namespace SquarifiedTreemapForge.Layout;
 
 /// <summary>Aggregates data and prepares seeds for generating a treemap.</summary>
 public sealed class DataGrouper<T>
@@ -9,18 +9,18 @@ public sealed class DataGrouper<T>
     /// <summary>Creates the root seed for the treemap.</summary>
     public static Seed<T> CreateSeed(
         IEnumerable<T> sources,
-        TreeMapLayoutSettings settings,
-        TreeMapSettings treeMapSettings,
+        TreemapLayoutSettings settings,
+        TreemapSettings treemapSettings,
         DataGroupPreparer<T> preparer)
     {
         ArgumentNullException.ThrowIfNull(sources);
         ArgumentNullException.ThrowIfNull(settings);
-        ArgumentNullException.ThrowIfNull(treeMapSettings);
+        ArgumentNullException.ThrowIfNull(treemapSettings);
 
         var format = new NodeFormat(
-            treeMapSettings.ForeColor,
-            treeMapSettings.BackColor,
-            preparer.GroupBorderWidths?.First() ?? 1,
+            treemapSettings.ForeColor,
+            treemapSettings.BackColor,
+            preparer.GroupBorderWidths?.FirstOrDefault() ?? 1,
             settings.BorderColor
         );
 
@@ -37,7 +37,7 @@ public sealed class DataGrouper<T>
     static void AddRangeChildren(
         List<Seed<T>> children,
         IEnumerable<T> sources,
-        TreeMapLayoutSettings settings,
+        TreemapLayoutSettings settings,
         DataGroupPreparer<T> preparer,
         ref int id,
         int maxDepth,
@@ -64,7 +64,7 @@ public sealed class DataGrouper<T>
 
     static Seed<T> CreateSeed(
         IGrouping<string, T> group,
-        TreeMapLayoutSettings settings,
+        TreemapLayoutSettings settings,
         DataGroupPreparer<T> preparer,
         ref int id,
         int depth,

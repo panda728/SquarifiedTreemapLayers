@@ -3,23 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35818.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapForge", "SquarifiedTreeMapForge\SquarifiedTreeMapForge.csproj", "{736A6C37-5A4E-440F-996E-3A53D66FF904}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreemapForge", "SquarifiedTreemapForge\SquarifiedTreemapForge.csproj", "{736A6C37-5A4E-440F-996E-3A53D66FF904}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapForge.Tests", "SquarifiedTreeMapForge.Tests\SquarifiedTreeMapForge.Tests.csproj", "{39EE5A0B-159E-4792-9A9E-524DA6A78D76}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreemapForge.Tests", "SquarifiedTreemapForge.Tests\SquarifiedTreemapForge.Tests.csproj", "{39EE5A0B-159E-4792-9A9E-524DA6A78D76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapForge.WinForms", "SquarifiedTreeMapForge.WinForms\SquarifiedTreeMapForge.WinForms.csproj", "{BF049CAF-02C5-445D-99B3-8792EF68D110}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreemapForge.WinForms", "SquarifiedTreemapForge.WinForms\SquarifiedTreemapForge.WinForms.csproj", "{BF049CAF-02C5-445D-99B3-8792EF68D110}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapForge.WinForms.Demo", "..\Demo\SquarifiedTreeMapForge.WinForms.Demo\SquarifiedTreeMapForge.WinForms.Demo.csproj", "{A7181A2F-F4DF-435A-B379-F96308532993}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreemapForge.WinForms.Demo", "..\Demo\SquarifiedTreemapForge.WinForms.Demo\SquarifiedTreemapForge.WinForms.Demo.csproj", "{A7181A2F-F4DF-435A-B379-F96308532993}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapShared", "SquarifiedTreeMapShared\SquarifiedTreeMapShared.csproj", "{E07B110F-70FA-419B-9DAA-160B3D6EA12D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreemapShared", "SquarifiedTreemapShared\SquarifiedTreemapShared.csproj", "{E07B110F-70FA-419B-9DAA-160B3D6EA12D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PopulationDataProvider.Demo", "..\Demo\PopulationDataProvider.Demo\PopulationDataProvider.Demo.csproj", "{98981CEE-4164-4D66-B443-D4680D5CDD73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapConsole", "SquarifiedTreeMapConsole\SquarifiedTreeMapConsole.csproj", "{F9E20EE1-A53D-4048-AB0A-9DD94DE8B49D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreemapConsole", "SquarifiedTreemapConsole\SquarifiedTreemapConsole.csproj", "{F9E20EE1-A53D-4048-AB0A-9DD94DE8B49D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapWinForms", "SquarifiedTreeMapWinForms\SquarifiedTreeMapWinForms.csproj", "{46888ACA-C708-4FE7-A00E-1A93E943FCEB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreemapWinForms", "SquarifiedTreemapWinForms\SquarifiedTreemapWinForms.csproj", "{46888ACA-C708-4FE7-A00E-1A93E943FCEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreeMapInteractor", "SquarifiedTreeMapInteractor\SquarifiedTreeMapInteractor.csproj", "{E1A4EB73-C7BE-4DFF-9EE4-DCB310878799}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreemapInteractor", "SquarifiedTreemapInteractor\SquarifiedTreemapInteractor.csproj", "{E1A4EB73-C7BE-4DFF-9EE4-DCB310878799}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

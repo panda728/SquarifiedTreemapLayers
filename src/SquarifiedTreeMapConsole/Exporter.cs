@@ -1,21 +1,21 @@
 ﻿using System.Drawing;
 using System.Text.Json;
 using Microsoft.Extensions.Options;
-using SquarifiedTreeMapInteractor;
-using SquarifiedTreeMapForge.WinForms;
-using SquarifiedTreeMapShared;
+using SquarifiedTreemapInteractor;
+using SquarifiedTreemapForge.WinForms;
+using SquarifiedTreemapShared;
 
-namespace SquarifiedTreeMapConsole;
+namespace SquarifiedTreemapConsole;
 
 public sealed class Exporter(
     GdiRenderer renderer,
     LayoutInteractor<PivotDataSource> coordinator,
-    IOptions<TreeMapSettings> treeMapSettingsOp,
-    IOptions<TreeMapLayoutSettings> layoutSettingsOp,
+    IOptions<TreemapSettings> treemapSettingsOp,
+    IOptions<TreemapLayoutSettings> layoutSettingsOp,
     IOptions<LegendSettings> legendSettingsOp)
 {
-    public TreeMapSettings TreeMapSettings { get; set; } = treeMapSettingsOp.Value;
-    public TreeMapLayoutSettings LayoutSettings { get; set; } = layoutSettingsOp.Value;
+    public TreemapSettings TreemapSettings { get; set; } = treemapSettingsOp.Value;
+    public TreemapLayoutSettings LayoutSettings { get; set; } = layoutSettingsOp.Value;
     public LegendSettings LegendSettings { get; set; } = legendSettingsOp.Value;
 
     public string Export(int width, int height, string dataPath, string? pngPath)
@@ -28,8 +28,8 @@ public sealed class Exporter(
         var data = JsonSerializer.Deserialize<IEnumerable<PivotDataSource>>(json) ?? [];
 
         coordinator.SetDataSource(
-            data, LayoutSettings, TreeMapSettings, LegendSettings, GetTitle, GetColor);
-        
+            data, LayoutSettings, TreemapSettings, LegendSettings, GetTitle, GetColor);
+
         var bmp = Render(width, height) ?? throw new ApplicationException("no data.");
 
         if (pngPath != null)
@@ -69,9 +69,9 @@ public sealed class Exporter(
             g, coordinator.NodeFont, LayoutSettings.TitleText);
 
         if (coordinator.Layout(new Rectangle(Point.Empty, bmp.Size), nodeHeight)
-            && coordinator.TreeMap != null && coordinator.RootNode != null)
+            && coordinator.Treemap != null && coordinator.RootNode != null)
         {
-            renderer.Render(g, coordinator.TreeMap, coordinator.RootNode, nodeHeight);
+            renderer.Render(g, coordinator.Treemap, coordinator.RootNode, nodeHeight);
             return bmp;
         }
         throw new ApplicationException("no data.");

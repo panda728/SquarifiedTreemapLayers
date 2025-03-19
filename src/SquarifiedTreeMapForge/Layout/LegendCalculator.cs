@@ -1,9 +1,9 @@
 ﻿using System.Drawing;
 using Microsoft.Extensions.Options;
-using SquarifiedTreeMapForge.Helpers;
-using SquarifiedTreeMapShared;
+using SquarifiedTreemapForge.Helpers;
+using SquarifiedTreemapShared;
 
-namespace SquarifiedTreeMapForge.Layout;
+namespace SquarifiedTreemapForge.Layout;
 
 public sealed class LegendCalculator
 {

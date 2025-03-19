@@ -1,8 +1,8 @@
 ﻿using System.Drawing;
-using SquarifiedTreeMapForge.Layout;
-using SquarifiedTreeMapShared;
+using SquarifiedTreemapForge.Layout;
+using SquarifiedTreemapShared;
 
-namespace SquarifiedTreeMapInteractor;
+namespace SquarifiedTreemapInteractor;
 
 public class LayoutInteractor<T>(
     LayoutGenerator<T> layoutGenerator,
@@ -14,11 +14,11 @@ public class LayoutInteractor<T>(
 
     Seed<T>? _rootSeed;
 
-    public TreeMap? TreeMap { get; set; }
+    public Treemap? Treemap { get; set; }
     public NodeFont TitleNodeFont { get; set; } = new();
     public NodeFont NodeFont { get; set; } = new();
     public NodeFont LegendFont { get; set; } = new();
-    public TreeMapNode? RootNode { get; set; }
+    public TreemapNode? RootNode { get; set; }
     public HashSet<int> Filter { get; set; } = [];
     public Rectangle? HighLightBounds { get; set; }
 
@@ -38,8 +38,8 @@ public class LayoutInteractor<T>(
     /// <summary>Sets the data source for the treemap.</summary>
     public void SetDataSource(
         IEnumerable<T> sources,
-        TreeMapLayoutSettings settings,
-        TreeMapSettings treeMapSettings,
+        TreemapLayoutSettings settings,
+        TreemapSettings treemapSettings,
         LegendSettings legendSettings,
         Func<string, IEnumerable<T>, string>? funcNodeText,
         Func<IEnumerable<T>, Color>? funcNodeColor)
@@ -53,43 +53,43 @@ public class LayoutInteractor<T>(
         _rootSeed = DataGrouper<T>.CreateSeed(
             sources,
             settings,
-            treeMapSettings,
+            treemapSettings,
             preparer
         );
 
         TitleNodeFont = new NodeFont(
-            treeMapSettings.TitleFontFamily,
-            treeMapSettings.TitleFontSize,
-            treeMapSettings.IsTitleFontBold
+            treemapSettings.TitleFontFamily,
+            treemapSettings.TitleFontSize,
+            treemapSettings.IsTitleFontBold
         );
 
         NodeFont = new NodeFont(
-            treeMapSettings.NodeFontFamily,
-            treeMapSettings.NodeFontSize,
-            treeMapSettings.IsNodeFontBold
+            treemapSettings.NodeFontFamily,
+            treemapSettings.NodeFontSize,
+            treemapSettings.IsNodeFontBold
         );
 
         LegendFont = new NodeFont(
-            treeMapSettings.LegendFontFamily,
-            treeMapSettings.LegendFontSize,
-            treeMapSettings.IsLegendFontBold
+            treemapSettings.LegendFontFamily,
+            treemapSettings.LegendFontSize,
+            treemapSettings.IsLegendFontBold
         );
 
         var format = new NodeFormat(
-            treeMapSettings.ForeColor,
-            treeMapSettings.BackColor,
+            treemapSettings.ForeColor,
+            treemapSettings.BackColor,
             1,
             Color.White
         );
 
-        TreeMap = new TreeMap(
+        Treemap = new Treemap(
             settings.TitleText,
             TitleNodeFont,
             format,
-            treeMapSettings.Margin,
+            treemapSettings.Margin,
             NodeFont,
             LegendFont,
-            treeMapSettings.HighlightColor
+            treemapSettings.HighlightColor
         );
     }
 
@@ -112,11 +112,11 @@ public class LayoutInteractor<T>(
     public void Clear()
     {
         _rootSeed = null;
-        TreeMap = null;
+        Treemap = null;
         RootNode = null;
     }
 
-    public TreeMapNode? GetContainsItem(Point p) => RootNode?.GetContainsItem(p);
+    public TreemapNode? GetContainsItem(Point p) => RootNode?.GetContainsItem(p);
 
     public bool SetFilterIfContains(Point p)
     {
@@ -141,7 +141,7 @@ public class LayoutInteractor<T>(
         return true;
     }
 
-    public Legend[] GenerateLegends(Rectangle bounds) 
+    public Legend[] GenerateLegends(Rectangle bounds)
         => legend.GenerateLegends(bounds);
 
     public Color GetPercentageColor(double per) => legend.GetPercentageColor(per);

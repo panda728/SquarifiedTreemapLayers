@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SquarifiedTreeMapForge\SquarifiedTreeMapForge.csproj" />
-    <ProjectReference Include="..\SquarifiedTreeMapShared\SquarifiedTreeMapShared.csproj" />
+    <ProjectReference Include="..\SquarifiedTreemapForge\SquarifiedTreemapForge.csproj" />
+    <ProjectReference Include="..\SquarifiedTreemapShared\SquarifiedTreemapShared.csproj" />
   </ItemGroup>
 </Project>

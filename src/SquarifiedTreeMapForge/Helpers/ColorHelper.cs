@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace SquarifiedTreeMapForge.Helpers;
+namespace SquarifiedTreemapForge.Helpers;
 
 public static class ColorHelper
 {

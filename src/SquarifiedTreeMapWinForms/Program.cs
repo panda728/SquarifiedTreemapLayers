@@ -1,12 +1,13 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SquarifiedTreeMapInteractor;
-using SquarifiedTreeMapForge;
-using SquarifiedTreeMapForge.Layout;
-using SquarifiedTreeMapForge.WinForms;
-using SquarifiedTreeMapShared;
+using SquarifiedTreemapInteractor;
+using SquarifiedTreemapForge;
+using SquarifiedTreemapForge.Layout;
+using SquarifiedTreemapForge.WinForms;
+using SquarifiedTreemapShared;
+using Microsoft.Extensions.Configuration;
 
-namespace SquarifiedTreeMapWinForms;
+namespace SquarifiedTreemapWinForms;
 
 internal static class Program
 {
@@ -26,28 +27,37 @@ internal static class Program
 
     public static IHostBuilder CreateHostBuilder(string[]? args = null) =>
         Host.CreateDefaultBuilder(args)
+             .ConfigureAppConfiguration((hostingContext, config) =>
+             {
+                 var env = hostingContext.HostingEnvironment;
+                 config.AddJsonFile("treemapsettings.json", optional: true, reloadOnChange: true)
+                       .AddJsonFile($"treemapsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
+                 config.AddEnvironmentVariables();
+             })
             .ConfigureServices((hostContext, services) =>
             {
-                services.Configure<TreeMapSettings>(
-                    hostContext.Configuration.GetSection("TreeMapSettings"));
-                services.Configure<TreeMapLayoutSettings>(
-                    hostContext.Configuration.GetSection("TreeMapLayoutSettings"));
+                services.Configure<AppSettings>(
+                    hostContext.Configuration.GetSection("AppSettings"));
+                services.Configure<TreemapSettings>(
+                    hostContext.Configuration.GetSection("TreemapSettings"));
+                services.Configure<TreemapLayoutSettings>(
+                    hostContext.Configuration.GetSection("TreemapLayoutSettings"));
                 services.Configure<LegendSettings>(
                     hostContext.Configuration.GetSection("LegendSettings"));
 
                 // Settings
-                services.AddTransient<TreeMapSettings>();
-                services.AddTransient<TreeMapLayoutSettings>();
+                services.AddTransient<TreemapSettings>();
+                services.AddTransient<TreemapLayoutSettings>();
                 services.AddTransient<LegendSettings>();
 
                 // this project
                 services.AddTransient<FormMain>();
 
-                // SquarifiedTreeMapForge.WinForms.csproj
-                services.AddTransient<TreeMapGdiDriver<PivotDataSource>>();
+                // SquarifiedTreemapForge.WinForms.csproj
+                services.AddTransient<TreemapGdiDriver<PivotDataSource>>();
                 services.AddTransient<GdiRenderer>();
 
-                // SquarifiedTreeMapForge.csproj
+                // SquarifiedTreemapForge.csproj
                 services.AddTransient<LayoutInteractor<PivotDataSource>>();
                 services.AddTransient<LayoutGenerator<PivotDataSource>>();
                 services.AddTransient<DataGroupPreparer<PivotDataSource>>();

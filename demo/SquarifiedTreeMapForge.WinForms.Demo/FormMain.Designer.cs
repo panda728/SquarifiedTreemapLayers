@@ -1,4 +1,4 @@
-﻿namespace SquarifiedTreeMapForge.WinForms.Demo
+﻿namespace SquarifiedTreemapForge.WinForms.Demo
 {
     partial class FormMain
     {
@@ -89,7 +89,7 @@
             label3 = new Label();
             label2 = new Label();
             splitContainer1 = new SplitContainer();
-            treeMapControl1 = new TreeMapControl();
+            treemapControl1 = new TreemapControl();
             tableLayoutPanel2 = new TableLayoutPanel();
             miniToolStrip = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
@@ -790,7 +790,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            splitContainer1.Panel1.Controls.Add(treeMapControl1);
+            splitContainer1.Panel1.Controls.Add(treemapControl1);
             // 
             // splitContainer1.Panel2
             // 
@@ -800,15 +800,15 @@
             splitContainer1.SplitterWidth = 8;
             splitContainer1.TabIndex = 3;
             // 
-            // treeMapControl1
+            // treemapControl1
             // 
-            treeMapControl1.Dock = DockStyle.Fill;
-            treeMapControl1.Font = new Font("Yu Gothic UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 128);
-            treeMapControl1.Location = new Point(0, 0);
-            treeMapControl1.Margin = new Padding(0);
-            treeMapControl1.Name = "treeMapControl1";
-            treeMapControl1.Size = new Size(553, 687);
-            treeMapControl1.TabIndex = 1;
+            treemapControl1.Dock = DockStyle.Fill;
+            treemapControl1.Font = new Font("Yu Gothic UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 128);
+            treemapControl1.Location = new Point(0, 0);
+            treemapControl1.Margin = new Padding(0);
+            treemapControl1.Name = "treemapControl1";
+            treemapControl1.Size = new Size(553, 687);
+            treemapControl1.TabIndex = 1;
             // 
             // tableLayoutPanel2
             // 
@@ -905,7 +905,7 @@
             Font = new Font("Yu Gothic UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 128);
             Name = "FormMain";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "SquarifiedTreeMapLayers";
+            Text = "SquarifiedTreemapLayers";
             Shown += Form1_Shown;
             tableLayoutPanel1.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
@@ -963,7 +963,7 @@
         private Label label1;
         private NumericUpDown numericDepth;
         private SplitContainer splitContainer1;
-        private TreeMapControl treeMapControl1;
+        private TreemapControl treemapControl1;
         private TableLayoutPanel tableLayoutPanel2;
         private StatusStrip miniToolStrip;
         private ToolStripStatusLabel toolStripStatusLabel1;

@@ -5,15 +5,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Title>SquarifiedTreeMapForge</Title>
+    <Title>SquarifiedTreemapForge</Title>
     <Authors>Hideyuki Kitao</Authors>
     <Company />
-    <Product>SquarifiedTreeMapLayers</Product>
-    <Description>SquarifiedTreeMapLayers is a library for generating and rendering treemap layouts. This solution provides various functionalities related to treemaps, including layout generation, color calculation, and legend generation.</Description>
+    <Product>SquarifiedTreemapLayers</Product>
+    <Description>SquarifiedTreemapLayers is a library for generating and rendering treemap layouts. This solution provides various functionalities related to treemaps, including layout generation, color calculation, and legend generation.</Description>
     <Copyright>Copyright © 2025 Hideyuki Kitao</Copyright>
-    <ReadmeUrl>https://github.com/panda728/SquarifiedTreeMapLayers/blob/main/README.md</ReadmeUrl>
+    <ReadmeUrl>https://github.com/panda728/SquarifiedTreemapLayers/blob/main/README.md</ReadmeUrl>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageProjectUrl>https://github.com/panda728/SquarifiedTreeMapLayers</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/panda728/SquarifiedTreemapLayers</PackageProjectUrl>
     <PackageTags>Visualization</PackageTags>
   </PropertyGroup>
 
@@ -31,7 +31,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SquarifiedTreeMapShared\SquarifiedTreeMapShared.csproj" />
+    <ProjectReference Include="..\SquarifiedTreemapShared\SquarifiedTreemapShared.csproj" />
   </ItemGroup>
 
 </Project>

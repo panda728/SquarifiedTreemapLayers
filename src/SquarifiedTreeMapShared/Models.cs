@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace SquarifiedTreeMapShared;
+namespace SquarifiedTreemapShared;
 
 public enum LayoutAlign
 {
@@ -24,7 +24,7 @@ public record NodeFormat(
     Color BorderColor
 );
 
-public record TreeMap(
+public record Treemap(
     string Text,
     NodeFont TextFont,
     NodeFormat Format,
@@ -33,19 +33,19 @@ public record TreeMap(
     NodeFont LegendFont,
     Color HighlightColor);
 
-public record TreeMapNode(
+public record TreemapNode(
     int Id,
     int Depth,
     string Text,
     int FontHeight,
     Rectangle Bounds,
     NodeFormat Format,
-    TreeMapNode? Parent,
-    List<TreeMapNode> Nodes)
+    TreemapNode? Parent,
+    List<TreemapNode> Nodes)
 {
-    public TreeMapNode? GetContainsItem(Point p) => GetContains(p, Nodes);
+    public TreemapNode? GetContainsItem(Point p) => GetContains(p, Nodes);
 
-    static TreeMapNode? GetContains(Point p, IEnumerable<TreeMapNode> nodes)
+    static TreemapNode? GetContains(Point p, IEnumerable<TreemapNode> nodes)
     {
         if (nodes == null || !nodes.Any()) return null;
         foreach (var n in nodes)
