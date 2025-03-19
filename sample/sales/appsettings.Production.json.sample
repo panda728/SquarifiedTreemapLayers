@@ -1,54 +1,6 @@
 ﻿{
-  "TreeMapSettings": {
-    "TitleFontFamily": "Yu Gothic UI",
-    "TitleFontSize": 9.5,
-    "IsTitleFontBold": false,
-    "Margin": 1,
-    "ForeColor": "White",
-    "BackColor": "Black",
-    "HighlightColor": "White",
-    "HighlightWidth": 2,
-    "NodeFontFamily": "Yu Gothic UI",
-    "NodeFontSize": 9.5,
-    "IsNodeFontBold": false,
-    "LegendFontFamily": "Yu Gothic UI",
-    "LegendFontSize": 7.5,
-    "IsLegendFontBold": false
-  },
-  "TreeMapLayoutSettings": {
-    "TitleText": "Visualizing Sales Revenue (Area) and Cost of Goods Sold Ratio (Color)",
-    "RootNodeTitle": "Total Sales",
-    "WeightColumn": "Weight",
-    "AggregateColumns": [
-      "Group1",
-      "Group2",
-      "Group3"
-    ],
-    "AggregateColumnFormats": [],
-    "AggregateColumnBorderWidths": [
-      8,
-      4,
-      2
-    ],
-    "ForeColor": "White",
-    "BorderColor": "Gray",
-    "MaxDepth": 32,
-    "IsSourceOrderDec": true,
-    "LayoutAlign": "LeftTop"
-  },
-  "LegendSettings": {
-    "Width": 250,
-    "Height": 20,
-    "MinPer": 0.73,
-    "MaxPer": 1.00,
-    "MinBrightness": 0.20,
-    "MaxBrightness": 0.90,
-    "HuePositive": 2.0,
-    "HueNegative": 205.0,
-    "Saturation": 0.85,
-    "StepCount": 5,
-    "Margin": 1,
-    "IsOrderAsc": false,
-    "LegendFormat": "0%"
+  "AppSettings": {
+    "IsAutoLoad": true,
+    "AutoLoadFilePath": "sales_data.json"
   }
 }
