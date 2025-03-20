@@ -79,6 +79,16 @@ This architecture ensures a modular and maintainable codebase, allowing for easy
 
 ## Installation
 
+### Installing SquarifiedTreemapForge.WinForms
+
+To install the `SquarifiedTreemapForge.WinForms` development library, use the following command:
+
+```cmd
+dotnet add package SquarifiedTreemapForge.WinForms --version 1.0.0
+```
+
+### Installing SquarifiedTreemapConsole
+
 To install and run the `SquarifiedTreemapConsole` application, follow these steps:
 
 1. Clone the repository:
@@ -105,7 +115,7 @@ SquarifiedTreemapConsole.exe <width> <height> <datapath> [pngfullpath]
 
 Replace `<width>`, `<height>`, `<datapath>`, and `[pngfullpath]` with the appropriate values for your use case.
 
-### Sample Data and Configuration
+#### Sample Data and Configuration
 
 Sample data and configuration examples can be found in the `SquarifiedTreemapLayers\sample\sales` folder.  
 
