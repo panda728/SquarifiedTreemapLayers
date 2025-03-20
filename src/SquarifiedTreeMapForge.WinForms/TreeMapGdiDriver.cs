@@ -65,7 +65,13 @@ public sealed class TreemapGdiDriver<T>(
     public void Invalidate(IEnumerable<T> sources)
     {
         interactor.SetDataSource(
-            sources, LayoutSettings, TreemapSettings, LegendSettings, FuncNodeText, FuncNodeColor, FuncPercentage);
+            sources,
+            LayoutSettings,
+            TreemapSettings,
+            LegendSettings,
+            FuncNodeText,
+            FuncNodeColor,
+            FuncPercentage);
         _treemapControl?.Invalidate();
     }
 

@@ -44,6 +44,7 @@ E -->|OnPaint| I[LegendGenerator]
 C --> |Mouse Event| D
 D -->|OnPaint| J[GdiRenderer] 
 ```
+
 - **Program**: The entry point of the application. It builds the host and runs the `FormMain`.
 - **FormMain**: The main Windows form that provides the user interface.
 - **TreemapGdiDriver<T>**: Responsible for rendering the treemap.

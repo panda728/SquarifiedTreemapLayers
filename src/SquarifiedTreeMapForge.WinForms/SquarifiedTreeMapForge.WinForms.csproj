@@ -11,11 +11,12 @@
     <Authors>Hideyuki Kitao</Authors>
     <Product>SquarifiedTreemapLayers</Product>
     <Copyright>Copyright © 2025 Hideyuki Kitao</Copyright>
-    <PackageReadmeFile></PackageReadmeFile>
-    <RepositoryUrl></RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/panda728/SquarifiedTreemapLayers</RepositoryUrl>
     <PackageProjectUrl>https://github.com/panda728/SquarifiedTreemapLayers</PackageProjectUrl>
     <PackageTags>Visualization</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -25,6 +26,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <NoWarn>1701;1702;IDE1006</NoWarn>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SquarifiedTreemapForge\SquarifiedTreemapForge.csproj" />
     <ProjectReference Include="..\SquarifiedTreemapInteractor\SquarifiedTreemapInteractor.csproj" />

@@ -37,8 +37,8 @@ namespace SquarifiedTreemapWinForms
             this.splitContainer1.SplitterDistance = this.splitContainer1.Width;
 
             _driver = driver;
-            _driver.FuncNodeText = GetTitle;
-            _driver.FuncNodeColor = GetColor;
+            _driver.FuncNodeText = PivotDataSource.GetTitle;
+            _driver.FuncPercentage = PivotDataSource.GetPercentage;
             _driver.TreemapControl = this.treemapControl1;
             _driver.OnMouseMoveAction += treemapControl1_MouseMove;
             _driver.OnMouseLeaveAction += treemapControl1_MouseLeave; ;
@@ -72,33 +72,16 @@ namespace SquarifiedTreemapWinForms
             _isInit = false;
         }
 
-        List<PivotDataSource> PivotDataSource { get; set; } = [];
-
-        string GetTitle(string k, IEnumerable<PivotDataSource> d)
-        {
-            var total = (double)d.Sum(d => d.Weight);
-            var purchaseTotal = (double)d.Sum(d => d.RelativeWeight);
-            var per = purchaseTotal / total;
-            return $"{k}({d.Sum(d => d.Weight) / 1000:#,##0} {per:+0.0%;-0.0%}) ";
-        }
-
-        Color GetColor(IEnumerable<PivotDataSource> d)
-        {
-            var total = (double)d.Sum(d => d.Weight);
-            var diff = (double)d.Sum(d => d.RelativeWeight);
-            var percentage = Math.Round(diff / total * 1000) / 1000;
-            return _driver.GetPercentageColor(percentage);
-        }
+        List<PivotDataSource> DataSource { get; set; } = [];
 
         async void Form1_Shown(object sender, EventArgs e)
         {
             try
             {
-                if (_appSettings.IsAutoLoad && File.Exists(_appSettings.AutoLoadFilePath))
-                {
-                    await LoadJsonDataAsync(_appSettings.AutoLoadFilePath);
-                }
-                InitDataSource();
+                DataSource = !_appSettings.IsAutoLoad || !File.Exists(_appSettings.AutoLoadFilePath)
+                        ? [] : await LoadJsonDataAsync(_appSettings.AutoLoadFilePath);
+
+                SetDataSource(DataSource);
             }
             catch (Exception ex)
             {
@@ -106,12 +89,12 @@ namespace SquarifiedTreemapWinForms
             }
         }
 
-        void InitDataSource()
+        void SetDataSource(List<PivotDataSource> dataSources)
         {
-            var showTreemap = PivotDataSource.Count > 0;
+            var showTreemap = dataSources.Count > 0;
             this.treemapControl1.Visible = showTreemap;
             this.panel1.Visible = !showTreemap;
-                _driver.Invalidate(PivotDataSource);
+            _driver.Invalidate(dataSources);
         }
 
         async Task RedrawTreemapAsync()
@@ -153,7 +136,7 @@ namespace SquarifiedTreemapWinForms
                     Height = (int)numericLegendHeight.Value,
                 };
 
-                _driver.Invalidate(PivotDataSource);
+                _driver.Invalidate(DataSource);
 
                 if (!string.IsNullOrEmpty(_driver.LayoutSettings.TitleText))
                 {
@@ -185,7 +168,9 @@ namespace SquarifiedTreemapWinForms
             TreemapLayoutSettings treemapLayoutSettings,
             LegendSettings legendSettings)
         {
-            var json = JsonSerializer.Serialize(new { treemapSettings, treemapLayoutSettings, legendSettings }, _options);
+            var json = JsonSerializer.Serialize(
+                new { treemapSettings, treemapLayoutSettings, legendSettings }, _options);
+
             File.WriteAllText(string.Format(SETTING_FLIE, _hostEnvironment.EnvironmentName), json);
         }
 
@@ -372,14 +357,14 @@ namespace SquarifiedTreemapWinForms
             }
         }
 
-        async Task LoadJsonDataAsync(string filePath)
+        async Task<List<PivotDataSource>> LoadJsonDataAsync(string filePath)
         {
             if (!File.Exists(filePath))
             {
                 throw new FileNotFoundException("File not found.", filePath);
             }
-            using FileStream openStream = File.OpenRead(filePath);
-            PivotDataSource = await JsonSerializer.DeserializeAsync<List<PivotDataSource>>(openStream, _options) ?? [];
+            using FileStream fs = File.OpenRead(filePath);
+            return await JsonSerializer.DeserializeAsync<List<PivotDataSource>>(fs, _options) ?? [];
         }
 
         async void toolStripLoad_Click(object sender, EventArgs e)
@@ -392,11 +377,10 @@ namespace SquarifiedTreemapWinForms
                 openFileDialog1.FileName = "data.json";
                 openFileDialog1.AddExtension = true;
 
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    await LoadJsonDataAsync(openFileDialog1.FileName);
-                }
-                InitDataSource();
+                if (openFileDialog1.ShowDialog() != DialogResult.OK) { return; }
+
+                DataSource = await LoadJsonDataAsync(openFileDialog1.FileName);
+                SetDataSource(DataSource);
             }
             catch (Exception ex)
             {
