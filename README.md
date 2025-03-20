@@ -8,6 +8,9 @@ SquarifiedTreemapLayers is a library for generating and rendering treemap layout
 - Customizable color calculation
 - Legend generation and display
 - Compatible with .NET 8
+  
+## Overview
+
 - TreemapGdiDriver as an entry point for development kits
 - `SquarifiedTreemapConsole` as an example console program that supports PNG saving and DataUrl output with given data and settings
 - `SquarifiedTreemapWinForms` as an example Windows Forms program that displays data, shows content at the mouse position in the status bar, provides interactive zoom on double-clicking group items, and allows immediate result verification upon changing settings in the configuration screen
@@ -16,17 +19,13 @@ SquarifiedTreemapLayers is a library for generating and rendering treemap layout
 
 ![Image](https://github.com/user-attachments/assets/c64b0c15-c753-4978-afa0-f73f93567d6a)
 
-### SquarifiedTreemapWinForms Screen
-
-Setting Screen (layout, color, legend)
-
-See: `SquarifiedTreemapLayers\src\SquarifiedTreemapWinForms`
+### Configuration Screen
 
 ![Image](https://github.com/user-attachments/assets/1db306a3-35a4-4b03-bb63-ea086d812807)
 
 ## System Architecture
 
-### SquarifiedTreemapWinForms
+### SquarifiedTreemapWinForms Architecture
 
 The `SquarifiedTreemapWinForms` application is structured as follows:
 
@@ -53,7 +52,7 @@ D -->|OnPaint| J[GdiRenderer]
 
 This architecture ensures a modular and maintainable codebase, allowing for easy extension and customization of the treemap functionalities.
 
-### SquarifiedTreemapConsole
+### SquarifiedTreemapConsole Architecture
 
 The `SquarifiedTreemapConsole` application is structured as follows:
 
@@ -110,7 +109,7 @@ Sample data and configuration examples can be found in the `SquarifiedTreemapLay
 
 ## Usage
 
-### With Minimal Setup
+### Minimal Setup Example
 
 The following code demonstrates how to generate and render a treemap layout with minimal setup. The data file used in this example is `sample\sales\sales_data.json`.
 
@@ -151,9 +150,9 @@ driver.Render(1024, 768)
 Console.WriteLine($"Treemap image saved to {new FileInfo("treemap.png").FullName}");
 ```
 
-### Dependency injection configuration examples.
+### Dependency Injection Configuration Example
 
-The following code examples using Dependency Injection (DI).  
+The following code demonstrates how to generate and render a treemap layout using Dependency Injection (DI).
 
 ```csharp
 Host.CreateDefaultBuilder(args)
