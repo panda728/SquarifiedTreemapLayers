@@ -43,6 +43,7 @@ G -->|OnPaint| H[SquarifiedTreemapGenerator]
 E -->|OnPaint| I[LegendGenerator]
 C --> |Mouse Event| D
 D -->|OnPaint| J[GdiRenderer] 
+D -->|OnPaint| C
 ```
 
 - **Program**: The entry point of the application. It builds the host and runs the `FormMain`.
