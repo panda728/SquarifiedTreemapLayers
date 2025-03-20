@@ -8,12 +8,12 @@ SquarifiedTreemapLayers is a library for generating and rendering treemap layout
 - Customizable color calculation
 - Legend generation and display
 - Compatible with .NET 8
-  
+
 ## Overview
 
-- TreemapGdiDriver as an entry point for development kits
-- `SquarifiedTreemapConsole` as an example console program that supports PNG saving and DataUrl output with given data and settings
-- `SquarifiedTreemapWinForms` as an example Windows Forms program that displays data, shows content at the mouse position in the status bar, provides interactive zoom on double-clicking group items, and allows immediate result verification upon changing settings in the configuration screen
+- TreemapGdiDriver serves as an entry point for development kits.
+- `SquarifiedTreemapConsole` is an example console program that supports PNG saving and DataUrl output with given data and settings.
+- `SquarifiedTreemapWinForms` is an example Windows Forms program that displays data, shows content at the mouse position in the status bar, provides interactive zoom on double-clicking group items, and allows immediate result verification upon changing settings in the configuration screen.
 
 ### PNG Saving Sample
 
@@ -25,7 +25,7 @@ SquarifiedTreemapLayers is a library for generating and rendering treemap layout
 
 ## System Architecture
 
-### SquarifiedTreemapWinForms Architecture
+### SquarifiedTreemapWinForms
 
 The `SquarifiedTreemapWinForms` application is structured as follows:
 
@@ -52,7 +52,7 @@ D -->|OnPaint| J[GdiRenderer]
 
 This architecture ensures a modular and maintainable codebase, allowing for easy extension and customization of the treemap functionalities.
 
-### SquarifiedTreemapConsole Architecture
+### SquarifiedTreemapConsole
 
 The `SquarifiedTreemapConsole` application is structured as follows:
 
