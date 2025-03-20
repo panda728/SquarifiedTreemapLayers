@@ -401,3 +401,6 @@ FodyWeavers.xsd
 
 # apppsettings.json
 appsettings.*.json
+
+# Visual Studio Code auto generated launch.json file
+launchSettings.json
