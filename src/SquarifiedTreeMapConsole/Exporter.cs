@@ -8,7 +8,7 @@ using SquarifiedTreemapShared;
 namespace SquarifiedTreemapConsole;
 
 public sealed class Exporter(
-    GdiRenderer renderer,
+    IGdiRenderer renderer,
     LayoutInteractor<PivotDataSource> interactor,
     IOptions<TreemapSettings> treemapSettingsOp,
     IOptions<TreemapLayoutSettings> layoutSettingsOp,

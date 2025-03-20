@@ -3,7 +3,7 @@ using SquarifiedTreemapShared;
 
 namespace SquarifiedTreemapForge.WinForms;
 
-public class GdiRenderer : IDisposable
+public class GdiRenderer : IGdiRenderer, IDisposable
 {
     bool _disposed = false;
     readonly Dictionary<Color, SolidBrush> _brushCache = [];

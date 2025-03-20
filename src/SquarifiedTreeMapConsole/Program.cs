@@ -68,7 +68,7 @@ class Program
 
                 // SquarifiedTreemapForge.WinForms.csproj
                 services.AddTransient<TreemapGdiDriver<PivotDataSource>>();
-                services.AddTransient<GdiRenderer>();
+                services.AddTransient<IGdiRenderer, GdiRenderer>();
 
                 // SquarifiedTreemapForge.csproj
                 services.AddTransient<LayoutInteractor<PivotDataSource>>();

@@ -53,7 +53,7 @@ internal static class Program
 
                 // SquarifiedTreemapForge.WinForms.csproj
                 services.AddTransient<TreemapGdiDriver<PopulationData>>();
-                services.AddTransient<GdiRenderer>();
+                services.AddTransient<IGdiRenderer, GdiRenderer>();
 
                 // SquarifiedTreemapForge.csproj
                 services.AddTransient<LayoutInteractor<PopulationData>>();

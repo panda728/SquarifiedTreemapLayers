@@ -7,7 +7,7 @@ namespace SquarifiedTreemapForge.WinForms;
 
 /// <summary>Manages the data source and rendering for a treemap.</summary>
 public sealed class TreemapGdiDriver<T>(
-    GdiRenderer renderer,
+    IGdiRenderer renderer,
     LayoutInteractor<T> interactor,
     IOptions<TreemapSettings> treemapSettingsOp,
     IOptions<TreemapLayoutSettings> layoutSettingsOp,
@@ -91,7 +91,7 @@ public sealed class TreemapGdiDriver<T>(
     static void RenderTreemap(
         Graphics g,
         LayoutInteractor<T> interactor,
-        GdiRenderer renderer,
+        IGdiRenderer renderer,
         Rectangle bounds,
         string titleText)
     {
