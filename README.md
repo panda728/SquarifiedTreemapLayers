@@ -11,9 +11,10 @@ SquarifiedTreemapLayers is a library for generating and rendering treemap layout
 
 ## Overview
 
-- TreemapGdiDriver serves as an entry point for development kits.
 - `SquarifiedTreemapConsole` is an example console program that supports PNG saving and DataUrl output with given data and settings.
 - `SquarifiedTreemapWinForms` is an example Windows Forms program that displays data, shows content at the mouse position in the status bar, provides interactive zoom on double-clicking group items, and allows immediate result verification upon changing settings in the configuration screen.
+- TreemapGdiDriver serves as an entry point for WinForms development kits.
+- LayoutInteractor serves as an entry point for Console development kits.
 
 ### PNG Saving Sample
 
