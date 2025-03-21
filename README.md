@@ -24,59 +24,6 @@ SquarifiedTreemapLayers is a library for generating and rendering treemap layout
 
 ![Image](https://github.com/user-attachments/assets/1db306a3-35a4-4b03-bb63-ea086d812807)
 
-## System Architecture
-
-### SquarifiedTreemapWinForms
-
-The `SquarifiedTreemapWinForms` application is structured as follows:
-
-```mermaid
-graph TD 
-A[Program] -->|Run| B[FormMain] 
-B -->|Controls.Add| C[TreemapControl] 
-B -->|SetData| D[TreemapGdiDriver<T>]
-D -->|SetData| E[LayoutInteractor<T>] 
-E -->|SetData| F[DataGroupPreparer<T>] 
-D -->|OnPaint| E
-E -->|OnPaint| G[LayoutGenerator<T>] 
-G -->|OnPaint| H[SquarifiedTreemapGenerator] 
-E -->|OnPaint| I[LegendGenerator]
-C --> |Mouse Event| D
-D -->|OnPaint| J[GdiRenderer] 
-D -->|OnPaint| C
-```
-
-- **Program**: The entry point of the application. It builds the host and runs the `FormMain`.
-- **FormMain**: The main Windows form that provides the user interface.
-- **TreemapGdiDriver<T>**: Responsible for rendering the treemap.
-- **GdiRenderer**: Uses GDI+ for rendering.
-- **LayoutInteractor<T>**, **LayoutGenerator<T>**, **DataGroupPreparer<T>**, **LegendGenerator**, **SquarifiedTreemapGenerator**: Handle various aspects of treemap layout, data preparation, and legend calculation.
-
-This architecture ensures a modular and maintainable codebase, allowing for easy extension and customization of the treemap functionalities.
-
-### SquarifiedTreemapConsole
-
-The `SquarifiedTreemapConsole` application is structured as follows:
-
-```mermaid
-graph TD 
-A[Program] -->|Run| B[Exporter] 
-B -->|SetData| C[LayoutInteractor<T>] 
-C -->|SetData| D[DataGroupPreparer<T>]
-B --> |Render| C
-C -->|Render| E[LayoutGenerator<T>] 
-E -->|Render| F[SquarifiedTreemapGenerator] 
-C -->|Render| G[LegendGenerator]
-B -->|Render| H[GdiRenderer] 
-```
-
-- **Program**: The entry point of the application. It parses command-line arguments, builds the host, and runs the `Exporter`.
-- **Exporter**: Handles the export process, including reading data, generating the treemap, and saving the output.
-- **GdiRenderer**: Uses GDI+ for rendering.
-- **LayoutInteractor<T>**, **LayoutGenerator<T>**, **DataGroupPreparer<T>**, **LegendGenerator**, **SquarifiedTreemapGenerator**: Handle various aspects of treemap layout, data preparation, and legend calculation.
-
-This architecture ensures a modular and maintainable codebase, allowing for easy extension and customization of the treemap functionalities.
-
 ## Installation
 
 ### Installing SquarifiedTreemapForge.WinForms
@@ -198,6 +145,82 @@ Host.CreateDefaultBuilder(args)
         services.AddTransient<ITreemapGenerator, SquarifiedTreemapGenerator>();
     });
 ```
+
+## System Architecture
+
+### SquarifiedTreemapWinForms
+
+The `SquarifiedTreemapWinForms` application is structured as follows:
+
+#### Structure
+```mermaid
+graph TD 
+A[Program] -->|Run| B[FormMain] 
+B -->|Controls.Add| C[TreemapControl] 
+B -->|SetData| D[TreemapGdiDriver<T>]
+D -->|SetData| E[LayoutInteractor<T>] 
+E -->|SetData| F[DataGroupPreparer<T>] 
+D -->|OnPaint| E
+E -->|OnPaint| G[LayoutGenerator<T>] 
+G -->|OnPaint| H[SquarifiedTreemapGenerator] 
+E -->|OnPaint| I[LegendGenerator]
+C --> |Mouse Event| D
+D -->|OnPaint| J[IGdiRenderer] 
+D -->|OnPaint| C
+```
+
+- **Program**: The entry point of the application. It builds the host and runs the `FormMain`.
+- **FormMain**: The main Windows form that provides the user interface.
+- **TreemapGdiDriver<T>**: Responsible for rendering the treemap.
+- **IGdiRenderer**: Uses GDI+ for rendering.
+- **LayoutInteractor<T>**, **LayoutGenerator<T>**, **DataGroupPreparer<T>**, **LegendGenerator**, **SquarifiedTreemapGenerator**: Handle various aspects of treemap layout, data preparation, and legend calculation.
+
+This architecture ensures a modular and maintainable codebase, allowing for easy extension and customization of the treemap functionalities.
+    
+#### Sequence diagram from data registration to drawing
+```mermaid
+sequenceDiagram
+    participant FormMain
+    participant TreemapGdiDriver
+    participant LayoutInteractor
+    participant TreemapControl
+
+    FormMain->>TreemapGdiDriver: Invalidate(DataSource)
+    TreemapGdiDriver->>LayoutInteractor: SetDataSource(DataSource)
+    LayoutInteractor->>LayoutInteractor: Create aggregate data
+    TreemapGdiDriver->>TreemapControl: Invalidate()
+    TreemapControl->>TreemapGdiDriver: OnPaint(PaintEventArgs e)
+    TreemapGdiDriver->>TreemapGdiDriver: RenderTreemap(Graphics g, Rectangle bounds, string titleText)
+    TreemapGdiDriver->>LayoutInteractor: Layout(Rectangle bounds, int nodeFontHeight)
+    LayoutInteractor->>LayoutInteractor: Calculate Treemap layout into a bounds from aggregate data
+    LayoutInteractor->>TreemapGdiDriver: Return Layout result
+    TreemapGdiDriver->>IGdiRenderer: Render(Graphics g, Treemap, TreemapNode rootNode, int displayMinSize, IEnumerable<Legend> legends, Rectangle? highLightBounds)
+```
+Data is aggregated by the aggregation column. The result is held by LayoutInteractor and OnPaint uses the aggregated data to compute the rectangle.
+
+### SquarifiedTreemapConsole
+
+The `SquarifiedTreemapConsole` application is structured as follows:
+
+```mermaid
+graph TD 
+A[Program] -->|Run| B[Exporter] 
+B -->|SetData| C[LayoutInteractor<T>] 
+C -->|SetData| D[DataGroupPreparer<T>]
+B --> |Render| C
+C -->|Render| E[LayoutGenerator<T>] 
+E -->|Render| F[SquarifiedTreemapGenerator] 
+C -->|Render| G[LegendGenerator]
+B -->|Render| H[IGdiRenderer] 
+```
+
+- **Program**: The entry point of the application. It parses command-line arguments, builds the host, and runs the `Exporter`.
+- **Exporter**: Handles the export process, including reading data, generating the treemap, and saving the output.
+- **IGdiRenderer**: Uses GDI+ for rendering.
+- **LayoutInteractor<T>**, **LayoutGenerator<T>**, **DataGroupPreparer<T>**, **LegendGenerator**, **SquarifiedTreemapGenerator**: Handle various aspects of treemap layout, data preparation, and legend calculation.
+
+This architecture ensures a modular and maintainable codebase, allowing for easy extension and customization of the treemap functionalities.
+
 
 ## License
 
