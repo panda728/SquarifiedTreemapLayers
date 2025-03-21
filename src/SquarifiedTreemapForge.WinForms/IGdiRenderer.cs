@@ -1,4 +1,4 @@
-﻿using SquarifiedTreemapShared;
+﻿using SquarifiedTreemapForge.Shared;
 
 namespace SquarifiedTreemapForge.WinForms;
 

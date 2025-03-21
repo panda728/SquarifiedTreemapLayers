@@ -125,14 +125,12 @@ Sample data and configuration examples can be found in the `SquarifiedTreemapLay
 
 The following code demonstrates how to generate and render a treemap layout with minimal setup. The data file used in this example is `sample\sales\sales_data.json`.
 
-```csharp
-using System.Text.Json;
+```csharpusing System.Text.Json;
 using Microsoft.Extensions.Options;
 using SquarifiedTreemapForge;
 using SquarifiedTreemapForge.Layout;
+using SquarifiedTreemapForge.Shared;
 using SquarifiedTreemapForge.WinForms;
-using SquarifiedTreemapInteractor;
-using SquarifiedTreemapShared;
 
 var settings = new TreemapSettings();
 var layoutSettings = new TreemapLayoutSettings { TitleText = "Visualizing Sales Revenue (Area) and Cost of Goods Sold Ratio (Color)", RootNodeTitle = "Total Sales", WeightColumn = "Weight", GroupColumns = ["Group1", "Group2", "Group3"], GroupBorderWidths = [4, 2], };
@@ -151,7 +149,7 @@ var driver = new TreemapGdiDriver<PivotDataSource>(
     FuncPercentage = PivotDataSource.GetPercentage
 };
 
-var json = File.ReadAllText(@"..\..\..\..\..\sample\sales\sales_data.json");
+var json = File.ReadAllText("sales_data.json");
 var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
 var data = JsonSerializer.Deserialize<IEnumerable<PivotDataSource>>(json, options) ?? [];
 driver.Invalidate(data);
@@ -170,6 +168,8 @@ The following code demonstrates how to generate and render a treemap layout usin
 Host.CreateDefaultBuilder(args)
     .ConfigureServices((hostContext, services) =>
     {
+        services.Configure<AppSettings>(
+            hostContext.Configuration.GetSection("AppSettings"));
         services.Configure<TreemapSettings>(
             hostContext.Configuration.GetSection("TreemapSettings"));
         services.Configure<TreemapLayoutSettings>(

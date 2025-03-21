@@ -4,7 +4,7 @@ using SquarifiedTreemapForge;
 using SquarifiedTreemapConsole;
 using SquarifiedTreemapForge.Layout;
 using SquarifiedTreemapForge.WinForms;
-using SquarifiedTreemapShared;
+using SquarifiedTreemapForge.Shared;
 
 class Program
 {

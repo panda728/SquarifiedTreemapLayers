@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using Microsoft.Extensions.Options;
 using SquarifiedTreemapForge;
-using SquarifiedTreemapShared;
+using SquarifiedTreemapForge.Shared;
 
 namespace SquarifiedTreemapForge.WinForms;
 

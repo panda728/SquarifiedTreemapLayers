@@ -3,7 +3,7 @@ using Microsoft.Extensions.Hosting;
 using PopulationDataProvider.Demo;
 using SquarifiedTreemapForge;
 using SquarifiedTreemapForge.Layout;
-using SquarifiedTreemapShared;
+using SquarifiedTreemapForge.Shared;
 using Microsoft.Extensions.Configuration;
 
 namespace SquarifiedTreemapForge.WinForms.Demo;

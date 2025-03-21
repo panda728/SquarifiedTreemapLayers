@@ -3,7 +3,7 @@ using System.Text.Json;
 using Microsoft.Extensions.Options;
 using SquarifiedTreemapForge;
 using SquarifiedTreemapForge.WinForms;
-using SquarifiedTreemapShared;
+using SquarifiedTreemapForge.Shared;
 
 namespace SquarifiedTreemapConsole;
 

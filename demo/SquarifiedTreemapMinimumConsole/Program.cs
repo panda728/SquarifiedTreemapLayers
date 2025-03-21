@@ -3,7 +3,7 @@ using Microsoft.Extensions.Options;
 using SquarifiedTreemapForge;
 using SquarifiedTreemapForge.Layout;
 using SquarifiedTreemapForge.WinForms;
-using SquarifiedTreemapShared;
+using SquarifiedTreemapForge.Shared;
 
 var settings = new TreemapSettings();
 var layoutSettings = new TreemapLayoutSettings { TitleText = "Visualizing Sales Revenue (Area) and Cost of Goods Sold Ratio (Color)", RootNodeTitle = "Total Sales", WeightColumn = "Weight", GroupColumns = ["Group1", "Group2", "Group3"], GroupBorderWidths = [4, 2], };

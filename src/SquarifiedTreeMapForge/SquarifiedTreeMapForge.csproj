@@ -16,9 +16,10 @@
     <PackageProjectUrl>https://github.com/panda728/SquarifiedTreemapLayers</PackageProjectUrl>
     <PackageTags>Visualization</PackageTags>
     <PackageId>SquarifiedTreemapForge</PackageId>
-    <Version>1.0.1</Version>
-    <FileVersion>1.0.1.0</FileVersion>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <Version>1.0.5</Version>
+    <FileVersion>1.0.5.0</FileVersion>
+    <AssemblyVersion>1.0.5.0</AssemblyVersion>
+    <IncludeReferencedProjects>true</IncludeReferencedProjects>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -35,7 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SquarifiedTreemapShared\SquarifiedTreemapShared.csproj" />
+    <ProjectReference Include="..\SquarifiedTreemapForge.Shared\SquarifiedTreemapForge.Shared.csproj" />
   </ItemGroup>
 
 </Project>

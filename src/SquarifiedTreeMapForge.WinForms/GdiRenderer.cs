@@ -1,5 +1,5 @@
 ﻿using System.Drawing.Drawing2D;
-using SquarifiedTreemapShared;
+using SquarifiedTreemapForge.Shared;
 
 namespace SquarifiedTreemapForge.WinForms;
 

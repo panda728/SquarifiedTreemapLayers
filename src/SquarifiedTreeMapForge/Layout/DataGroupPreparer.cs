@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 using SquarifiedTreemapForge.Helpers;
-using SquarifiedTreemapShared;
+using SquarifiedTreemapForge.Shared;
 
 namespace SquarifiedTreemapForge.Layout;
 
