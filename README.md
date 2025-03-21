@@ -16,6 +16,10 @@ SquarifiedTreemapLayers is a library for generating and rendering treemap layout
 - TreemapGdiDriver serves as an entry point for WinForms development kits.
 - LayoutInteractor serves as an entry point for Console development kits.
 
+## Application Summary
+
+https://github.com/panda728/SquarifiedTreemapLayers/blob/main/SquarifiedTreemapLayers_Application_Summary.md
+
 ### PNG Saving Sample
 
 ![Image](https://github.com/user-attachments/assets/c64b0c15-c753-4978-afa0-f73f93567d6a)
@@ -220,7 +224,6 @@ B -->|Render| H[IGdiRenderer]
 - **LayoutInteractor<T>**, **LayoutGenerator<T>**, **DataGroupPreparer<T>**, **LegendGenerator**, **SquarifiedTreemapGenerator**: Handle various aspects of treemap layout, data preparation, and legend calculation.
 
 This architecture ensures a modular and maintainable codebase, allowing for easy extension and customization of the treemap functionalities.
-
 
 ## License
 
