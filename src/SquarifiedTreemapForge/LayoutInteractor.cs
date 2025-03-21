@@ -3,7 +3,7 @@ using SquarifiedTreemapForge.Helpers;
 using SquarifiedTreemapForge.Layout;
 using SquarifiedTreemapShared;
 
-namespace SquarifiedTreemapInteractor;
+namespace SquarifiedTreemapForge;
 
 public class LayoutInteractor<T>(
     LayoutGenerator<T> layoutGenerator,

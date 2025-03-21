@@ -19,8 +19,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreemapConsole", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreemapWinForms", "SquarifiedTreemapWinForms\SquarifiedTreemapWinForms.csproj", "{46888ACA-C708-4FE7-A00E-1A93E943FCEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreemapInteractor", "SquarifiedTreemapInteractor\SquarifiedTreemapInteractor.csproj", "{E1A4EB73-C7BE-4DFF-9EE4-DCB310878799}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquarifiedTreemapMinimumConsole", "..\Demo\SquarifiedTreemapMinimumConsole\SquarifiedTreemapMinimumConsole.csproj", "{52086F8E-A1CD-465D-BC0E-D17990B70E1C}"
 EndProject
 Global
@@ -61,10 +59,6 @@ Global
 		{46888ACA-C708-4FE7-A00E-1A93E943FCEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46888ACA-C708-4FE7-A00E-1A93E943FCEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46888ACA-C708-4FE7-A00E-1A93E943FCEB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E1A4EB73-C7BE-4DFF-9EE4-DCB310878799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E1A4EB73-C7BE-4DFF-9EE4-DCB310878799}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E1A4EB73-C7BE-4DFF-9EE4-DCB310878799}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E1A4EB73-C7BE-4DFF-9EE4-DCB310878799}.Release|Any CPU.Build.0 = Release|Any CPU
 		{52086F8E-A1CD-465D-BC0E-D17990B70E1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{52086F8E-A1CD-465D-BC0E-D17990B70E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52086F8E-A1CD-465D-BC0E-D17990B70E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
