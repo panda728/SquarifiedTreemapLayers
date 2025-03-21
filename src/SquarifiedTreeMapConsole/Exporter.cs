@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Text.Json;
 using Microsoft.Extensions.Options;
-using SquarifiedTreemapInteractor;
+using SquarifiedTreemapForge;
 using SquarifiedTreemapForge.WinForms;
 using SquarifiedTreemapShared;
 

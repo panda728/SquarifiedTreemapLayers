@@ -3,7 +3,6 @@ using Microsoft.Extensions.Options;
 using SquarifiedTreemapForge;
 using SquarifiedTreemapForge.Layout;
 using SquarifiedTreemapForge.WinForms;
-using SquarifiedTreemapInteractor;
 using SquarifiedTreemapShared;
 
 var settings = new TreemapSettings();

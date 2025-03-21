@@ -1,7 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PopulationDataProvider.Demo;
-using SquarifiedTreemapInteractor;
+using SquarifiedTreemapForge;
 using SquarifiedTreemapForge.Layout;
 using SquarifiedTreemapShared;
 using Microsoft.Extensions.Configuration;

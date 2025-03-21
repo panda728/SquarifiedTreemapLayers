@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SquarifiedTreemapInteractor;
 using SquarifiedTreemapForge;
 using SquarifiedTreemapConsole;
 using SquarifiedTreemapForge.Layout;

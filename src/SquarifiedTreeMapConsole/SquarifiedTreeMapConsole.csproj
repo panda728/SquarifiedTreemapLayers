@@ -25,8 +25,6 @@
   <ItemGroup>
     <ProjectReference Include="..\SquarifiedTreemapForge.WinForms\SquarifiedTreemapForge.WinForms.csproj" />
     <ProjectReference Include="..\SquarifiedTreemapForge\SquarifiedTreemapForge.csproj" />
-    <ProjectReference Include="..\SquarifiedTreemapInteractor\SquarifiedTreemapInteractor.csproj" />
-    <ProjectReference Include="..\SquarifiedTreemapShared\SquarifiedTreemapShared.csproj" />
   </ItemGroup>
 
   <ItemGroup>
