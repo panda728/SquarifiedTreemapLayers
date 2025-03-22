@@ -52,7 +52,9 @@
 * Shneiderman, B. (1992). Tree visualization with tree-maps: 2-d space-filling approach. *ACM Transactions on Graphics (TOG)*, *11*(1), 921-99.
 
 **図1：SquarifiedTreemapLayersの出力例** (出典：[GitHub - SquarifiedTreemapLayers](https://github.com/user-attachments/assets/c64b0c15-c753-4978-afa0-f73f93567d6a))
-    * この図は、部門別収益構造の視覚化を示すSquarifiedTreemapLayersによって生成された出力例を示しています。
+![w:640 h:400](https://github.com/user-attachments/assets/c64b0c15-c753-4978-afa0-f73f93567d6a)
+
+この図は、部門別収益構造の視覚化を示すSquarifiedTreemapLayersによって生成された出力例を示しています。
 
 **図1に示すように**、「SquarifiedTreemapLayers」は部門別収益構造を明確かつ直感的に視覚化する方法を提供し、収益分布と改善の可能性のある領域の迅速な特定を可能にします。
 
