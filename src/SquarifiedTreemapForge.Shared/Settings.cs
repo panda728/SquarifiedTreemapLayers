@@ -2,12 +2,6 @@
 
 namespace SquarifiedTreemapForge.Shared;
 
-public record AppSettings
-{
-    public bool IsAutoLoad { get; set; } = false;
-    public string AutoLoadFilePath { get; init; } = "";
-}
-
 public record TreemapSettings
 {
     public string TitleFontFamily { get; init; } = "Alial";
