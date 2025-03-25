@@ -7,7 +7,7 @@
 @inject IJSRuntime JS
 @rendermode InteractiveServer
 
-<div class="container h-100 w-100">
+<div class="container-fluid h-100 w-100">
     <div class="row h-100">
         <div class="col w-100">
             <canvas id="treemapCanvas" class="h-100 w-100"></canvas>
@@ -71,7 +71,6 @@
             funcNodeText: PivotDataSource.GetTitle,
             funcPercentage: PivotDataSource.GetPercentage);
 
-        _interactor.Layout(new Rectangle(0, 0, canvasWidth, canvasHeight), 18);
 
         // var data2 = interactor.RootNode?.Nodes.First().Nodes.Select(n => new
         // {
@@ -91,10 +90,12 @@
         //     color = ColorToHex(item.color)
         // }).ToList();
 
-        var data3 = GetTreemapItem(_interactor.RootNode).items;
-
-        var context = await JS.InvokeAsync<IJSObjectReference>("import", "./js/treemap.js");
-        await context.InvokeVoidAsync("drawTreemap", "treemapCanvas", data3);
+        if (_interactor.Layout(new Rectangle(0, 0, canvasWidth, canvasHeight), 18))
+        {
+            var data3 = GetTreemapItem(_interactor.RootNode).items;
+            var context = await JS.InvokeAsync<IJSObjectReference>("import", "./js/treemap.js");
+            await context.InvokeVoidAsync("drawTreemap", "treemapCanvas", data3);
+        }
     }
 
     private static string ColorToHex(Color color)
