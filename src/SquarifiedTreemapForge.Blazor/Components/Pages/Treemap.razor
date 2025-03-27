@@ -1,0 +1,136 @@
+﻿@page "/treemap"
+@using System.Drawing
+@using System.Diagnostics
+@using System.Text.Json
+@using SquarifiedTreemapForge.Layout
+@using SquarifiedTreemapForge.Shared
+@inject IJSRuntime JS
+@rendermode InteractiveServer
+
+<div class="container-fluid h-100 w-100">
+    <div class="row h-100">
+        <div class="col w-100">
+            <canvas id="treemapCanvas" class="h-100 w-100"></canvas>
+        </div>
+    </div>
+</div>
+
+@code {
+    readonly JsonSerializerOptions _options = new() { PropertyNameCaseInsensitive = true };
+    private List<TreemapItem> treemapData = new List<TreemapItem>
+    {
+        new TreemapItem { x = 10, y = 10, width = 100, height = 100, color = ColorToHex(Color.Blue) },
+        new TreemapItem { x = 120, y = 10, width = 100, height = 100, color = ColorToHex(Color.Red) }
+    };
+
+    private int canvasWidth;
+    private int canvasHeight;
+    private LayoutInteractor<PivotDataSource> _interactor;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await GetCanvasSizeAsync();
+            await DrawTreemapAsync();
+            var context = await JS.InvokeAsync<IJSObjectReference>("import", "./js/treemap.js");
+            await context.InvokeVoidAsync("initializeResizeListener", "treemapCanvas", GetTreemapItem(_interactor.RootNode).items);
+        }
+    }
+
+    private async Task GetCanvasSizeAsync()
+    {
+        var context = await JS.InvokeAsync<IJSObjectReference>("import", "./js/treemap.js");
+        var size = await context.InvokeAsync<CanvasSize>("getCanvasSize", "treemapCanvas");
+        canvasWidth = size.Width;
+        canvasHeight = size.Height;
+        Debug.WriteLine($"Canvas size: {canvasWidth}x{canvasHeight}");
+    }
+
+    private async Task DrawTreemapAsync()
+    {
+        var settings = new TreemapSettings();
+        var layoutSettings = new TreemapLayoutSettings { TitleText = "Visualizing Sales Revenue (Area) and Cost of Goods Sold Ratio (Color)", RootNodeTitle = "Total Sales", WeightColumn = "Weight", GroupColumns = ["Group1", "Group2", "Group3"], GroupBorderWidths = [4, 2], };
+        var legendSettings = new LegendSettings() { Width = 250, Height = 20, MinPer = 0.73, MaxPer = 1, MinBrightness = 0.2, MaxBrightness = 0.9, HuePositive = 2, HueNegative = 205, Saturation = 0.85, StepCount = 7, Margin = 1, IsOrderAsc = false, LegendFormat = "0%", IsShowLegend = true, IsShowPlusSign = true };
+
+        _interactor = new LayoutInteractor<PivotDataSource>(
+            new LayoutGenerator<PivotDataSource>(new SquarifiedTreemapGenerator()),
+            new DataGroupPreparer<PivotDataSource>(),
+            new LegendGenerator()
+        );
+
+        var json = File.ReadAllText("sales_data.json");
+        var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+        var dataSource = JsonSerializer.Deserialize<IEnumerable<PivotDataSource>>(json, options) ?? [];
+
+        _interactor.SetDataSource(
+            dataSource,
+            layoutSettings,
+            settings,
+            legendSettings,
+            funcNodeText: PivotDataSource.GetTitle,
+            funcPercentage: PivotDataSource.GetPercentage);
+
+
+        // var data2 = interactor.RootNode?.Nodes.First().Nodes.Select(n => new
+        // {
+        //     n.Bounds.X,
+        //     n.Bounds.Y,
+        //     n.Bounds.Width,
+        //     n.Bounds.Height,
+        //     color = ColorToHex(n.Format.BackColor)
+        // }).ToList();
+
+        // var data = treemapData.Select(item => new
+        // {
+        //     item.x,
+        //     item.y,
+        //     item.width,
+        //     item.height,
+        //     color = ColorToHex(item.color)
+        // }).ToList();
+
+        if (_interactor.Layout(new Rectangle(0, 0, canvasWidth, canvasHeight), 18))
+        {
+            var data3 = GetTreemapItem(_interactor.RootNode).items;
+            var context = await JS.InvokeAsync<IJSObjectReference>("import", "./js/treemap.js");
+            await context.InvokeVoidAsync("drawTreemap", "treemapCanvas", data3);
+        }
+    }
+
+    private static string ColorToHex(Color color)
+    {
+        return $"#{color.R:X2}{color.G:X2}{color.B:X2}";
+    }
+
+    private TreemapItem GetTreemapItem(TreemapNode node)
+    {
+        return new TreemapItem()
+            {
+                x = node.Bounds.X,
+                y = node.Bounds.Y,
+                width = node.Bounds.Width,
+                height = node.Bounds.Height,
+                color = ColorToHex(node.Format.BackColor),
+                items = node.Nodes.Select(n => GetTreemapItem(n)).ToArray(),
+                label = node.Text
+            };
+    }
+
+    public class TreemapItem
+    {
+        public int x { get; set; }
+        public int y { get; set; }
+        public int width { get; set; }
+        public int height { get; set; }
+        public string color { get; set; } = "";
+        public string label { get; set; } = "";
+        public TreemapItem[] items { get; set; } = [];
+    }
+
+    public class CanvasSize
+    {
+        public int Width { get; set; }
+        public int Height { get; set; }
+    }
+}
