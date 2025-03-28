@@ -35,8 +35,7 @@ https://github.com/panda728/SquarifiedTreemapLayers/blob/main/SquarifiedTreemapL
 To install the `SquarifiedTreemapForge.WinForms` development library, use the following command:
 
 ```cmd
-dotnet add package SquarifiedTreemapForge --version 1.0.5
-dotnet add package SquarifiedTreemapForge.WinForms --version 1.0.5
+dotnet add package SquarifiedTreemapForge.WinForms --version 1.0.7
 ```
 
 ### Installing SquarifiedTreemapConsole
