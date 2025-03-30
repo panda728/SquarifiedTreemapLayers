@@ -8,6 +8,8 @@ namespace SquarifiedTreemapForge.Layout;
 public sealed class DataGroupPreparer<T>
 {
     public const int MINIMUM_SIZE = 2;
+    const string DATE_FORMAT = "MM/dd";
+    const string TIME_FORMAT = "HH:mm";
     TreemapLayoutSettings? _settings;
 
     public void Initialize(
@@ -59,6 +61,8 @@ public sealed class DataGroupPreparer<T>
     public PropCache[]? GroupProperties { get; private set; }
     public string[]? GroupColumnFormats { get; private set; }
     public int[]? GroupBorderWidths { get; private set; }
+    public string StandardDateFormat { get; private set; } = DATE_FORMAT;
+    public string StandardTimeFormat { get; private set; } = TIME_FORMAT;
 
     public Func<string, IEnumerable<T>, string>? FuncNodeText { get; private set; }
     public Func<IEnumerable<T>, Color>? FuncNodeColor { get; private set; }
@@ -108,9 +112,9 @@ public sealed class DataGroupPreparer<T>
             float f => f.ToString(fmt),
             decimal e => e.ToString(fmt),
             long l => l.ToString(fmt),
-            DateTime dt => dt.ToString(fmt),
-            DateOnly dto => dto.ToString(fmt),
-            TimeOnly tio => tio.ToString(fmt),
+            DateTime dt => dt.ToString(string.IsNullOrEmpty(fmt) ? StandardDateFormat : fmt),
+            DateOnly dto => dto.ToString(string.IsNullOrEmpty(fmt) ? StandardDateFormat : fmt),
+            TimeOnly tio => tio.ToString(string.IsNullOrEmpty(fmt) ? StandardTimeFormat : fmt),
             _ => value.ToString() ?? ""
         };
     }
