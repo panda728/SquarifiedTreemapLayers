@@ -33,6 +33,8 @@ namespace SquarifiedTreemapWinForms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             tableLayoutPanel1 = new TableLayoutPanel();
             groupBox1 = new GroupBox();
+            numericDispDepth = new NumericUpDown();
+            label18 = new Label();
             groupBox6 = new GroupBox();
             label5 = new Label();
             label4 = new Label();
@@ -107,6 +109,7 @@ namespace SquarifiedTreemapWinForms
             openFileDialog1 = new OpenFileDialog();
             tableLayoutPanel1.SuspendLayout();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericDispDepth).BeginInit();
             groupBox6.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox4.SuspendLayout();
@@ -153,6 +156,8 @@ namespace SquarifiedTreemapWinForms
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(numericDispDepth);
+            groupBox1.Controls.Add(label18);
             groupBox1.Controls.Add(groupBox6);
             groupBox1.Controls.Add(groupBox3);
             groupBox1.Controls.Add(groupBox4);
@@ -164,6 +169,26 @@ namespace SquarifiedTreemapWinForms
             groupBox1.Size = new Size(435, 337);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
+            // 
+            // numericDispDepth
+            // 
+            numericDispDepth.Location = new Point(174, 302);
+            numericDispDepth.Maximum = new decimal(new int[] { 64, 0, 0, 0 });
+            numericDispDepth.Name = "numericDispDepth";
+            numericDispDepth.Size = new Size(62, 29);
+            numericDispDepth.TabIndex = 4;
+            numericDispDepth.TextAlign = HorizontalAlignment.Right;
+            numericDispDepth.Value = new decimal(new int[] { 32, 0, 0, 0 });
+            numericDispDepth.ValueChanged += numeric_ValueChanged;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(148, 282);
+            label18.Name = "label18";
+            label18.Size = new Size(93, 23);
+            label18.TabIndex = 5;
+            label18.Text = "depth limit";
             // 
             // groupBox6
             // 
@@ -187,7 +212,7 @@ namespace SquarifiedTreemapWinForms
             label5.AutoSize = true;
             label5.Location = new Point(191, 26);
             label5.Name = "label5";
-            label5.Size = new Size(66, 17);
+            label5.Size = new Size(85, 23);
             label5.TabIndex = 8;
             label5.Text = "selectable";
             // 
@@ -196,7 +221,7 @@ namespace SquarifiedTreemapWinForms
             label4.AutoSize = true;
             label4.Location = new Point(32, 26);
             label4.Name = "label4";
-            label4.Size = new Size(56, 17);
+            label4.Size = new Size(72, 23);
             label4.TabIndex = 7;
             label4.Text = "selected";
             // 
@@ -213,11 +238,11 @@ namespace SquarifiedTreemapWinForms
             // listBoxGroupSelectable
             // 
             listBoxGroupSelectable.FormattingEnabled = true;
-            listBoxGroupSelectable.ItemHeight = 17;
+            listBoxGroupSelectable.ItemHeight = 21;
             listBoxGroupSelectable.Items.AddRange(new object[] { "***", "***", "***" });
             listBoxGroupSelectable.Location = new Point(167, 46);
             listBoxGroupSelectable.Name = "listBoxGroupSelectable";
-            listBoxGroupSelectable.Size = new Size(100, 174);
+            listBoxGroupSelectable.Size = new Size(100, 172);
             listBoxGroupSelectable.TabIndex = 4;
             // 
             // buttonGroupDelete
@@ -253,11 +278,11 @@ namespace SquarifiedTreemapWinForms
             // listBoxGroupSelected
             // 
             listBoxGroupSelected.FormattingEnabled = true;
-            listBoxGroupSelected.ItemHeight = 17;
+            listBoxGroupSelected.ItemHeight = 21;
             listBoxGroupSelected.Items.AddRange(new object[] { "***", "***", "***" });
             listBoxGroupSelected.Location = new Point(15, 46);
             listBoxGroupSelected.Name = "listBoxGroupSelected";
-            listBoxGroupSelected.Size = new Size(100, 174);
+            listBoxGroupSelected.Size = new Size(100, 172);
             listBoxGroupSelected.TabIndex = 0;
             // 
             // groupBox3
@@ -279,7 +304,7 @@ namespace SquarifiedTreemapWinForms
             radioAT.AutoSize = true;
             radioAT.Location = new Point(22, 161);
             radioAT.Name = "radioAT";
-            radioAT.Size = new Size(77, 21);
+            radioAT.Size = new Size(99, 27);
             radioAT.TabIndex = 4;
             radioAT.TabStop = true;
             radioAT.Text = "alternate";
@@ -291,7 +316,7 @@ namespace SquarifiedTreemapWinForms
             radioRB.AutoSize = true;
             radioRB.Location = new Point(22, 127);
             radioRB.Name = "radioRB";
-            radioRB.Size = new Size(100, 21);
+            radioRB.Size = new Size(129, 27);
             radioRB.TabIndex = 3;
             radioRB.TabStop = true;
             radioRB.Text = "right bottom";
@@ -303,7 +328,7 @@ namespace SquarifiedTreemapWinForms
             radioRT.AutoSize = true;
             radioRT.Location = new Point(22, 93);
             radioRT.Name = "radioRT";
-            radioRT.Size = new Size(77, 21);
+            radioRT.Size = new Size(98, 27);
             radioRT.TabIndex = 2;
             radioRT.TabStop = true;
             radioRT.Text = "right top";
@@ -315,7 +340,7 @@ namespace SquarifiedTreemapWinForms
             radioLB.AutoSize = true;
             radioLB.Location = new Point(22, 59);
             radioLB.Name = "radioLB";
-            radioLB.Size = new Size(91, 21);
+            radioLB.Size = new Size(117, 27);
             radioLB.TabIndex = 1;
             radioLB.TabStop = true;
             radioLB.Text = "left bottom";
@@ -327,7 +352,7 @@ namespace SquarifiedTreemapWinForms
             radioLT.AutoSize = true;
             radioLT.Location = new Point(22, 25);
             radioLT.Name = "radioLT";
-            radioLT.Size = new Size(68, 21);
+            radioLT.Size = new Size(86, 27);
             radioLT.TabIndex = 0;
             radioLT.TabStop = true;
             radioLT.Text = "left top";
@@ -350,7 +375,7 @@ namespace SquarifiedTreemapWinForms
             radioD.AutoSize = true;
             radioD.Location = new Point(22, 53);
             radioD.Name = "radioD";
-            radioD.Size = new Size(97, 21);
+            radioD.Size = new Size(123, 27);
             radioD.TabIndex = 2;
             radioD.TabStop = true;
             radioD.Text = "descending ";
@@ -362,7 +387,7 @@ namespace SquarifiedTreemapWinForms
             radioA.AutoSize = true;
             radioA.Location = new Point(22, 26);
             radioA.Name = "radioA";
-            radioA.Size = new Size(89, 21);
+            radioA.Size = new Size(113, 27);
             radioA.TabIndex = 1;
             radioA.TabStop = true;
             radioA.Text = "ascending ";
@@ -371,10 +396,10 @@ namespace SquarifiedTreemapWinForms
             // 
             // numericDepth
             // 
-            numericDepth.Location = new Point(211, 293);
+            numericDepth.Location = new Point(61, 302);
             numericDepth.Maximum = new decimal(new int[] { 64, 0, 0, 0 });
             numericDepth.Name = "numericDepth";
-            numericDepth.Size = new Size(79, 25);
+            numericDepth.Size = new Size(62, 29);
             numericDepth.TabIndex = 2;
             numericDepth.TextAlign = HorizontalAlignment.Right;
             numericDepth.Value = new decimal(new int[] { 32, 0, 0, 0 });
@@ -383,9 +408,9 @@ namespace SquarifiedTreemapWinForms
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(138, 301);
+            label1.Location = new Point(35, 282);
             label1.Name = "label1";
-            label1.Size = new Size(70, 17);
+            label1.Size = new Size(93, 23);
             label1.TabIndex = 3;
             label1.Text = "depth limit";
             // 
@@ -443,7 +468,7 @@ namespace SquarifiedTreemapWinForms
             label16.AutoSize = true;
             label16.Location = new Point(305, 148);
             label16.Name = "label16";
-            label16.Size = new Size(44, 17);
+            label16.Size = new Size(59, 23);
             label16.TabIndex = 30;
             label16.Text = "height";
             // 
@@ -452,7 +477,7 @@ namespace SquarifiedTreemapWinForms
             numericLegendHeight.Location = new Point(353, 144);
             numericLegendHeight.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             numericLegendHeight.Name = "numericLegendHeight";
-            numericLegendHeight.Size = new Size(55, 25);
+            numericLegendHeight.Size = new Size(55, 29);
             numericLegendHeight.TabIndex = 29;
             numericLegendHeight.TextAlign = HorizontalAlignment.Right;
             numericLegendHeight.Value = new decimal(new int[] { 22, 0, 0, 0 });
@@ -463,7 +488,7 @@ namespace SquarifiedTreemapWinForms
             checkLegendOrder.AutoSize = true;
             checkLegendOrder.Location = new Point(123, 24);
             checkLegendOrder.Name = "checkLegendOrder";
-            checkLegendOrder.Size = new Size(127, 21);
+            checkLegendOrder.Size = new Size(159, 27);
             checkLegendOrder.TabIndex = 28;
             checkLegendOrder.Text = "legend order asc";
             checkLegendOrder.UseVisualStyleBackColor = true;
@@ -474,7 +499,7 @@ namespace SquarifiedTreemapWinForms
             numericSat.Location = new Point(353, 82);
             numericSat.Maximum = new decimal(new int[] { 360, 0, 0, 0 });
             numericSat.Name = "numericSat";
-            numericSat.Size = new Size(55, 25);
+            numericSat.Size = new Size(55, 29);
             numericSat.TabIndex = 26;
             numericSat.TextAlign = HorizontalAlignment.Right;
             numericSat.Value = new decimal(new int[] { 205, 0, 0, 0 });
@@ -485,7 +510,7 @@ namespace SquarifiedTreemapWinForms
             label15.AutoSize = true;
             label15.Location = new Point(283, 86);
             label15.Name = "label15";
-            label15.Size = new Size(66, 17);
+            label15.Size = new Size(87, 23);
             label15.TabIndex = 27;
             label15.Text = "saturation";
             // 
@@ -493,7 +518,7 @@ namespace SquarifiedTreemapWinForms
             // 
             numericMaxBri.Location = new Point(226, 144);
             numericMaxBri.Name = "numericMaxBri";
-            numericMaxBri.Size = new Size(55, 25);
+            numericMaxBri.Size = new Size(55, 29);
             numericMaxBri.TabIndex = 24;
             numericMaxBri.TextAlign = HorizontalAlignment.Right;
             numericMaxBri.Value = new decimal(new int[] { 88, 0, 0, 0 });
@@ -503,7 +528,7 @@ namespace SquarifiedTreemapWinForms
             // 
             numericMinBri.Location = new Point(226, 114);
             numericMinBri.Name = "numericMinBri";
-            numericMinBri.Size = new Size(55, 25);
+            numericMinBri.Size = new Size(55, 29);
             numericMinBri.TabIndex = 22;
             numericMinBri.TextAlign = HorizontalAlignment.Right;
             numericMinBri.Value = new decimal(new int[] { 8, 0, 0, 0 });
@@ -514,7 +539,7 @@ namespace SquarifiedTreemapWinForms
             checkShowPlusSign.AutoSize = true;
             checkShowPlusSign.Location = new Point(252, 24);
             checkShowPlusSign.Name = "checkShowPlusSign";
-            checkShowPlusSign.Size = new Size(113, 21);
+            checkShowPlusSign.Size = new Size(143, 27);
             checkShowPlusSign.TabIndex = 21;
             checkShowPlusSign.Text = "show plus sign";
             checkShowPlusSign.UseVisualStyleBackColor = true;
@@ -525,7 +550,7 @@ namespace SquarifiedTreemapWinForms
             numericHueNegative.Location = new Point(226, 82);
             numericHueNegative.Maximum = new decimal(new int[] { 360, 0, 0, 0 });
             numericHueNegative.Name = "numericHueNegative";
-            numericHueNegative.Size = new Size(55, 25);
+            numericHueNegative.Size = new Size(55, 29);
             numericHueNegative.TabIndex = 19;
             numericHueNegative.TextAlign = HorizontalAlignment.Right;
             numericHueNegative.Value = new decimal(new int[] { 205, 0, 0, 0 });
@@ -536,7 +561,7 @@ namespace SquarifiedTreemapWinForms
             label13.AutoSize = true;
             label13.Location = new Point(125, 148);
             label13.Name = "label13";
-            label13.Size = new Size(97, 17);
+            label13.Size = new Size(126, 23);
             label13.TabIndex = 25;
             label13.Text = "max brightness";
             // 
@@ -545,7 +570,7 @@ namespace SquarifiedTreemapWinForms
             numericHuePositive.Location = new Point(226, 51);
             numericHuePositive.Maximum = new decimal(new int[] { 360, 0, 0, 0 });
             numericHuePositive.Name = "numericHuePositive";
-            numericHuePositive.Size = new Size(55, 25);
+            numericHuePositive.Size = new Size(55, 29);
             numericHuePositive.TabIndex = 17;
             numericHuePositive.TextAlign = HorizontalAlignment.Right;
             numericHuePositive.Value = new decimal(new int[] { 2, 0, 0, 0 });
@@ -556,7 +581,7 @@ namespace SquarifiedTreemapWinForms
             label11.AutoSize = true;
             label11.Location = new Point(140, 86);
             label11.Name = "label11";
-            label11.Size = new Size(82, 17);
+            label11.Size = new Size(109, 23);
             label11.TabIndex = 20;
             label11.Text = "hue negative";
             // 
@@ -565,7 +590,7 @@ namespace SquarifiedTreemapWinForms
             label14.AutoSize = true;
             label14.Location = new Point(128, 118);
             label14.Name = "label14";
-            label14.Size = new Size(94, 17);
+            label14.Size = new Size(123, 23);
             label14.TabIndex = 23;
             label14.Text = "min brightness";
             // 
@@ -574,7 +599,7 @@ namespace SquarifiedTreemapWinForms
             label12.AutoSize = true;
             label12.Location = new Point(144, 55);
             label12.Name = "label12";
-            label12.Size = new Size(78, 17);
+            label12.Size = new Size(102, 23);
             label12.TabIndex = 18;
             label12.Text = "hue positive";
             // 
@@ -583,7 +608,7 @@ namespace SquarifiedTreemapWinForms
             numericMaxPer.Location = new Point(66, 144);
             numericMaxPer.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
             numericMaxPer.Name = "numericMaxPer";
-            numericMaxPer.Size = new Size(55, 25);
+            numericMaxPer.Size = new Size(55, 29);
             numericMaxPer.TabIndex = 15;
             numericMaxPer.TextAlign = HorizontalAlignment.Right;
             numericMaxPer.Value = new decimal(new int[] { 10, 0, 0, 0 });
@@ -594,7 +619,7 @@ namespace SquarifiedTreemapWinForms
             numericMinPer.Location = new Point(66, 114);
             numericMinPer.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
             numericMinPer.Name = "numericMinPer";
-            numericMinPer.Size = new Size(55, 25);
+            numericMinPer.Size = new Size(55, 29);
             numericMinPer.TabIndex = 13;
             numericMinPer.TextAlign = HorizontalAlignment.Right;
             numericMinPer.Value = new decimal(new int[] { 10, 0, 0, int.MinValue });
@@ -605,7 +630,7 @@ namespace SquarifiedTreemapWinForms
             label9.AutoSize = true;
             label9.Location = new Point(6, 148);
             label9.Name = "label9";
-            label9.Size = new Size(56, 17);
+            label9.Size = new Size(72, 23);
             label9.TabIndex = 16;
             label9.Text = "max per";
             // 
@@ -614,7 +639,7 @@ namespace SquarifiedTreemapWinForms
             label10.AutoSize = true;
             label10.Location = new Point(9, 118);
             label10.Name = "label10";
-            label10.Size = new Size(53, 17);
+            label10.Size = new Size(69, 23);
             label10.TabIndex = 14;
             label10.Text = "min per";
             // 
@@ -623,7 +648,7 @@ namespace SquarifiedTreemapWinForms
             checkShow.AutoSize = true;
             checkShow.Location = new Point(20, 24);
             checkShow.Name = "checkShow";
-            checkShow.Size = new Size(101, 21);
+            checkShow.Size = new Size(128, 27);
             checkShow.TabIndex = 11;
             checkShow.Text = "show legend";
             checkShow.UseVisualStyleBackColor = true;
@@ -634,7 +659,7 @@ namespace SquarifiedTreemapWinForms
             label8.AutoSize = true;
             label8.Location = new Point(296, 55);
             label8.Name = "label8";
-            label8.Size = new Size(53, 17);
+            label8.Size = new Size(69, 23);
             label8.TabIndex = 10;
             label8.Text = "fontsize";
             // 
@@ -646,7 +671,7 @@ namespace SquarifiedTreemapWinForms
             numericLegendFontSize.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
             numericLegendFontSize.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericLegendFontSize.Name = "numericLegendFontSize";
-            numericLegendFontSize.Size = new Size(55, 25);
+            numericLegendFontSize.Size = new Size(55, 29);
             numericLegendFontSize.TabIndex = 9;
             numericLegendFontSize.TextAlign = HorizontalAlignment.Right;
             numericLegendFontSize.Value = new decimal(new int[] { 7, 0, 0, 0 });
@@ -657,7 +682,7 @@ namespace SquarifiedTreemapWinForms
             label7.AutoSize = true;
             label7.Location = new Point(305, 118);
             label7.Name = "label7";
-            label7.Size = new Size(39, 17);
+            label7.Size = new Size(52, 23);
             label7.TabIndex = 8;
             label7.Text = "width";
             // 
@@ -666,7 +691,7 @@ namespace SquarifiedTreemapWinForms
             numericLegendWidth.Location = new Point(353, 114);
             numericLegendWidth.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             numericLegendWidth.Name = "numericLegendWidth";
-            numericLegendWidth.Size = new Size(55, 25);
+            numericLegendWidth.Size = new Size(55, 29);
             numericLegendWidth.TabIndex = 7;
             numericLegendWidth.TextAlign = HorizontalAlignment.Right;
             numericLegendWidth.Value = new decimal(new int[] { 250, 0, 0, 0 });
@@ -677,7 +702,7 @@ namespace SquarifiedTreemapWinForms
             label6.AutoSize = true;
             label6.Location = new Point(20, 55);
             label6.Name = "label6";
-            label6.Size = new Size(39, 17);
+            label6.Size = new Size(49, 23);
             label6.TabIndex = 5;
             label6.Text = "steps";
             // 
@@ -687,7 +712,7 @@ namespace SquarifiedTreemapWinForms
             numericLegendSteps.Maximum = new decimal(new int[] { 16, 0, 0, 0 });
             numericLegendSteps.Minimum = new decimal(new int[] { 3, 0, 0, 0 });
             numericLegendSteps.Name = "numericLegendSteps";
-            numericLegendSteps.Size = new Size(55, 25);
+            numericLegendSteps.Size = new Size(55, 29);
             numericLegendSteps.TabIndex = 4;
             numericLegendSteps.TextAlign = HorizontalAlignment.Right;
             numericLegendSteps.Value = new decimal(new int[] { 16, 0, 0, 0 });
@@ -697,7 +722,7 @@ namespace SquarifiedTreemapWinForms
             // 
             textBoxRootName.Location = new Point(82, 45);
             textBoxRootName.Name = "textBoxRootName";
-            textBoxRootName.Size = new Size(348, 25);
+            textBoxRootName.Size = new Size(348, 29);
             textBoxRootName.TabIndex = 5;
             // 
             // labelRootName
@@ -705,7 +730,7 @@ namespace SquarifiedTreemapWinForms
             labelRootName.AutoSize = true;
             labelRootName.Location = new Point(5, 49);
             labelRootName.Name = "labelRootName";
-            labelRootName.Size = new Size(71, 17);
+            labelRootName.Size = new Size(92, 23);
             labelRootName.TabIndex = 4;
             labelRootName.Text = "RootName";
             // 
@@ -713,7 +738,7 @@ namespace SquarifiedTreemapWinForms
             // 
             textBoxTitle.Location = new Point(82, 18);
             textBoxTitle.Name = "textBoxTitle";
-            textBoxTitle.Size = new Size(348, 25);
+            textBoxTitle.Size = new Size(348, 29);
             textBoxTitle.TabIndex = 1;
             // 
             // labelTitle
@@ -721,7 +746,7 @@ namespace SquarifiedTreemapWinForms
             labelTitle.AutoSize = true;
             labelTitle.Location = new Point(44, 21);
             labelTitle.Name = "labelTitle";
-            labelTitle.Size = new Size(32, 17);
+            labelTitle.Size = new Size(42, 23);
             labelTitle.TabIndex = 0;
             labelTitle.Text = "Title";
             // 
@@ -755,7 +780,7 @@ namespace SquarifiedTreemapWinForms
             numericWidth.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             numericWidth.Minimum = new decimal(new int[] { 100, 0, 0, 0 });
             numericWidth.Name = "numericWidth";
-            numericWidth.Size = new Size(50, 25);
+            numericWidth.Size = new Size(50, 29);
             numericWidth.TabIndex = 4;
             numericWidth.TextAlign = HorizontalAlignment.Right;
             numericWidth.Value = new decimal(new int[] { 3840, 0, 0, 0 });
@@ -766,7 +791,7 @@ namespace SquarifiedTreemapWinForms
             numericHeight.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             numericHeight.Minimum = new decimal(new int[] { 100, 0, 0, 0 });
             numericHeight.Name = "numericHeight";
-            numericHeight.Size = new Size(50, 25);
+            numericHeight.Size = new Size(50, 29);
             numericHeight.TabIndex = 6;
             numericHeight.TextAlign = HorizontalAlignment.Right;
             numericHeight.Value = new decimal(new int[] { 2160, 0, 0, 0 });
@@ -776,7 +801,7 @@ namespace SquarifiedTreemapWinForms
             label3.AutoSize = true;
             label3.Location = new Point(69, 19);
             label3.Name = "label3";
-            label3.Size = new Size(44, 17);
+            label3.Size = new Size(59, 23);
             label3.TabIndex = 7;
             label3.Text = "height";
             // 
@@ -785,7 +810,7 @@ namespace SquarifiedTreemapWinForms
             label2.AutoSize = true;
             label2.Location = new Point(11, 19);
             label2.Name = "label2";
-            label2.Size = new Size(39, 17);
+            label2.Size = new Size(52, 23);
             label2.TabIndex = 5;
             label2.Text = "width";
             // 
@@ -857,6 +882,7 @@ namespace SquarifiedTreemapWinForms
             miniToolStrip.AutoSize = false;
             miniToolStrip.Dock = DockStyle.None;
             miniToolStrip.GripMargin = new Padding(0);
+            miniToolStrip.ImageScalingSize = new Size(20, 20);
             miniToolStrip.Location = new Point(140, 6);
             miniToolStrip.Name = "miniToolStrip";
             miniToolStrip.Size = new Size(786, 32);
@@ -868,13 +894,14 @@ namespace SquarifiedTreemapWinForms
             toolStripStatusLabel1.Margin = new Padding(25, 3, 3, 3);
             toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             toolStripStatusLabel1.Padding = new Padding(1);
-            toolStripStatusLabel1.Size = new Size(133, 30);
+            toolStripStatusLabel1.Size = new Size(173, 30);
             toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // statusStrip1
             // 
             statusStrip1.Dock = DockStyle.Fill;
             statusStrip1.GripMargin = new Padding(0);
+            statusStrip1.ImageScalingSize = new Size(20, 20);
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripSplitButton1, toolStripStatusLabel1 });
             statusStrip1.Location = new Point(0, 693);
             statusStrip1.Name = "statusStrip1";
@@ -891,27 +918,27 @@ namespace SquarifiedTreemapWinForms
             toolStripSplitButton1.ImageTransparentColor = Color.Magenta;
             toolStripSplitButton1.Name = "toolStripSplitButton1";
             toolStripSplitButton1.Padding = new Padding(8, 0, 8, 0);
-            toolStripSplitButton1.Size = new Size(70, 34);
+            toolStripSplitButton1.Size = new Size(81, 34);
             toolStripSplitButton1.Text = "Menu";
             // 
             // toolStripOpen
             // 
             toolStripOpen.Name = "toolStripOpen";
-            toolStripOpen.Size = new Size(170, 22);
+            toolStripOpen.Size = new Size(214, 26);
             toolStripOpen.Text = "Open Setting Area";
             toolStripOpen.Click += toolStripOpen_Click;
             // 
             // toolStripClose
             // 
             toolStripClose.Name = "toolStripClose";
-            toolStripClose.Size = new Size(170, 22);
+            toolStripClose.Size = new Size(214, 26);
             toolStripClose.Text = "Close Setting Area";
             toolStripClose.Click += toolStripClose_Click;
             // 
             // toolStripLoad
             // 
             toolStripLoad.Name = "toolStripLoad";
-            toolStripLoad.Size = new Size(170, 22);
+            toolStripLoad.Size = new Size(214, 26);
             toolStripLoad.Text = "Load Json";
             toolStripLoad.Click += toolStripLoad_Click;
             // 
@@ -936,7 +963,7 @@ namespace SquarifiedTreemapWinForms
             // 
             // FormMain
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1008, 729);
             Controls.Add(tableLayoutMain);
@@ -948,6 +975,7 @@ namespace SquarifiedTreemapWinForms
             tableLayoutPanel1.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericDispDepth).EndInit();
             groupBox6.ResumeLayout(false);
             groupBox6.PerformLayout();
             groupBox3.ResumeLayout(false);
@@ -1061,5 +1089,7 @@ namespace SquarifiedTreemapWinForms
         private Label label17;
         private ToolStripMenuItem toolStripLoad;
         private OpenFileDialog openFileDialog1;
+        private NumericUpDown numericDispDepth;
+        private Label label18;
     }
 }

@@ -15,7 +15,9 @@ public sealed class LayoutGenerator<T>(ITreemapGenerator treemapGenerator)
         IEnumerable<Seed<T>> children,
         Rectangle bounds,
         int height,
-        HashSet<int> filter)
+        HashSet<int> filter,
+        int displayDepthMax = 1024,
+        int currentDisplayDepth = 0)
     {
         var treeNode = new TreemapNode(
             current.Id,
@@ -34,16 +36,26 @@ public sealed class LayoutGenerator<T>(ITreemapGenerator treemapGenerator)
             bounds.Height - height
         );
         innerBounds.Inflate(-(current.Format.BorderWidth + 2), -(current.Format.BorderWidth + 2));
+        if (innerBounds.Width <= 0 || innerBounds.Height <= 0)
+        {
+            return treeNode;
+        }
 
         if (filter.Count > 0 && children.Count() > 1)
         {
             var c = children.Where(c => filter.Contains(c.Id)).FirstOrDefault();
             if (c != null)
             {
-                var filtered = Layout(c, isSourceOrderDec, layoutAlign, treeNode, c.Children, innerBounds, height, filter);
+                var filtered = Layout(
+                    c, isSourceOrderDec, layoutAlign, treeNode, c.Children, innerBounds, height, filter, displayDepthMax, currentDisplayDepth);
                 treeNode.Nodes.Add(filtered);
                 return treeNode;
             }
+        }
+
+        if (displayDepthMax < currentDisplayDepth)
+        {
+            return treeNode;
         }
 
         var weights = children.Select(a => a.Weight);
@@ -57,11 +69,11 @@ public sealed class LayoutGenerator<T>(ITreemapGenerator treemapGenerator)
             layout: layoutAlign,
             isCheckSorted: false
         );
-
         treeNode.Nodes.AddRange(childrenRects.Select((r, i) =>
         {
             var a = children.ElementAt(i);
-            return Layout(a, isSourceOrderDec, layoutAlign, treeNode, a.Children, r, height, filter);
+            return Layout(
+                a, isSourceOrderDec, layoutAlign, treeNode, a.Children, r, height, filter, displayDepthMax, currentDisplayDepth + 1);
         }));
         return treeNode;
     }

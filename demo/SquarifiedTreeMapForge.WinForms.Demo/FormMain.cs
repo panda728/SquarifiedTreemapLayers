@@ -38,9 +38,9 @@ namespace SquarifiedTreemapForge.WinForms.Demo
             _driver = driver;
             _driver.FuncNodeText = GetTitle;
             _driver.FuncNodeColor = GetColor;
-            _driver.TreemapControl = this.treemapControl1;
             _driver.OnMouseMoveAction += treemapControl1_MouseMove;
             _driver.OnMouseLeaveAction += treemapControl1_MouseLeave; ;
+            _driver.TreemapControl = this.treemapControl1;
 
             _defaultGroupColumns = _driver.LayoutSettings.GroupColumns;
             _defaultWeightColumn = _driver.LayoutSettings.WeightColumn;
@@ -56,6 +56,8 @@ namespace SquarifiedTreemapForge.WinForms.Demo
             this.numericMaxPer.Value = (decimal)(_driver.LegendSettings.MaxPer * 100);
             this.numericMinBri.Value = (decimal)(_driver.LegendSettings.MinBrightness * 100);
             this.numericMaxBri.Value = (decimal)(_driver.LegendSettings.MaxBrightness * 100);
+            this.numericDepth.Value = _driver.LayoutSettings.MaxDepth;
+            this.numericDispDepth.Value = _driver.LayoutSettings.DisplayMaxDepth;
             this.numericSat.Value = (decimal)(_driver.LegendSettings.Saturation * 100);
             this.numericHuePositive.Value = (decimal)_driver.LegendSettings.HuePositive;
             this.numericHueNegative.Value = (decimal)_driver.LegendSettings.HueNegative;
@@ -109,6 +111,7 @@ namespace SquarifiedTreemapForge.WinForms.Demo
                     LayoutAlign = GetLayout(),
                     IsSourceOrderDec = IsOrderDec(),
                     MaxDepth = (int)numericDepth.Value,
+                    DisplayMaxDepth = (int)numericDispDepth.Value,
                     RootNodeTitle = this.textBoxRootName.Text,
                     WeightColumn = _defaultWeightColumn,
                     GroupColumns = GetSelectedColumnNames(),

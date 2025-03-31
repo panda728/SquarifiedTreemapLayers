@@ -34,6 +34,7 @@ public record TreemapLayoutSettings
     public Color ForeColor { get; init; } = Color.White;
     public Color BorderColor { get; init; } = Color.DimGray;
     public int MaxDepth { get; init; } = 32;
+    public int DisplayMaxDepth { get; init; } = 32;
     public bool IsSourceOrderDec { get; init; } = true;
     public LayoutAlign LayoutAlign { get; init; } = LayoutAlign.LeftTop;
 }
