@@ -22,9 +22,11 @@
     "GroupColumns": [ "PrefName", "SiCyoName", "KuName" ],
     "GroupColumnFormats": [],
     "GroupBorderWidths": [ 4, 2 ],
+    "ExplodeGaps": [],
     "ForeColor": "White",
     "BorderColor": "DimGray",
     "MaxDepth": 32,
+    "DisplayMaxDepth": 32,
     "IsSourceOrderDec": true,
     "LayoutAlign": "LeftTop"
   },

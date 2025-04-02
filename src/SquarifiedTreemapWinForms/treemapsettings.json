@@ -30,9 +30,11 @@
       4,
       2
     ],
+    "ExplodeGaps": [],
     "ForeColor": "White",
     "BorderColor": "Gray",
     "MaxDepth": 32,
+    "DisplayMaxDepth": 32,
     "IsSourceOrderDec": true,
     "LayoutAlign": "LeftTop"
   },

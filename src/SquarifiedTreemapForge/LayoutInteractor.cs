@@ -83,7 +83,8 @@ public class LayoutInteractor<T>(
             treemapSettings.ForeColor,
             treemapSettings.BackColor,
             1,
-            Color.White
+            Color.White,
+            0
         );
 
         Treemap = new Treemap(
@@ -104,7 +105,7 @@ public class LayoutInteractor<T>(
         : legend.GetPercentageColor(FuncPercentage.Invoke(d));
 
     /// <summary>Calculates the layout of the treemap.</summary>
-    public bool Layout(Rectangle bounds, int nodeFontHeight, int explodeGap = 0, int displayMaxDepth = 1024)
+    public bool Layout(Rectangle bounds, int nodeFontHeight, int displayMaxDepth = 1024)
     {
         if (nodeFontHeight <= 0) { nodeFontHeight = 1; }
         if (displayMaxDepth <= 0) { displayMaxDepth = 1; }
@@ -123,7 +124,6 @@ public class LayoutInteractor<T>(
             bounds,
             nodeFontHeight,
             Filter,
-            explodeGap,
             displayMaxDepth);
         return RootNode != null;
     }

@@ -16,14 +16,14 @@ public sealed class LayoutGenerator<T>(ITreemapGenerator treemapGenerator)
         Rectangle bounds,
         int height,
         HashSet<int> filter,
-        int explodeGap = 0,
         int displayDepthMax = 1024,
         int currentDisplayDepth = 0)
     {
         var outerBounds = bounds;
-        if (explodeGap > 0)
+        if (current.Format.ExplodeGap > 0)
         {
-            outerBounds.Inflate(-explodeGap, -explodeGap);
+            var gap = -current.Format.ExplodeGap;
+            outerBounds.Inflate(gap, gap);
         }
 
         var treeNode = new TreemapNode(
@@ -54,7 +54,7 @@ public sealed class LayoutGenerator<T>(ITreemapGenerator treemapGenerator)
             if (c != null)
             {
                 var filtered = Layout(
-                    c, isSourceOrderDec, layoutAlign, treeNode, c.Children, innerBounds, height, filter, explodeGap, displayDepthMax, currentDisplayDepth);
+                    c, isSourceOrderDec, layoutAlign, treeNode, c.Children, innerBounds, height, filter, displayDepthMax, currentDisplayDepth);
                 treeNode.Nodes.Add(filtered);
                 return treeNode;
             }
@@ -80,7 +80,7 @@ public sealed class LayoutGenerator<T>(ITreemapGenerator treemapGenerator)
         {
             var a = children.ElementAt(i);
             return Layout(
-                a, isSourceOrderDec, layoutAlign, treeNode, a.Children, r, height, filter, explodeGap, displayDepthMax, currentDisplayDepth + 1);
+                a, isSourceOrderDec, layoutAlign, treeNode, a.Children, r, height, filter, displayDepthMax, currentDisplayDepth + 1);
         }));
         return treeNode;
     }

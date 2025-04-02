@@ -28,25 +28,27 @@ public sealed class DataGroupPreparer<T>
             Cache<T>.Properties.FirstOrDefault(p => p.Name.Equals(c, StringComparison.OrdinalIgnoreCase))
             ?? throw new KeyNotFoundException($"Group column '{c}' not found."))];
         GroupColumnFormats = InitializeGroupColumnFormats(_settings.GroupColumnFormats, _settings.GroupColumns.Length);
-        GroupBorderWidths = InitializeGroupBorderWidth(_settings.GroupBorderWidths, _settings.GroupColumns.Length);
+        GroupBorderWidths = InitializeGroupSettings(_settings.GroupBorderWidths, _settings.GroupColumns.Length);
+        ExplodeGaps = InitializeExplodeGaps(_settings.ExplodeGaps, _settings.GroupColumns.Length);
     }
 
-    static int[] InitializeGroupBorderWidth(int[]? groupBorderWidth, int length)
+    static int[] InitializeGroupSettings(int[]? widths, int length, int defaultValue = 1)
     {
-        if (groupBorderWidth == null || groupBorderWidth.Length == 0)
+        if (widths == null || widths.Length == 0)
         {
-            return [.. Enumerable.Repeat(1, length).Select((v, i) => i < 2 ? MINIMUM_SIZE * (2 - i) : v)];
+            return [.. Enumerable.Repeat(defaultValue, length).Select((v, i) => i < 2 ? MINIMUM_SIZE * (2 - i) : v)];
         }
+        if (widths.Length > length) { return [.. widths.Take(length)]; }
+        return widths.Length == length
+            ? widths : [.. widths, .. Enumerable.Repeat(defaultValue, length - widths.Length)];
+    }
 
-        if (groupBorderWidth.Length > length)
-        {
-            return [.. groupBorderWidth.Take(length)];
-        }
-
-        groupBorderWidth = [.. groupBorderWidth.Select(w => w < 0 ? 1 : w)];
-        return groupBorderWidth.Length == length
-            ? groupBorderWidth
-            : [.. groupBorderWidth, .. Enumerable.Repeat(1, length - groupBorderWidth.Length)];
+    static int[] InitializeExplodeGaps(int[]? gaps, int length, int defaultValue = 0)
+    {
+        if (gaps == null || gaps.Length == 0) { return [.. Enumerable.Repeat(defaultValue, length)]; }
+        if (gaps.Length > length) { return [.. gaps.Take(length)]; }
+        return gaps.Length == length
+            ? gaps : [.. gaps, .. Enumerable.Repeat(defaultValue, length - gaps.Length)];
     }
 
     static string[] InitializeGroupColumnFormats(string[]? formats, int length)
@@ -61,6 +63,7 @@ public sealed class DataGroupPreparer<T>
     public PropCache[]? GroupProperties { get; private set; }
     public string[]? GroupColumnFormats { get; private set; }
     public int[]? GroupBorderWidths { get; private set; }
+    public int[]? ExplodeGaps { get; private set; }
     public string StandardDateFormat { get; private set; } = DATE_FORMAT;
     public string StandardTimeFormat { get; private set; } = TIME_FORMAT;
 
@@ -81,6 +84,8 @@ public sealed class DataGroupPreparer<T>
             blue: Random.Shared.Next(64, 192));
     }
 
+    const int DEFAULT_WIDTH = 1;
+    const int DEFAULT_GAP = 1;
     public int GetBorderWidth(int depth = 0)
     {
         if (GroupBorderWidths == null || depth < 0 || depth >= GroupBorderWidths.Length)
@@ -88,7 +93,17 @@ public sealed class DataGroupPreparer<T>
             return 1;
         }
         var w = GroupBorderWidths[depth];
-        return w > 0 ? w : 1;
+        return w > DEFAULT_WIDTH ? w : DEFAULT_WIDTH;
+    }
+
+    public int GetExplodeGap(int depth = 0)
+    {
+        if (ExplodeGaps == null || depth < 0 || depth >= ExplodeGaps.Length)
+        {
+            return 1;
+        }
+        var g = ExplodeGaps[depth];
+        return g > DEFAULT_GAP ? g : DEFAULT_GAP;
     }
 
     public string GetGroupKey(T x, int depth = 0)

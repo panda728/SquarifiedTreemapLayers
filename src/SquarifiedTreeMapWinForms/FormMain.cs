@@ -59,7 +59,7 @@ namespace SquarifiedTreemapWinForms
             this.numericMaxBri.Value = (decimal)(_driver.LegendSettings.MaxBrightness * 100);
             this.numericDepth.Value = _driver.LayoutSettings.MaxDepth;
             this.numericDispDepth.Value = _driver.LayoutSettings.DisplayMaxDepth;
-            this.numericExplode.Value = _driver.LayoutSettings.ExplodeGap;
+            this.numericExplode.Value = _driver.LayoutSettings.ExplodeGaps.FirstOrDefault();
             this.numericSat.Value = (decimal)(_driver.LegendSettings.Saturation * 100);
             this.numericHuePositive.Value = (decimal)_driver.LegendSettings.HuePositive;
             this.numericHueNegative.Value = (decimal)_driver.LegendSettings.HueNegative;
@@ -121,7 +121,7 @@ namespace SquarifiedTreemapWinForms
                     RootNodeTitle = this.textBoxRootName.Text,
                     WeightColumn = _defaultWeightColumn,
                     GroupColumns = GetSelectedColumnNames(),
-                    ExplodeGap = (int)this.numericExplode.Value,
+                    ExplodeGaps = [(int)this.numericExplode.Value],
                 };
 
                 _driver.LegendSettings = _driver.LegendSettings with

@@ -20,7 +20,8 @@ public sealed class DataGrouper<T>
             treemapSettings.ForeColor,
             treemapSettings.BackColor,
             preparer.GroupBorderWidths?.FirstOrDefault() ?? 1,
-            settings.BorderColor
+            settings.BorderColor,
+            preparer.ExplodeGaps?.FirstOrDefault() ?? 1
         );
 
         int id = 1;
@@ -76,7 +77,8 @@ public sealed class DataGrouper<T>
             settings.ForeColor,
             preparer.GetColor(group),
             preparer.GetBorderWidth(depth),
-            settings.BorderColor
+            settings.BorderColor,
+            preparer.GetExplodeGap(depth)
         );
 
         return new Seed<T>(id++, depth, text, weight, [.. group], format, parent);
