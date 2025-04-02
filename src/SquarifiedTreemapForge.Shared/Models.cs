@@ -22,7 +22,7 @@ public record NodeFormat(
     Color BackColor,
     int BorderWidth,
     Color BorderColor,
-    int ExplodeGap
+    int ExplodeGap = 0
 );
 
 public record Treemap(

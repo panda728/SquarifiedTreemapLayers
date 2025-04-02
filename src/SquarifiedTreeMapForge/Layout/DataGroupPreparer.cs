@@ -8,8 +8,12 @@ namespace SquarifiedTreemapForge.Layout;
 public sealed class DataGroupPreparer<T>
 {
     public const int MINIMUM_SIZE = 2;
+    const int DEFAULT_WIDTH = 1;
+    const int DEFAULT_GAP = 0;
+
     const string DATE_FORMAT = "MM/dd";
     const string TIME_FORMAT = "HH:mm";
+
     TreemapLayoutSettings? _settings;
 
     public void Initialize(
@@ -84,13 +88,11 @@ public sealed class DataGroupPreparer<T>
             blue: Random.Shared.Next(64, 192));
     }
 
-    const int DEFAULT_WIDTH = 1;
-    const int DEFAULT_GAP = 1;
     public int GetBorderWidth(int depth = 0)
     {
         if (GroupBorderWidths == null || depth < 0 || depth >= GroupBorderWidths.Length)
         {
-            return 1;
+            return DEFAULT_WIDTH;
         }
         var w = GroupBorderWidths[depth];
         return w > DEFAULT_WIDTH ? w : DEFAULT_WIDTH;
@@ -100,7 +102,7 @@ public sealed class DataGroupPreparer<T>
     {
         if (ExplodeGaps == null || depth < 0 || depth >= ExplodeGaps.Length)
         {
-            return 1;
+            return DEFAULT_GAP;
         }
         var g = ExplodeGaps[depth];
         return g > DEFAULT_GAP ? g : DEFAULT_GAP;

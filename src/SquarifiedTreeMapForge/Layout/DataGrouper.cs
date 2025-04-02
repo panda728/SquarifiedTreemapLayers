@@ -20,8 +20,7 @@ public sealed class DataGrouper<T>
             treemapSettings.ForeColor,
             treemapSettings.BackColor,
             preparer.GroupBorderWidths?.FirstOrDefault() ?? 1,
-            settings.BorderColor,
-            preparer.ExplodeGaps?.FirstOrDefault() ?? 1
+            settings.BorderColor
         );
 
         int id = 1;

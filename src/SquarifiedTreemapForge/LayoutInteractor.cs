@@ -83,8 +83,7 @@ public class LayoutInteractor<T>(
             treemapSettings.ForeColor,
             treemapSettings.BackColor,
             1,
-            Color.White,
-            0
+            Color.White
         );
 
         Treemap = new Treemap(
