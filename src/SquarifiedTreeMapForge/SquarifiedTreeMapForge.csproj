@@ -16,7 +16,7 @@
     <PackageProjectUrl>https://github.com/panda728/SquarifiedTreemapLayers</PackageProjectUrl>
     <PackageTags>Visualization</PackageTags>
     <PackageId>SquarifiedTreemapForge</PackageId>
-    <Version>1.1.1</Version>
+    <Version>1.1.2</Version>
     <IncludeReferencedProjects>true</IncludeReferencedProjects>
   </PropertyGroup>
 
