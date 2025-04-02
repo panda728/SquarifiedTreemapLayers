@@ -60,10 +60,13 @@ public sealed class TreemapGdiDriver<T>(
     public Color GetPercentageColor(double per)
         => interactor.GetPercentageColor(per);
 
+    public void ResetFilter() => interactor.ResetFilter();
+
     public void Invalidate() => _treemapControl?.Invalidate();
 
     public void Invalidate(IEnumerable<T> sources)
     {
+        ResetFilter();
         interactor.SetDataSource(
             sources,
             LayoutSettings,

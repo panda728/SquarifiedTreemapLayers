@@ -137,6 +137,11 @@ public class LayoutInteractor<T>(
 
     public TreemapNode? GetContainsItem(Point p) => RootNode?.GetContainsItem(p);
 
+    public void ResetFilter()
+    {
+        Filter.Clear();
+    }
+
     public bool SetFilterIfContains(Point p)
     {
         HighLightBounds = null;
