@@ -104,10 +104,10 @@ public class LayoutInteractor<T>(
         : legend.GetPercentageColor(FuncPercentage.Invoke(d));
 
     /// <summary>Calculates the layout of the treemap.</summary>
-    public bool Layout(Rectangle bounds, int nodeFontHeight, int displayMaxDepth = 1024)
+    public bool Layout(Rectangle bounds, int nodeFontHeight, int explodeGap = 0, int displayMaxDepth = 1024)
     {
         if (nodeFontHeight <= 0) { nodeFontHeight = 1; }
-        if(displayMaxDepth <= 0) { displayMaxDepth = 1; }
+        if (displayMaxDepth <= 0) { displayMaxDepth = 1; }
 
         if (_rootSeed == null || bounds.Width < nodeFontHeight || bounds.Height < nodeFontHeight)
         {
@@ -115,7 +115,16 @@ public class LayoutInteractor<T>(
             return false;
         }
         RootNode = layoutGenerator.Layout(
-            _rootSeed, _isSourceOrderDec, _layoutAlign, null, _rootSeed.Children, bounds, nodeFontHeight, Filter, displayMaxDepth);
+            _rootSeed,
+            _isSourceOrderDec,
+            _layoutAlign,
+            null,
+            _rootSeed.Children,
+            bounds,
+            nodeFontHeight,
+            Filter,
+            explodeGap,
+            displayMaxDepth);
         return RootNode != null;
     }
 

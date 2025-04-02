@@ -16,24 +16,31 @@ public sealed class LayoutGenerator<T>(ITreemapGenerator treemapGenerator)
         Rectangle bounds,
         int height,
         HashSet<int> filter,
+        int explodeGap = 0,
         int displayDepthMax = 1024,
         int currentDisplayDepth = 0)
     {
+        var outerBounds = bounds;
+        if (explodeGap > 0)
+        {
+            outerBounds.Inflate(-explodeGap, -explodeGap);
+        }
+
         var treeNode = new TreemapNode(
             current.Id,
             current.Depth,
             current.Text,
             height,
-            bounds,
+            outerBounds,
             current.Format,
             parent,
             []);
 
         var innerBounds = new Rectangle(
-            bounds.X,
-            bounds.Y + height,
-            bounds.Width,
-            bounds.Height - height
+            outerBounds.X,
+            outerBounds.Y + height,
+            outerBounds.Width,
+            outerBounds.Height - height
         );
         innerBounds.Inflate(-(current.Format.BorderWidth + 2), -(current.Format.BorderWidth + 2));
         if (innerBounds.Width <= 0 || innerBounds.Height <= 0)
@@ -47,7 +54,7 @@ public sealed class LayoutGenerator<T>(ITreemapGenerator treemapGenerator)
             if (c != null)
             {
                 var filtered = Layout(
-                    c, isSourceOrderDec, layoutAlign, treeNode, c.Children, innerBounds, height, filter, displayDepthMax, currentDisplayDepth);
+                    c, isSourceOrderDec, layoutAlign, treeNode, c.Children, innerBounds, height, filter, explodeGap, displayDepthMax, currentDisplayDepth);
                 treeNode.Nodes.Add(filtered);
                 return treeNode;
             }
@@ -73,7 +80,7 @@ public sealed class LayoutGenerator<T>(ITreemapGenerator treemapGenerator)
         {
             var a = children.ElementAt(i);
             return Layout(
-                a, isSourceOrderDec, layoutAlign, treeNode, a.Children, r, height, filter, displayDepthMax, currentDisplayDepth + 1);
+                a, isSourceOrderDec, layoutAlign, treeNode, a.Children, r, height, filter, explodeGap, displayDepthMax, currentDisplayDepth + 1);
         }));
         return treeNode;
     }

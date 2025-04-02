@@ -101,10 +101,11 @@ public class GdiRenderer : IGdiRenderer, IDisposable
 
         RenderTreemapContent(g, treemap, rootNode, displayMinSize);
 
-        if (highLightBounds == null) { return; }
-        var pen = GetPen(treemap.HighlightColor, treemap.Format.BorderWidth);
-        g.DrawRectangle(pen, highLightBounds.Value);
-
+        if (highLightBounds != null)
+        {
+            var pen = GetPen(treemap.HighlightColor, treemap.Format.BorderWidth);
+            g.DrawRectangle(pen, highLightBounds.Value);
+        }
         CacheClear();
     }
 
@@ -162,7 +163,8 @@ public class GdiRenderer : IGdiRenderer, IDisposable
             && !string.IsNullOrEmpty(node.Text))
         {
             var textArea = node.Bounds;
-            textArea.Inflate(-2, -2);
+            var textMergin = (int)(node.Format.BorderWidth > 0 ? -2 : -2 + Math.Ceiling(node.Format.BorderWidth / 2.0));
+            textArea.Inflate(textMergin, textMergin);
             if (node.Bounds.Height >= node.FontHeight)
             {
                 if (node.Nodes.Count > 0 || textArea.Height < node.FontHeight * 2)

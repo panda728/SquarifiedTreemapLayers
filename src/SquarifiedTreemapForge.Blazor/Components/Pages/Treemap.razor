@@ -25,7 +25,7 @@
 
     private int canvasWidth;
     private int canvasHeight;
-    private LayoutInteractor<PivotDataSource> _interactor;
+    private LayoutInteractor<PivotDataSource>? _interactor;
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -90,7 +90,7 @@
         //     color = ColorToHex(item.color)
         // }).ToList();
 
-        if (_interactor.Layout(new Rectangle(0, 0, canvasWidth, canvasHeight), 18))
+        if (_interactor.Layout(new Rectangle(0, 0, canvasWidth, canvasHeight), nodeFontHeight: 18))
         {
             var data3 = GetTreemapItem(_interactor.RootNode).items;
             var context = await JS.InvokeAsync<IJSObjectReference>("import", "./js/treemap.js");
