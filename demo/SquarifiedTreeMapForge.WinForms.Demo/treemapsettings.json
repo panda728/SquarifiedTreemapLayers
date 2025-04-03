@@ -28,7 +28,8 @@
     "MaxDepth": 32,
     "DisplayMaxDepth": 32,
     "IsSourceOrderDec": true,
-    "LayoutAlign": "LeftTop"
+    "LayoutAlign": "LeftTop",
+    "NodeTextHeightMargin": 0
   },
   "LegendSettings": {
     "Width": 250,

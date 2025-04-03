@@ -84,7 +84,7 @@ public sealed class TreemapGdiDriver<T>(
         try
         {
             RenderTreemap(e.Graphics, interactor, renderer, e.ClipRectangle,
-                LayoutSettings.TitleText, LayoutSettings.DisplayMaxDepth);
+                LayoutSettings.TitleText, LayoutSettings.DisplayMaxDepth, LayoutSettings.NodeTextHeightMargin);
         }
         finally
         {
@@ -98,11 +98,15 @@ public sealed class TreemapGdiDriver<T>(
         IGdiRenderer renderer,
         Rectangle bounds,
         string titleText,
-        int displayMaxDepth)
+        int displayMaxDepth,
+        int nodeTextHeightMargin = 0)
     {
         var nodeHeight = renderer.GetFontHeight(
             g, interactor.NodeFont, string.IsNullOrEmpty(titleText) ? FONT_HEIGHT_DEFALUT : titleText);
-
+        if (nodeTextHeightMargin > 0)
+        {
+            nodeHeight += nodeTextHeightMargin;
+        }
         if (interactor.Layout(bounds, nodeHeight, displayMaxDepth)
             && interactor.Treemap != null && interactor.RootNode != null)
         {
@@ -165,7 +169,7 @@ public sealed class TreemapGdiDriver<T>(
         var bmp = new Bitmap(width, height);
         using var g = Graphics.FromImage(bmp);
         RenderTreemap(g, interactor, renderer, new Rectangle(Point.Empty, bmp.Size),
-            LayoutSettings.TitleText, LayoutSettings.DisplayMaxDepth);
+            LayoutSettings.TitleText, LayoutSettings.DisplayMaxDepth, LayoutSettings.NodeTextHeightMargin);
         return bmp;
     }
 }

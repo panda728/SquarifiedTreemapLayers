@@ -38,6 +38,7 @@ public record TreemapLayoutSettings
     public int DisplayMaxDepth { get; init; } = 32;
     public bool IsSourceOrderDec { get; init; } = true;
     public LayoutAlign LayoutAlign { get; init; } = LayoutAlign.LeftTop;
+    public int NodeTextHeightMargin { get; init; } = 0;
 }
 
 public record LegendSettings

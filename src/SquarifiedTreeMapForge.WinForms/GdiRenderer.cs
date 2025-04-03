@@ -121,14 +121,14 @@ public class GdiRenderer : IGdiRenderer, IDisposable
 
     void RenderTitle(Graphics g, Treemap treemap)
     {
-        var brushText = GetBrush(treemap.Format.ForeColor);
+        var textBrush = GetBrush(treemap.Format.ForeColor);
         var titleFont = GetFont(treemap.TextFont);
-        g.DrawString(treemap.Text, titleFont, brushText, 0, 0);
+        g.DrawString(treemap.Text, titleFont, textBrush, 0, 0);
     }
 
     void RenderLegends(Graphics g, Treemap treemap, IEnumerable<Legend> legends)
     {
-        var brushText = GetBrush(treemap.Format.ForeColor);
+        var textBrush = GetBrush(treemap.Format.ForeColor);
         var legendFont = GetFont(treemap.LegendFont);
         foreach (var legend in legends)
         {
@@ -140,7 +140,7 @@ public class GdiRenderer : IGdiRenderer, IDisposable
             var textY = legend.TextBounds.Y + (legend.TextBounds.Height - textSize.Height) / 2;
             var textPosition = new PointF(textX, textY);
 
-            g.DrawString(legend.Text, legendFont, brushText, textPosition);
+            g.DrawString(legend.Text, legendFont, textBrush, textPosition);
         }
     }
 
@@ -171,8 +171,8 @@ public class GdiRenderer : IGdiRenderer, IDisposable
                 {
                     textArea.Height = node.FontHeight;
                 }
-                var brushText = GetBrush(node.Format.ForeColor);
-                g.DrawString(node.Text, nodeFont, brushText, textArea);
+                var textBrush = GetBrush(node.Format.ForeColor);
+                g.DrawString(node.Text, nodeFont, textBrush, textArea);
             }
         }
         var pen = GetPen(node.Format.BorderColor, node.Format.BorderWidth);

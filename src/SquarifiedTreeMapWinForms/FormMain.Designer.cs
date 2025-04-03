@@ -57,22 +57,24 @@ namespace SquarifiedTreemapWinForms
             label1 = new Label();
             groupBox2 = new GroupBox();
             groupBox7 = new GroupBox();
+            numericMaxBri = new NumericUpDown();
+            numericMinBri = new NumericUpDown();
+            numericHueNegative = new NumericUpDown();
+            numericHuePositive = new NumericUpDown();
+            numericLegendHeight = new NumericUpDown();
+            numericSat = new NumericUpDown();
+            numericLegendFontSize = new NumericUpDown();
+            numericLegendWidth = new NumericUpDown();
             numericExplode = new NumericUpDown();
             numericMaxPer = new NumericUpDown();
             numericMinPer = new NumericUpDown();
             numericLegendSteps = new NumericUpDown();
             label19 = new Label();
             label16 = new Label();
-            numericLegendHeight = new NumericUpDown();
             checkLegendOrder = new CheckBox();
-            numericSat = new NumericUpDown();
             label15 = new Label();
-            numericMaxBri = new NumericUpDown();
-            numericMinBri = new NumericUpDown();
             checkShowPlusSign = new CheckBox();
-            numericHueNegative = new NumericUpDown();
             label13 = new Label();
-            numericHuePositive = new NumericUpDown();
             label11 = new Label();
             label14 = new Label();
             label12 = new Label();
@@ -80,9 +82,7 @@ namespace SquarifiedTreemapWinForms
             label10 = new Label();
             checkShow = new CheckBox();
             label8 = new Label();
-            numericLegendFontSize = new NumericUpDown();
             label7 = new Label();
-            numericLegendWidth = new NumericUpDown();
             label6 = new Label();
             textBoxRootName = new TextBox();
             labelRootName = new Label();
@@ -118,18 +118,18 @@ namespace SquarifiedTreemapWinForms
             ((System.ComponentModel.ISupportInitialize)numericDepth).BeginInit();
             groupBox2.SuspendLayout();
             groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericExplode).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericMaxPer).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericMinPer).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericLegendSteps).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericLegendHeight).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericSat).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericMaxBri).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericMinBri).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericHueNegative).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericHuePositive).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericLegendHeight).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericSat).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericLegendFontSize).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericLegendWidth).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericExplode).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericMaxPer).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericMinPer).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericLegendSteps).BeginInit();
             groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericWidth).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericHeight).BeginInit();
@@ -175,7 +175,7 @@ namespace SquarifiedTreemapWinForms
             // 
             // numericDispDepth
             // 
-            numericDispDepth.Location = new Point(174, 302);
+            numericDispDepth.Location = new Point(229, 302);
             numericDispDepth.Maximum = new decimal(new int[] { 64, 0, 0, 0 });
             numericDispDepth.Name = "numericDispDepth";
             numericDispDepth.Size = new Size(62, 29);
@@ -187,7 +187,7 @@ namespace SquarifiedTreemapWinForms
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(148, 282);
+            label18.Location = new Point(198, 276);
             label18.Name = "label18";
             label18.Size = new Size(93, 23);
             label18.TabIndex = 5;
@@ -203,7 +203,7 @@ namespace SquarifiedTreemapWinForms
             groupBox6.Controls.Add(buttonGroupUp);
             groupBox6.Controls.Add(buttonGroupAdd);
             groupBox6.Controls.Add(listBoxGroupSelected);
-            groupBox6.Location = new Point(7, 25);
+            groupBox6.Location = new Point(7, 17);
             groupBox6.Name = "groupBox6";
             groupBox6.Size = new Size(282, 257);
             groupBox6.TabIndex = 1;
@@ -295,7 +295,7 @@ namespace SquarifiedTreemapWinForms
             groupBox3.Controls.Add(radioRT);
             groupBox3.Controls.Add(radioLB);
             groupBox3.Controls.Add(radioLT);
-            groupBox3.Location = new Point(296, 25);
+            groupBox3.Location = new Point(296, 17);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(151, 201);
             groupBox3.TabIndex = 0;
@@ -399,7 +399,7 @@ namespace SquarifiedTreemapWinForms
             // 
             // numericDepth
             // 
-            numericDepth.Location = new Point(61, 302);
+            numericDepth.Location = new Point(131, 302);
             numericDepth.Maximum = new decimal(new int[] { 64, 0, 0, 0 });
             numericDepth.Name = "numericDepth";
             numericDepth.Size = new Size(62, 29);
@@ -411,7 +411,7 @@ namespace SquarifiedTreemapWinForms
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(35, 282);
+            label1.Location = new Point(98, 276);
             label1.Name = "label1";
             label1.Size = new Size(93, 23);
             label1.TabIndex = 3;
@@ -467,6 +467,95 @@ namespace SquarifiedTreemapWinForms
             groupBox7.TabIndex = 6;
             groupBox7.TabStop = false;
             groupBox7.Text = "legend";
+            // 
+            // numericMaxBri
+            // 
+            numericMaxBri.Location = new Point(229, 144);
+            numericMaxBri.Name = "numericMaxBri";
+            numericMaxBri.Size = new Size(55, 29);
+            numericMaxBri.TabIndex = 24;
+            numericMaxBri.TextAlign = HorizontalAlignment.Right;
+            numericMaxBri.Value = new decimal(new int[] { 88, 0, 0, 0 });
+            numericMaxBri.ValueChanged += numeric_ValueChanged;
+            // 
+            // numericMinBri
+            // 
+            numericMinBri.Location = new Point(229, 114);
+            numericMinBri.Name = "numericMinBri";
+            numericMinBri.Size = new Size(55, 29);
+            numericMinBri.TabIndex = 22;
+            numericMinBri.TextAlign = HorizontalAlignment.Right;
+            numericMinBri.Value = new decimal(new int[] { 8, 0, 0, 0 });
+            numericMinBri.ValueChanged += numeric_ValueChanged;
+            // 
+            // numericHueNegative
+            // 
+            numericHueNegative.Location = new Point(229, 82);
+            numericHueNegative.Maximum = new decimal(new int[] { 360, 0, 0, 0 });
+            numericHueNegative.Name = "numericHueNegative";
+            numericHueNegative.Size = new Size(55, 29);
+            numericHueNegative.TabIndex = 19;
+            numericHueNegative.TextAlign = HorizontalAlignment.Right;
+            numericHueNegative.Value = new decimal(new int[] { 205, 0, 0, 0 });
+            numericHueNegative.ValueChanged += numeric_ValueChanged;
+            // 
+            // numericHuePositive
+            // 
+            numericHuePositive.Location = new Point(229, 51);
+            numericHuePositive.Maximum = new decimal(new int[] { 360, 0, 0, 0 });
+            numericHuePositive.Name = "numericHuePositive";
+            numericHuePositive.Size = new Size(55, 29);
+            numericHuePositive.TabIndex = 17;
+            numericHuePositive.TextAlign = HorizontalAlignment.Right;
+            numericHuePositive.Value = new decimal(new int[] { 2, 0, 0, 0 });
+            numericHuePositive.ValueChanged += numeric_ValueChanged;
+            // 
+            // numericLegendHeight
+            // 
+            numericLegendHeight.Location = new Point(363, 144);
+            numericLegendHeight.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            numericLegendHeight.Name = "numericLegendHeight";
+            numericLegendHeight.Size = new Size(55, 29);
+            numericLegendHeight.TabIndex = 29;
+            numericLegendHeight.TextAlign = HorizontalAlignment.Right;
+            numericLegendHeight.Value = new decimal(new int[] { 22, 0, 0, 0 });
+            numericLegendHeight.ValueChanged += numeric_ValueChanged;
+            // 
+            // numericSat
+            // 
+            numericSat.Location = new Point(363, 82);
+            numericSat.Maximum = new decimal(new int[] { 360, 0, 0, 0 });
+            numericSat.Name = "numericSat";
+            numericSat.Size = new Size(55, 29);
+            numericSat.TabIndex = 26;
+            numericSat.TextAlign = HorizontalAlignment.Right;
+            numericSat.Value = new decimal(new int[] { 205, 0, 0, 0 });
+            numericSat.ValueChanged += numeric_ValueChanged;
+            // 
+            // numericLegendFontSize
+            // 
+            numericLegendFontSize.DecimalPlaces = 1;
+            numericLegendFontSize.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
+            numericLegendFontSize.Location = new Point(363, 51);
+            numericLegendFontSize.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            numericLegendFontSize.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            numericLegendFontSize.Name = "numericLegendFontSize";
+            numericLegendFontSize.Size = new Size(55, 29);
+            numericLegendFontSize.TabIndex = 9;
+            numericLegendFontSize.TextAlign = HorizontalAlignment.Right;
+            numericLegendFontSize.Value = new decimal(new int[] { 7, 0, 0, 0 });
+            numericLegendFontSize.ValueChanged += numeric_ValueChanged;
+            // 
+            // numericLegendWidth
+            // 
+            numericLegendWidth.Location = new Point(363, 114);
+            numericLegendWidth.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
+            numericLegendWidth.Name = "numericLegendWidth";
+            numericLegendWidth.Size = new Size(55, 29);
+            numericLegendWidth.TabIndex = 7;
+            numericLegendWidth.TextAlign = HorizontalAlignment.Right;
+            numericLegendWidth.Value = new decimal(new int[] { 250, 0, 0, 0 });
+            numericLegendWidth.ValueChanged += numeric_ValueChanged;
             // 
             // numericExplode
             // 
@@ -530,17 +619,6 @@ namespace SquarifiedTreemapWinForms
             label16.TabIndex = 30;
             label16.Text = "height";
             // 
-            // numericLegendHeight
-            // 
-            numericLegendHeight.Location = new Point(363, 144);
-            numericLegendHeight.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
-            numericLegendHeight.Name = "numericLegendHeight";
-            numericLegendHeight.Size = new Size(55, 29);
-            numericLegendHeight.TabIndex = 29;
-            numericLegendHeight.TextAlign = HorizontalAlignment.Right;
-            numericLegendHeight.Value = new decimal(new int[] { 22, 0, 0, 0 });
-            numericLegendHeight.ValueChanged += numeric_ValueChanged;
-            // 
             // checkLegendOrder
             // 
             checkLegendOrder.AutoSize = true;
@@ -552,17 +630,6 @@ namespace SquarifiedTreemapWinForms
             checkLegendOrder.UseVisualStyleBackColor = true;
             checkLegendOrder.CheckedChanged += check_CheckedChanged;
             // 
-            // numericSat
-            // 
-            numericSat.Location = new Point(363, 82);
-            numericSat.Maximum = new decimal(new int[] { 360, 0, 0, 0 });
-            numericSat.Name = "numericSat";
-            numericSat.Size = new Size(55, 29);
-            numericSat.TabIndex = 26;
-            numericSat.TextAlign = HorizontalAlignment.Right;
-            numericSat.Value = new decimal(new int[] { 205, 0, 0, 0 });
-            numericSat.ValueChanged += numeric_ValueChanged;
-            // 
             // label15
             // 
             label15.AutoSize = true;
@@ -571,26 +638,6 @@ namespace SquarifiedTreemapWinForms
             label15.Size = new Size(87, 23);
             label15.TabIndex = 27;
             label15.Text = "saturation";
-            // 
-            // numericMaxBri
-            // 
-            numericMaxBri.Location = new Point(229, 144);
-            numericMaxBri.Name = "numericMaxBri";
-            numericMaxBri.Size = new Size(55, 29);
-            numericMaxBri.TabIndex = 24;
-            numericMaxBri.TextAlign = HorizontalAlignment.Right;
-            numericMaxBri.Value = new decimal(new int[] { 88, 0, 0, 0 });
-            numericMaxBri.ValueChanged += numeric_ValueChanged;
-            // 
-            // numericMinBri
-            // 
-            numericMinBri.Location = new Point(229, 114);
-            numericMinBri.Name = "numericMinBri";
-            numericMinBri.Size = new Size(55, 29);
-            numericMinBri.TabIndex = 22;
-            numericMinBri.TextAlign = HorizontalAlignment.Right;
-            numericMinBri.Value = new decimal(new int[] { 8, 0, 0, 0 });
-            numericMinBri.ValueChanged += numeric_ValueChanged;
             // 
             // checkShowPlusSign
             // 
@@ -603,17 +650,6 @@ namespace SquarifiedTreemapWinForms
             checkShowPlusSign.UseVisualStyleBackColor = true;
             checkShowPlusSign.CheckedChanged += check_CheckedChanged;
             // 
-            // numericHueNegative
-            // 
-            numericHueNegative.Location = new Point(229, 82);
-            numericHueNegative.Maximum = new decimal(new int[] { 360, 0, 0, 0 });
-            numericHueNegative.Name = "numericHueNegative";
-            numericHueNegative.Size = new Size(55, 29);
-            numericHueNegative.TabIndex = 19;
-            numericHueNegative.TextAlign = HorizontalAlignment.Right;
-            numericHueNegative.Value = new decimal(new int[] { 205, 0, 0, 0 });
-            numericHueNegative.ValueChanged += numeric_ValueChanged;
-            // 
             // label13
             // 
             label13.AutoSize = true;
@@ -622,17 +658,6 @@ namespace SquarifiedTreemapWinForms
             label13.Size = new Size(126, 23);
             label13.TabIndex = 25;
             label13.Text = "max brightness";
-            // 
-            // numericHuePositive
-            // 
-            numericHuePositive.Location = new Point(229, 51);
-            numericHuePositive.Maximum = new decimal(new int[] { 360, 0, 0, 0 });
-            numericHuePositive.Name = "numericHuePositive";
-            numericHuePositive.Size = new Size(55, 29);
-            numericHuePositive.TabIndex = 17;
-            numericHuePositive.TextAlign = HorizontalAlignment.Right;
-            numericHuePositive.Value = new decimal(new int[] { 2, 0, 0, 0 });
-            numericHuePositive.ValueChanged += numeric_ValueChanged;
             // 
             // label11
             // 
@@ -699,20 +724,6 @@ namespace SquarifiedTreemapWinForms
             label8.TabIndex = 10;
             label8.Text = "fontsize";
             // 
-            // numericLegendFontSize
-            // 
-            numericLegendFontSize.DecimalPlaces = 1;
-            numericLegendFontSize.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
-            numericLegendFontSize.Location = new Point(363, 51);
-            numericLegendFontSize.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
-            numericLegendFontSize.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            numericLegendFontSize.Name = "numericLegendFontSize";
-            numericLegendFontSize.Size = new Size(55, 29);
-            numericLegendFontSize.TabIndex = 9;
-            numericLegendFontSize.TextAlign = HorizontalAlignment.Right;
-            numericLegendFontSize.Value = new decimal(new int[] { 7, 0, 0, 0 });
-            numericLegendFontSize.ValueChanged += numeric_ValueChanged;
-            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -721,17 +732,6 @@ namespace SquarifiedTreemapWinForms
             label7.Size = new Size(52, 23);
             label7.TabIndex = 8;
             label7.Text = "width";
-            // 
-            // numericLegendWidth
-            // 
-            numericLegendWidth.Location = new Point(363, 114);
-            numericLegendWidth.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
-            numericLegendWidth.Name = "numericLegendWidth";
-            numericLegendWidth.Size = new Size(55, 29);
-            numericLegendWidth.TabIndex = 7;
-            numericLegendWidth.TextAlign = HorizontalAlignment.Right;
-            numericLegendWidth.Value = new decimal(new int[] { 250, 0, 0, 0 });
-            numericLegendWidth.ValueChanged += numeric_ValueChanged;
             // 
             // label6
             // 
@@ -781,18 +781,18 @@ namespace SquarifiedTreemapWinForms
             groupBox5.Controls.Add(numericHeight);
             groupBox5.Controls.Add(label3);
             groupBox5.Controls.Add(label2);
-            groupBox5.Location = new Point(7, 256);
+            groupBox5.Location = new Point(7, 273);
             groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(222, 76);
+            groupBox5.Size = new Size(321, 60);
             groupBox5.TabIndex = 0;
             groupBox5.TabStop = false;
             groupBox5.Text = "save image";
             // 
             // buttonSave
             // 
-            buttonSave.Location = new Point(124, 40);
+            buttonSave.Location = new Point(233, 18);
             buttonSave.Name = "buttonSave";
-            buttonSave.Size = new Size(82, 26);
+            buttonSave.Size = new Size(82, 36);
             buttonSave.TabIndex = 8;
             buttonSave.Text = "save";
             buttonSave.UseVisualStyleBackColor = true;
@@ -800,7 +800,7 @@ namespace SquarifiedTreemapWinForms
             // 
             // numericWidth
             // 
-            numericWidth.Location = new Point(6, 40);
+            numericWidth.Location = new Point(62, 22);
             numericWidth.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             numericWidth.Minimum = new decimal(new int[] { 100, 0, 0, 0 });
             numericWidth.Name = "numericWidth";
@@ -811,7 +811,7 @@ namespace SquarifiedTreemapWinForms
             // 
             // numericHeight
             // 
-            numericHeight.Location = new Point(66, 40);
+            numericHeight.Location = new Point(179, 22);
             numericHeight.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             numericHeight.Minimum = new decimal(new int[] { 100, 0, 0, 0 });
             numericHeight.Name = "numericHeight";
@@ -823,7 +823,7 @@ namespace SquarifiedTreemapWinForms
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(69, 19);
+            label3.Location = new Point(116, 25);
             label3.Name = "label3";
             label3.Size = new Size(59, 23);
             label3.TabIndex = 7;
@@ -832,7 +832,7 @@ namespace SquarifiedTreemapWinForms
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(11, 19);
+            label2.Location = new Point(6, 25);
             label2.Name = "label2";
             label2.Size = new Size(52, 23);
             label2.TabIndex = 5;
@@ -1011,18 +1011,18 @@ namespace SquarifiedTreemapWinForms
             groupBox2.PerformLayout();
             groupBox7.ResumeLayout(false);
             groupBox7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericExplode).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericMaxPer).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericMinPer).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericLegendSteps).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericLegendHeight).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericSat).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericMaxBri).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericMinBri).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericHueNegative).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericHuePositive).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericLegendHeight).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericSat).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericLegendFontSize).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericLegendWidth).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericExplode).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericMaxPer).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericMinPer).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericLegendSteps).EndInit();
             groupBox5.ResumeLayout(false);
             groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericWidth).EndInit();
