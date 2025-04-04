@@ -4,6 +4,7 @@ namespace SquarifiedTreemapForge.WinForms;
 
 public interface IGdiRenderer
 {
+    Action<Graphics, TreemapNode>? DrawLeafNode { get; set; }
     int GetFontHeight(Graphics g, NodeFont font, string text);
     void Render(
         Graphics g,

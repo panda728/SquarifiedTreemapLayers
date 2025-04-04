@@ -10,6 +10,8 @@ public class GdiRenderer : IGdiRenderer, IDisposable
     readonly Dictionary<NodeFont, Font> _fontCache = [];
     readonly Dictionary<(Color, float), Pen> _penCache = [];
 
+    public Action<Graphics, TreemapNode>? DrawLeafNode { get; set; }
+
     public void Dispose()
     {
         Dispose(true);
@@ -173,6 +175,10 @@ public class GdiRenderer : IGdiRenderer, IDisposable
                 }
                 var textBrush = GetBrush(node.Format.ForeColor);
                 g.DrawString(node.Text, nodeFont, textBrush, textArea);
+                if (node.Nodes.Count == 0)
+                {
+                    DrawLeafNode?.Invoke(g, node);
+                }
             }
         }
         var pen = GetPen(node.Format.BorderColor, node.Format.BorderWidth);

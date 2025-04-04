@@ -135,7 +135,14 @@ public class LayoutInteractor<T>(
         RootNode = null;
     }
 
-    public TreemapNode? GetContainsItem(Point p) => RootNode?.GetContainsItem(p);
+    public TreemapNode? GetContainsItem(Point p)
+        => RootNode?.GetContainsItem(p);
+
+    public IEnumerable<T> GetSources(Point p)
+        => GetSources(GetContainsItem(p));
+
+    public IEnumerable<T> GetSources(TreemapNode? node)
+        => node == null ? [] : _rootSeed?.GetSources(node.Id) ?? [];
 
     public void ResetFilter()
     {

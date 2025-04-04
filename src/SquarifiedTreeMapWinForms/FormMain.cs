@@ -39,6 +39,7 @@ namespace SquarifiedTreemapWinForms
             _driver = driver;
             _driver.FuncNodeText = PivotDataSource.GetTitle;
             _driver.FuncPercentage = PivotDataSource.GetPercentage;
+            _driver.DrawLeafNode = DrawLeafNode;
             _driver.OnMouseMoveAction += treemapControl1_MouseMove;
             _driver.OnMouseLeaveAction += treemapControl1_MouseLeave;
             _driver.TreemapControl = this.treemapControl1;
@@ -192,8 +193,24 @@ namespace SquarifiedTreemapWinForms
                 var pathText = string.Join(" -> ", node.GetAllPathTexts().Skip(1));
                 this.toolStripStatusLabel1.Text = $"{pathText} (debug info. x={Cursor.Position.X}:y={Cursor.Position.Y} depth:{node.Depth} src:{node.Nodes.Count})";
             }
+#if DEBUG
+            if (node != null)
+            {
+                var sources = _driver.GetSources(cp);
+                var sb = new StringBuilder();
+                foreach (var s in sources)
+                {
+                    sb.AppendLine(s.ToString());
+                }
+                this.toolStripStatusLabel1.Text += Environment.NewLine + sb.ToString();
+            }
+#endif
         }
 
+        void DrawLeaxfNode(IEnumerable<PivotDataSource> sources, Rectangle? bounds)
+        {
+
+        }
         void treemapControl1_MouseLeave(object? sender, EventArgs e)
         {
             this.toolStripStatusLabel1.Text = "";
@@ -390,6 +407,28 @@ namespace SquarifiedTreemapWinForms
             {
                 MessageBox.Show($"Error loading JSON data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        // Change the method signature to match the delegate
+        void DrawLeafNode(Graphics g, TreemapNode node, IEnumerable<PivotDataSource> sources)
+        {
+            var bounds = node.Bounds;
+            if (bounds.Width <= 0 || bounds.Height <= 0) return;
+            using var backBrush = new SolidBrush(node.Format.BackColor);
+            g.FillRectangle(backBrush, bounds);
+            using var borderPen = new Pen(Color.Black, 1);
+            var text = sources.FirstOrDefault()?.Group1 ?? "No Data";
+            using var font = new Font("Arial", 10);
+            using var textBrush = new SolidBrush(Color.White);
+            using var drawFormat = new StringFormat();
+            drawFormat.Alignment = StringAlignment.Center;
+            drawFormat.LineAlignment = StringAlignment.Center;
+
+            var total = (double)sources.Sum(d => d.Weight);
+            var purchaseTotal = (double)sources.Sum(d => d.RelativeWeight);
+            var per = purchaseTotal / total;
+            var s = $"{text}({sources.Sum(d => d.Weight) / 1000:#,##0} {per:+0.0%;-0.0%}) "; 
+            
+            g.DrawString(s, font, textBrush, bounds, drawFormat);
         }
         #endregion
     }

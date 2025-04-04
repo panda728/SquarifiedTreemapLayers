@@ -31,6 +31,7 @@ public sealed class TreemapGdiDriver<T>(
     public Func<string, IEnumerable<T>, string>? FuncNodeText { get; set; }
     public Func<IEnumerable<T>, Color>? FuncNodeColor { get; set; }
     public Func<IEnumerable<T>, double>? FuncPercentage { get; set; }
+    public Action<Graphics, TreemapNode, IEnumerable<T>>? DrawLeafNode { get; set; }
 
     public TreemapControl? TreemapControl
     {
@@ -64,9 +65,10 @@ public sealed class TreemapGdiDriver<T>(
 
     public void Invalidate() => _treemapControl?.Invalidate();
 
-    public void Invalidate(IEnumerable<T> sources)
+    public void Invalidate(IEnumerable<T> sources, bool withFilterRest = true)
     {
-        ResetFilter();
+        if (withFilterRest) { ResetFilter(); }
+        renderer.DrawLeafNode ??= DrawLeafNodeInner;
         interactor.SetDataSource(
             sources,
             LayoutSettings,
@@ -116,6 +118,13 @@ public sealed class TreemapGdiDriver<T>(
         }
     }
 
+    void DrawLeafNodeInner(Graphics g, TreemapNode node)
+    {
+        if (DrawLeafNode == null) { return; }
+        if (node.Bounds.Width <= 0 || node.Bounds.Height <= 0) { return; }
+        DrawLeafNode.Invoke(g, node, interactor.GetSources(node));
+    }
+
     #region Mouse Event
     public Action<object?, EventArgs>? OnDoubleClickAction { get; set; }
     public Action<object?, MouseEventArgs>? OnMouseMoveAction { get; set; }
@@ -123,6 +132,8 @@ public sealed class TreemapGdiDriver<T>(
 
     public TreemapNode? GetContainsItem(Point cp)
         => interactor.GetContainsItem(cp);
+    public IEnumerable<T> GetSources(Point cp)
+        => interactor.GetSources(cp);
 
     void treemapControl_DoubleClick(object? sender, EventArgs e)
     {
