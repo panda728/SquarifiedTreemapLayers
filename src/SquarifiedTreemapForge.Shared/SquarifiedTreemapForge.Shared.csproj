@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>SquarifiedTreemapForge.Shared</Title>
-    <Version>1.1.3</Version>
+    <Version>1.1.4</Version>
     <Authors>Hideyuki Kitao</Authors>
     <Product>SquarifiedTreemapLayers</Product>
     <Description>SquarifiedTreemapLayers is a library for generating and rendering treemap layouts. This solution provides various functionalities related to treemaps, including layout generation, color calculation, and legend generation.</Description>
