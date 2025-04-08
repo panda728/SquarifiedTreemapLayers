@@ -5,10 +5,11 @@ namespace SquarifiedTreemapForge.WinForms;
 
 public class GdiRenderer : IGdiRenderer, IDisposable
 {
-    bool _disposed = false;
     readonly Dictionary<Color, SolidBrush> _brushCache = [];
     readonly Dictionary<NodeFont, Font> _fontCache = [];
     readonly Dictionary<(Color, float), Pen> _penCache = [];
+
+    bool _disposed = false;
 
     public Action<Graphics, TreemapNode>? DrawLeafNode { get; set; }
 
@@ -157,30 +158,66 @@ public class GdiRenderer : IGdiRenderer, IDisposable
 
     public void RenderNode(Graphics g, TreemapNode node, Font nodeFont, int displayMinSize)
     {
+        if (!IsNodeDrawable(node, displayMinSize)) { return; }
+
+        DrawNodeBackground(g, node);
+
+        if (ShouldDrawText(node, displayMinSize))
+        {
+            DrawNodeText(g, node, nodeFont);
+            InvokeDrawLeafNode(g, node);
+        }
+
+        DrawNodeBorder(g, node);
+    }
+
+    static bool IsNodeDrawable(TreemapNode node, int displayMinSize)
+        => node.Bounds.Width > 0 && node.Bounds.Height > 0 &&
+            node.Bounds.Width <= int.MaxValue && node.Bounds.Height <= int.MaxValue;
+
+    void DrawNodeBackground(Graphics g, TreemapNode node)
+    {
         var brush = GetBrush(node.Format.BackColor);
         g.FillRectangle(brush, node.Bounds);
+    }
 
-        if (node.Bounds.Width > displayMinSize
-            && node.Bounds.Height > displayMinSize
-            && !string.IsNullOrEmpty(node.Text))
+    static bool ShouldDrawText(TreemapNode node, int displayMinSize)
+        => node.Bounds.Width > displayMinSize &&
+               node.Bounds.Height > displayMinSize &&
+               !string.IsNullOrEmpty(node.Text);
+
+    void DrawNodeText(Graphics g, TreemapNode node, Font nodeFont)
+    {
+        var textArea = node.Bounds;
+
+        var textMergin = (int)(node.Format.BorderWidth > 0
+            ? -2 : -2 + Math.Ceiling(node.Format.BorderWidth / 2.0));
+        textArea.Inflate(textMergin, textMergin);
+
+        if (textArea.Width <= 0 || node.Bounds.Height < node.FontHeight)
         {
-            var textArea = node.Bounds;
-            var textMergin = (int)(node.Format.BorderWidth > 0 ? -2 : -2 + Math.Ceiling(node.Format.BorderWidth / 2.0));
-            textArea.Inflate(textMergin, textMergin);
-            if (node.Bounds.Height >= node.FontHeight)
-            {
-                if (node.Nodes.Count > 0 || textArea.Height < node.FontHeight * 2)
-                {
-                    textArea.Height = node.FontHeight;
-                }
-                var textBrush = GetBrush(node.Format.ForeColor);
-                g.DrawString(node.Text, nodeFont, textBrush, textArea);
-                if (node.Nodes.Count == 0)
-                {
-                    DrawLeafNode?.Invoke(g, node);
-                }
-            }
+            return;
         }
+
+        if (node.Nodes.Count > 0 || textArea.Height < node.FontHeight * 2)
+        {
+            textArea.Height = node.FontHeight;
+        }
+
+        var textBrush = GetBrush(node.Format.ForeColor);
+        g.DrawString(node.Text, nodeFont, textBrush, textArea);
+    }
+
+    private void InvokeDrawLeafNode(Graphics g, TreemapNode node)
+    {
+        if (node.Nodes.Count == 0)
+        {
+            DrawLeafNode?.Invoke(g, node);
+        }
+    }
+
+    void DrawNodeBorder(Graphics g, TreemapNode node)
+    {
         var pen = GetPen(node.Format.BorderColor, node.Format.BorderWidth);
         g.DrawRectangle(pen, node.Bounds);
     }

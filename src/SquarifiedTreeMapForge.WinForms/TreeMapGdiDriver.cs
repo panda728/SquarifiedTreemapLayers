@@ -1,6 +1,5 @@
 using System.ComponentModel;
 using Microsoft.Extensions.Options;
-using SquarifiedTreemapForge;
 using SquarifiedTreemapForge.Shared;
 
 namespace SquarifiedTreemapForge.WinForms;
@@ -103,12 +102,16 @@ public sealed class TreemapGdiDriver<T>(
         int displayMaxDepth,
         int nodeTextHeightMargin = 0)
     {
+        if (bounds.Width <= 0 || bounds.Height <= 0) { return; }
+
         var nodeHeight = renderer.GetFontHeight(
             g, interactor.NodeFont, string.IsNullOrEmpty(titleText) ? FONT_HEIGHT_DEFALUT : titleText);
+
         if (nodeTextHeightMargin > 0)
         {
             nodeHeight += nodeTextHeightMargin;
         }
+
         if (interactor.Layout(bounds, nodeHeight, displayMaxDepth)
             && interactor.Treemap != null && interactor.RootNode != null)
         {
@@ -121,7 +124,6 @@ public sealed class TreemapGdiDriver<T>(
     void DrawLeafNodeInner(Graphics g, TreemapNode node)
     {
         if (DrawLeafNode == null) { return; }
-        if (node.Bounds.Width <= 0 || node.Bounds.Height <= 0) { return; }
         DrawLeafNode.Invoke(g, node, interactor.GetSources(node));
     }
 
@@ -177,6 +179,9 @@ public sealed class TreemapGdiDriver<T>(
     /// <summary>Renders the treemap to a bitmap.</summary>
     public Bitmap Render(int width, int height)
     {
+        if (width <= 0 || height <= 0) 
+            throw new ArgumentOutOfRangeException(nameof(width), "Width and height must be positive values.");
+
         var bmp = new Bitmap(width, height);
         using var g = Graphics.FromImage(bmp);
         RenderTreemap(g, interactor, renderer, new Rectangle(Point.Empty, bmp.Size),

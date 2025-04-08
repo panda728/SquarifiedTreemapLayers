@@ -22,6 +22,7 @@ public sealed class DataGroupPreparer<T>
         Func<IEnumerable<T>, Color>? funcNodeColor)
     {
         _settings = settings;
+
         FuncNodeText = funcNodeText;
         FuncNodeColor = funcNodeColor;
 
@@ -112,14 +113,16 @@ public sealed class DataGroupPreparer<T>
     {
         if (GroupProperties == null || GroupColumnFormats == null) { return ""; }
         if (x == null || _settings?.GroupColumns == null) { return ""; }
-        if (depth < 0) return _settings.RootNodeTitle;
+        if (depth < 0) { return _settings.RootNodeTitle; }
         if (depth >= GroupProperties.Length) { return ""; }
 
         var value = GroupProperties[depth].GetValue(x);
         if (value == null) { return ""; }
 
         if (GroupColumnFormats.Length == 0 || depth >= GroupColumnFormats.Length)
+        {
             return value.ToString() ?? "";
+        }
 
         var fmt = GroupColumnFormats[depth];
         return value switch

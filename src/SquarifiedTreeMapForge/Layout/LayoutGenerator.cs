@@ -6,6 +6,8 @@ namespace SquarifiedTreemapForge.Layout;
 /// <summary>Manages the layout of a treemap.</summary>
 public sealed class LayoutGenerator<T>(ITreemapGenerator treemapGenerator)
 {
+    const int MinimumNodeSize = 2;
+
     /// <summary>Recursively calculates the layout of the treemap nodes.</summary>
     public TreemapNode Layout(
         Seed<T> current,
@@ -19,6 +21,19 @@ public sealed class LayoutGenerator<T>(ITreemapGenerator treemapGenerator)
         int displayDepthMax = 1024,
         int currentDisplayDepth = 0)
     {
+        if (currentDisplayDepth > displayDepthMax)
+        {
+            return new TreemapNode(
+                current.Id,
+                current.Depth,
+                current.Text,
+                height,
+                bounds,
+                current.Format,
+                parent,
+                []);
+        }
+
         var outerBounds = bounds;
         if (current.Format.ExplodeGap > 0)
         {
@@ -43,14 +58,15 @@ public sealed class LayoutGenerator<T>(ITreemapGenerator treemapGenerator)
             outerBounds.Height - height
         );
         innerBounds.Inflate(-(current.Format.BorderWidth + 2), -(current.Format.BorderWidth + 2));
-        if (innerBounds.Width <= 0 || innerBounds.Height <= 0)
+
+        if (innerBounds.Width < MinimumNodeSize || innerBounds.Height < MinimumNodeSize)
         {
             return treeNode;
         }
 
         if (filter.Count > 0 && children.Count() > 1)
         {
-            var c = children.Where(c => filter.Contains(c.Id)).FirstOrDefault();
+            var c = children.FirstOrDefault(c => filter.Contains(c.Id));
             if (c != null)
             {
                 var filtered = Layout(
@@ -69,11 +85,6 @@ public sealed class LayoutGenerator<T>(ITreemapGenerator treemapGenerator)
             }
         }
 
-        if (displayDepthMax < currentDisplayDepth)
-        {
-            return treeNode;
-        }
-
         var weights = children.Select(a => a.Weight);
         var weightsOrder = !isSourceOrderDec
             ? weights.OrderBy(w => w)
@@ -85,6 +96,7 @@ public sealed class LayoutGenerator<T>(ITreemapGenerator treemapGenerator)
             layout: layoutAlign,
             isCheckSorted: false
         );
+
         treeNode.Nodes.AddRange(childrenRects.Select((r, i) =>
         {
             var a = children.ElementAt(i);

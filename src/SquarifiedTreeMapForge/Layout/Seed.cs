@@ -26,7 +26,10 @@ public sealed class Seed<T>(
 
     static IEnumerable<T> GetSources(int id, IEnumerable<Seed<T>>? seeds)
     {
-        if (seeds == null || !seeds.Any()) return [];
+        if (seeds == null || !seeds.Any())
+        {
+            return [];
+        }
         foreach (var s in seeds)
         {
             if (s.Id == id)
