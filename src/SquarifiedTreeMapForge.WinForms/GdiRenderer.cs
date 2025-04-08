@@ -12,6 +12,7 @@ public class GdiRenderer : IGdiRenderer, IDisposable
     bool _disposed = false;
 
     public Action<Graphics, TreemapNode>? DrawLeafNode { get; set; }
+    public int NodeDepthLimit { get; set; } = 255;
 
     public void Dispose()
     {
@@ -147,12 +148,13 @@ public class GdiRenderer : IGdiRenderer, IDisposable
         }
     }
 
-    void RenderNodes(Graphics g, TreemapNode node, Font nodeFont, int displayMinSize)
+    void RenderNodes(Graphics g, TreemapNode node, Font nodeFont, int displayMinSize, int depth = 0)
     {
         RenderNode(g, node, nodeFont, displayMinSize);
+        if (NodeDepthLimit < depth) { return; }
         foreach (var child in node.Nodes)
         {
-            RenderNodes(g, child, nodeFont, displayMinSize);
+            RenderNodes(g, child, nodeFont, displayMinSize, depth + 1);
         }
     }
 
