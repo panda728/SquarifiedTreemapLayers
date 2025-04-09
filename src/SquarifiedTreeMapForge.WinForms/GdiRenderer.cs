@@ -160,7 +160,12 @@ public class GdiRenderer : IGdiRenderer, IDisposable
         {
             var (node, depth) = stack.Pop();
 
-            if (depth > NodeDepthLimit || visitedNodes.Contains(node.Id))
+            if (depth > NodeDepthLimit || visitedNodes.Contains(node.Id)
+                || node.Bounds.X <= 0 || node.Bounds.X > NodeSizeLimit
+                || node.Bounds.Y <= 0 || node.Bounds.Y > NodeSizeLimit
+                || node.Bounds.Width <= 0 || node.Bounds.Width > NodeSizeLimit
+                || node.Bounds.Height <= 0 || node.Bounds.Height > NodeSizeLimit
+                )
             {
                 continue;
             }
@@ -178,7 +183,7 @@ public class GdiRenderer : IGdiRenderer, IDisposable
 
     public void RenderNode(Graphics g, TreemapNode node, Font nodeFont, int displayMinSize)
     {
-        if (!IsNodeDrawable(node)) { return; }
+        if (IsOutOfRange(node.Bounds)) { return; }
 
         DrawNodeBackground(g, node);
 
@@ -191,9 +196,13 @@ public class GdiRenderer : IGdiRenderer, IDisposable
         DrawNodeBorder(g, node);
     }
 
-    bool IsNodeDrawable(TreemapNode node)
-        => node.Bounds.Width > 0 && node.Bounds.Height > 0 &&
-            node.Bounds.Width <= NodeSizeLimit && node.Bounds.Height <= NodeSizeLimit;
+    bool IsOutOfRange(Rectangle bounds)
+        => IsOutOfRange(bounds.X)
+        || IsOutOfRange(bounds.Y)
+        || IsOutOfRange(bounds.Width)
+        || IsOutOfRange(bounds.Height);
+
+    bool IsOutOfRange(int i) => i < 0 || i > NodeSizeLimit;
 
     void DrawNodeBackground(Graphics g, TreemapNode node)
     {

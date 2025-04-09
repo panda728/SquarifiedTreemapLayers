@@ -7,6 +7,7 @@ namespace SquarifiedTreemapForge.Layout;
 public sealed class LayoutGenerator<T>(ITreemapGenerator treemapGenerator)
 {
     const int MinimumNodeSize = 2;
+    const int MaximumNodeSize = int.MaxValue / 2;
 
     /// <summary>Recursively calculates the layout of the treemap nodes.</summary>
     public TreemapNode Layout(
@@ -59,10 +60,7 @@ public sealed class LayoutGenerator<T>(ITreemapGenerator treemapGenerator)
         );
         innerBounds.Inflate(-(current.Format.BorderWidth + 2), -(current.Format.BorderWidth + 2));
 
-        if (innerBounds.Width < MinimumNodeSize || innerBounds.Height < MinimumNodeSize)
-        {
-            return treeNode;
-        }
+        if (IsOutOfRange(innerBounds)) { return treeNode; }
 
         if (filter.Count > 0 && children.Count() > 1)
         {
@@ -90,6 +88,9 @@ public sealed class LayoutGenerator<T>(ITreemapGenerator treemapGenerator)
             ? weights.OrderBy(w => w)
             : weights.OrderByDescending(w => w);
 
+        var weightsSum = weights.Sum();
+        if (weightsSum == 0) {  return treeNode; }
+
         var childrenRects = treemapGenerator.Layout(
             innerBounds,
             weightsOrder,
@@ -114,4 +115,12 @@ public sealed class LayoutGenerator<T>(ITreemapGenerator treemapGenerator)
         }));
         return treeNode;
     }
+
+    static bool IsOutOfRange(Rectangle bounds) 
+        => IsOutOfRange(bounds.X)
+        || IsOutOfRange(bounds.Y)
+        || IsOutOfRange(bounds.Width) 
+        || IsOutOfRange(bounds.Height);
+
+    static bool IsOutOfRange(int i) => i < MinimumNodeSize || i > MaximumNodeSize;
 }
