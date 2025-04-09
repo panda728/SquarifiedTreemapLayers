@@ -29,7 +29,7 @@ public class SquarifiedTreemapGenerator : ITreemapGenerator
         if (bounds == Rectangle.Empty || !weights.Any()) { yield break; }
         if (bounds.Width <= minimumSize || bounds.Height <= minimumSize) { yield break; }
 
-        var weightsArray = weights is double[] array ? array : [.. weights];
+        var weightsArray = weights.Where(d => d > 0).ToArray();
         if (isCheckSorted && !IsSorted(weightsArray.AsSpan()))
         {
             throw new ArgumentException("The list of weights must be sorted in descending order.");
