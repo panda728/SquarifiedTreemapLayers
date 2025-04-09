@@ -148,13 +148,30 @@ public class GdiRenderer : IGdiRenderer, IDisposable
         }
     }
 
-    void RenderNodes(Graphics g, TreemapNode node, Font nodeFont, int displayMinSize, int depth = 0)
+    void RenderNodes(Graphics g, TreemapNode rootNode, Font nodeFont, int displayMinSize)
     {
-        RenderNode(g, node, nodeFont, displayMinSize);
-        if (NodeDepthLimit < depth) { return; }
-        foreach (var child in node.Nodes)
+        var stack = new Stack<(TreemapNode node, int depth)>();
+        stack.Push((rootNode, 0));
+
+        var visitedNodes = new HashSet<int>();
+
+        while (stack.Count > 0)
         {
-            RenderNodes(g, child, nodeFont, displayMinSize, depth + 1);
+            var (node, depth) = stack.Pop();
+
+            if (depth > NodeDepthLimit || visitedNodes.Contains(node.Id))
+            {
+                continue; 
+            }
+
+            visitedNodes.Add(node.Id);
+
+            RenderNode(g, node, nodeFont, displayMinSize);
+
+            foreach (var child in node.Nodes)
+            {
+                stack.Push((child, depth + 1));
+            }
         }
     }
 
