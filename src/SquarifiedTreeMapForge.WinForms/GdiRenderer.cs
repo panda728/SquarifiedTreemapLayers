@@ -178,7 +178,7 @@ public class GdiRenderer : IGdiRenderer, IDisposable
 
     public void RenderNode(Graphics g, TreemapNode node, Font nodeFont, int displayMinSize)
     {
-        if (!IsNodeDrawable(node, displayMinSize)) { return; }
+        if (!IsNodeDrawable(node)) { return; }
 
         DrawNodeBackground(g, node);
 
@@ -191,8 +191,8 @@ public class GdiRenderer : IGdiRenderer, IDisposable
         DrawNodeBorder(g, node);
     }
 
-    bool IsNodeDrawable(TreemapNode node, int displayMinSize)
-        => node.Bounds.Width > displayMinSize && node.Bounds.Height > displayMinSize &&
+    bool IsNodeDrawable(TreemapNode node)
+        => node.Bounds.Width > 0 && node.Bounds.Height > 0 &&
             node.Bounds.Width <= NodeSizeLimit && node.Bounds.Height <= NodeSizeLimit;
 
     void DrawNodeBackground(Graphics g, TreemapNode node)
@@ -203,8 +203,8 @@ public class GdiRenderer : IGdiRenderer, IDisposable
 
     static bool ShouldDrawText(TreemapNode node, int displayMinSize)
         => node.Bounds.Width > displayMinSize &&
-               node.Bounds.Height > displayMinSize &&
-               !string.IsNullOrEmpty(node.Text);
+            node.Bounds.Height > displayMinSize &&
+            !string.IsNullOrEmpty(node.Text);
 
     void DrawNodeText(Graphics g, TreemapNode node, Font nodeFont)
     {
