@@ -13,6 +13,7 @@ public class GdiRenderer : IGdiRenderer, IDisposable
 
     public Action<Graphics, TreemapNode>? DrawLeafNode { get; set; }
     public int NodeDepthLimit { get; set; } = 255;
+    public int NodeSizeLimit { get; set; } = int.MaxValue / 2;
 
     public void Dispose()
     {
@@ -161,7 +162,7 @@ public class GdiRenderer : IGdiRenderer, IDisposable
 
             if (depth > NodeDepthLimit || visitedNodes.Contains(node.Id))
             {
-                continue; 
+                continue;
             }
 
             visitedNodes.Add(node.Id);
@@ -190,9 +191,9 @@ public class GdiRenderer : IGdiRenderer, IDisposable
         DrawNodeBorder(g, node);
     }
 
-    static bool IsNodeDrawable(TreemapNode node, int displayMinSize)
-        => node.Bounds.Width > 0 && node.Bounds.Height > 0 &&
-            node.Bounds.Width <= int.MaxValue && node.Bounds.Height <= int.MaxValue;
+    bool IsNodeDrawable(TreemapNode node, int displayMinSize)
+        => node.Bounds.Width > displayMinSize && node.Bounds.Height > displayMinSize &&
+            node.Bounds.Width <= NodeSizeLimit && node.Bounds.Height <= NodeSizeLimit;
 
     void DrawNodeBackground(Graphics g, TreemapNode node)
     {

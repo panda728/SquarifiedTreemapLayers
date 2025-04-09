@@ -32,6 +32,9 @@ public sealed class TreemapGdiDriver<T>(
     public Func<IEnumerable<T>, double>? FuncPercentage { get; set; }
     public Action<Graphics, TreemapNode, IEnumerable<T>>? DrawLeafNode { get; set; }
 
+    public Treemap? Treemap { get => interactor.Treemap; }
+    public TreemapNode? RootNode { get => interactor.RootNode; }
+
     public TreemapControl? TreemapControl
     {
         get { return _treemapControl; }
@@ -179,7 +182,7 @@ public sealed class TreemapGdiDriver<T>(
     /// <summary>Renders the treemap to a bitmap.</summary>
     public Bitmap Render(int width, int height)
     {
-        if (width <= 0 || height <= 0) 
+        if (width <= 0 || height <= 0)
             throw new ArgumentOutOfRangeException(nameof(width), "Width and height must be positive values.");
 
         var bmp = new Bitmap(width, height);
